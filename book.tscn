@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cclcdjqcbpt3j"]
+
+[node name="Book" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 799.0
+offset_bottom = 341.0
+color = Color(1, 0.129412, 1, 1)

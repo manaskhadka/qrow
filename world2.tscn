@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://dicdf0rv56lca"]
+
+[ext_resource type="PackedScene" uid="uid://do027h1kv333v" path="res://test-level.tscn" id="1_7j2eq"]
+[ext_resource type="PackedScene" uid="uid://ccwb7bmjph5un" path="res://player.tscn" id="2_6gm2w"]
+[ext_resource type="Script" path="res://Area2D1.gd" id="3_xk27t"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8tut1"]
+radius = 24.0832
+
+[node name="world2" type="Node2D"]
+
+[node name="test-level" parent="." instance=ExtResource("1_7j2eq")]
+
+[node name="player" parent="." instance=ExtResource("2_6gm2w")]
+position = Vector2(122, 158)
+scale = Vector2(0.984563, 0.987805)
+decel_coeff = 0.98
+speed = 15.0
+max_speed = 300.0
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("3_xk27t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(27, 212)
+shape = SubResource("CircleShape2D_8tut1")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 35.0
+offset_top = 57.0
+offset_right = 75.0
+offset_bottom = 97.0
+color = Color(1, 0.0745098, 1, 1)
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
