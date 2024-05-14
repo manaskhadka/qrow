@@ -17,9 +17,11 @@ func _physics_process(delta) -> void:
 	if Input.is_action_pressed("left"):
 		if (velocity.x >= -1*max_speed):
 			velocity.x -= speed
+		anim_sprite.play("flying left")
 	if Input.is_action_pressed("right"):
 		if (velocity.x <= max_speed):
 			velocity.x += speed
+		anim_sprite.play("flying right")
 	
 	velocity.y *= decel_coeff
 	velocity.x *= decel_coeff
