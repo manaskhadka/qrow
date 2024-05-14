@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://b8i3w6yq3u6cb"]
+
+[ext_resource type="PackedScene" uid="uid://do027h1kv333v" path="res://test-level.tscn" id="1_4m6ml"]
+[ext_resource type="PackedScene" uid="uid://ccwb7bmjph5un" path="res://player.tscn" id="2_bcbvm"]
+
+[node name="world" type="Node2D"]
+
+[node name="test-level" parent="." instance=ExtResource("1_4m6ml")]
+
+[node name="player" parent="." instance=ExtResource("2_bcbvm")]
+position = Vector2(110, 170)
+scale = Vector2(0.984563, 0.987805)
+speed = 100.0
+accel = 10.0
