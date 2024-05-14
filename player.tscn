@@ -1,22 +1,13 @@
 [gd_scene load_steps=5 format=3 uid="uid://ccwb7bmjph5un"]
 
-[ext_resource type="Texture2D" uid="uid://ch6ki0164q1th" path="res://icon.svg" id="1_7gfxx"]
 [ext_resource type="Script" path="res://player.gd" id="1_mc4wp"]
+[ext_resource type="Texture2D" uid="uid://4xxqrttvdi65" path="res://crow.jpg" id="2_6of2i"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_vivnw"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_7gfxx")
-}, {
-"duration": 1.0,
-"texture": ExtResource("1_7gfxx")
-}, {
-"duration": 1.0,
-"texture": ExtResource("1_7gfxx")
-}, {
-"duration": 1.0,
-"texture": ExtResource("1_7gfxx")
+"texture": ExtResource("2_6of2i")
 }],
 "loop": true,
 "name": &"default",

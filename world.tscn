@@ -1,12 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://b8i3w6yq3u6cb"]
+[gd_scene load_steps=8 format=3 uid="uid://b8i3w6yq3u6cb"]
 
 [ext_resource type="PackedScene" uid="uid://do027h1kv333v" path="res://test-level.tscn" id="1_4m6ml"]
 [ext_resource type="PackedScene" uid="uid://ccwb7bmjph5un" path="res://player.tscn" id="2_bcbvm"]
 [ext_resource type="Script" path="res://Area2D1.gd" id="3_ap70v"]
 [ext_resource type="Script" path="res://Area2D2.gd" id="4_m8bo1"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_8tut1"]
-radius = 24.0832
+[ext_resource type="Texture2D" uid="uid://cou65suxdsmc0" path="res://desert-game-assets/note.png" id="5_taxmi"]
+[ext_resource type="Texture2D" uid="uid://d0kl7w8qlyd70" path="res://desert-game-assets/door.jpg" id="6_xnwc7"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hlxmn"]
 radius = 25.0799
@@ -18,17 +17,17 @@ radius = 25.0799
 [node name="player" parent="." instance=ExtResource("2_bcbvm")]
 position = Vector2(122, 158)
 scale = Vector2(0.984563, 0.987805)
-decel_coeff = 0.98
-speed = 15.0
-max_speed = 300.0
+decel_coeff = 0.96
+speed = 20.0
+max_speed = 125.0
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(22, 20)
 script = ExtResource("3_ap70v")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(7, 204)
-shape = SubResource("CircleShape2D_8tut1")
+position = Vector2(23, 176)
+shape = SubResource("CircleShape2D_hlxmn")
 
 [node name="Area2D2" type="Area2D" parent="."]
 position = Vector2(82, 15)
@@ -37,6 +36,23 @@ script = ExtResource("4_m8bo1")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
 position = Vector2(-44, 23)
 shape = SubResource("CircleShape2D_hlxmn")
+
+[node name="Note" type="Sprite2D" parent="."]
+position = Vector2(39, 37)
+scale = Vector2(0.0597222, 0.096243)
+texture = ExtResource("5_taxmi")
+
+[node name="Door" type="Sprite2D" parent="."]
+position = Vector2(44, 196)
+scale = Vector2(0.137097, 0.137097)
+texture = ExtResource("6_xnwc7")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 35.0
+offset_top = 114.0
+offset_right = 237.0
+offset_bottom = 137.0
+text = "Press Spacebar to interact"
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
