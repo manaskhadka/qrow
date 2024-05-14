@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://4xxqrttvdi65"
-path="res://.godot/imported/crow.jpg-13667d82fefe3da7beae43b89b875f5c.ctex"
+uid="uid://by35fscukp1w4"
+path="res://.godot/imported/Baby Crow.png-16db1dbc7d10b869aadc22a69eaca7ce.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://crow.jpg"
-dest_files=["res://.godot/imported/crow.jpg-13667d82fefe3da7beae43b89b875f5c.ctex"]
+source_file="res://graphics/Baby Crow.png"
+dest_files=["res://.godot/imported/Baby Crow.png-16db1dbc7d10b869aadc22a69eaca7ce.ctex"]
 
 [params]
 
