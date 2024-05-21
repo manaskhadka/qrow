@@ -1,9 +1,10 @@
-[gd_resource type="TileSet" load_steps=9 format=3 uid="uid://cuuaexgaiqejo"]
+[gd_resource type="TileSet" load_steps=11 format=3 uid="uid://cuuaexgaiqejo"]
 
 [ext_resource type="Texture2D" uid="uid://ca0p2ak06ttgp" path="res://graphics/Deep Forest/sheet.png" id="1_4tdu1"]
 [ext_resource type="Texture2D" uid="uid://vcl2x323ggjd" path="res://graphics/Deep Forest/DarkHouseTiles.png" id="2_wer45"]
 [ext_resource type="Texture2D" uid="uid://5xmgs7i7wkv0" path="res://graphics/Deep Forest/tiles.png" id="3_7gr74"]
 [ext_resource type="Texture2D" uid="uid://2ix46hvkwn61" path="res://graphics/Deep Forest/cave_entrance.png" id="4_4p0c1"]
+[ext_resource type="Texture2D" uid="uid://5j3ufqe0or05" path="res://graphics/Deep Forest/Foliage/Grass3.png" id="5_l4b1i"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tydk2"]
 texture = ExtResource("1_4tdu1")
@@ -4602,9 +4603,16 @@ texture = ExtResource("4_4p0c1")
 7:7/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 7:7/0/physics_layer_0/angular_velocity = 0.0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o33c5"]
+texture = ExtResource("5_l4b1i")
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
 [resource]
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_tydk2")
 sources/1 = SubResource("TileSetAtlasSource_ip1hh")
 sources/2 = SubResource("TileSetAtlasSource_1lmdw")
 sources/3 = SubResource("TileSetAtlasSource_secuw")
+sources/4 = SubResource("TileSetAtlasSource_o33c5")
