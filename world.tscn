@@ -21,9 +21,6 @@ layer_2/tile_data = PackedInt32Array(0, 2, 0, 1, 2, 0, 2, 2, 0, 3, 2, 0, 4, 2, 0
 [node name="player" parent="." instance=ExtResource("2_bcbvm")]
 position = Vector2(120, 158)
 scale = Vector2(0.984563, 0.987805)
-decel_coeff = 0.96
-speed = 20.0
-max_speed = 125.0
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(22, 20)
