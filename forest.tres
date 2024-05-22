@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=11 format=3 uid="uid://cuuaexgaiqejo"]
+[gd_resource type="TileSet" load_steps=11 format=3 uid="uid://8gea1ppxsuby"]
 
 [ext_resource type="Texture2D" uid="uid://ca0p2ak06ttgp" path="res://graphics/Deep Forest/sheet.png" id="1_4tdu1"]
 [ext_resource type="Texture2D" uid="uid://vcl2x323ggjd" path="res://graphics/Deep Forest/DarkHouseTiles.png" id="2_wer45"]
