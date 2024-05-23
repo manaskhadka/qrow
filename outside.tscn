@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://beve8unndvi8n"]
+[gd_scene load_steps=11 format=3 uid="uid://beve8unndvi8n"]
 
 [ext_resource type="PackedScene" uid="uid://ccwb7bmjph5un" path="res://player.tscn" id="1_1j6s7"]
 [ext_resource type="TileSet" uid="uid://8gea1ppxsuby" path="res://forest.tres" id="1_opfij"]
@@ -8,6 +8,10 @@
 [ext_resource type="Texture2D" uid="uid://bqx7lwqhohnb4" path="res://graphics/Deep Forest/Foliage/Bush1_4.png" id="6_iru7p"]
 [ext_resource type="PackedScene" path="res://enemy.tscn" id="7_dri43"]
 [ext_resource type="Texture2D" uid="uid://bckhqsqy60785" path="res://Bush4_1.png" id="8_3fvtt"]
+[ext_resource type="Script" path="res://GetInHouse.gd" id="9_bfioh"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8o5td"]
+radius = 24.3311
 
 [node name="Outside" type="Node2D"]
 
@@ -105,3 +109,13 @@ texture = ExtResource("8_3fvtt")
 [node name="Bush46" type="Sprite2D" parent="."]
 position = Vector2(637, -64)
 texture = ExtResource("8_3fvtt")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(-47, -11)
+script = ExtResource("9_bfioh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_8o5td")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
