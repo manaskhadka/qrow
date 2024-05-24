@@ -12,4 +12,4 @@ func _on_body_exited(body):
 func _process(delta):
 	if entered == true:
 		if Input.is_action_just_pressed("ui_accept"):
-			get_tree().change_scene_to_file("res://world3.tscn")
+			get_tree().change_scene_to_file("res://world4.tscn")
