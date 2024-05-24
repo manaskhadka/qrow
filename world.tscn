@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://b8i3w6yq3u6cb"]
+[gd_scene load_steps=12 format=3 uid="uid://b8i3w6yq3u6cb"]
 
 [ext_resource type="PackedScene" uid="uid://do027h1kv333v" path="res://test-level.tscn" id="1_4m6ml"]
 [ext_resource type="PackedScene" uid="uid://ccwb7bmjph5un" path="res://player.tscn" id="2_bcbvm"]
@@ -8,9 +8,13 @@
 [ext_resource type="Texture2D" uid="uid://d0kl7w8qlyd70" path="res://desert-game-assets/door.jpg" id="6_xnwc7"]
 [ext_resource type="Texture2D" uid="uid://drhulqcvq06o5" path="res://graphics/Witch.png" id="7_lyobl"]
 [ext_resource type="Texture2D" uid="uid://cukpmjqdu1wrp" path="res://graphics/Wood Tile.png" id="8_hr24x"]
+[ext_resource type="Script" path="res://leaveDoor.gd" id="9_w2mbr"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hlxmn"]
 radius = 25.0799
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_n8jwx"]
+radius = 14.0357
 
 [node name="world" type="Node2D"]
 position = Vector2(0, -1)
@@ -23,7 +27,7 @@ layer_3/name = "added"
 layer_3/tile_data = PackedInt32Array(65543, 327687, 7, 65544, 458759, 7, 131081, 393223, 1, 262147, 524294, 2, 262148, 589830, 2, 33, 458758, 7, 65569, 458758, 8, 131105, 458758, 9, 34, 524294, 7, 65570, 524294, 8, 131106, 524294, 9, 262183, 6, 3, 262184, 65542, 3, 262185, 131078, 3, 41, 6, 16, 65577, 6, 17, 36, 131079, 3, 37, 131079, 3, -65501, 7, 1, -65497, 65543, 1, 39, 393223, 1, -131036, 393219, 8, -65500, 393219, 9, -131035, 458755, 8, -65499, 458755, 9, 196647, 6, 2, 196648, 65542, 2, 196649, 131078, 2, 196627, 589830, 8, 262163, 589830, 9, 196628, 655366, 8, 262164, 655366, 9, 917505, 1, 0, 917506, 327680, 0, 917507, 327680, 0, 917510, 1, 0, 917511, 1, 0, 917512, 1, 0, 917513, 1, 0, 917514, 1, 0, 917515, 1, 0, 917516, 1, 0, 917517, 1, 0, 917518, 1, 0, 917519, 1, 0, 917520, 1, 0, 917521, 1, 0, 917522, 1, 0, 917523, 1, 0, 917524, 1, 0, 917525, 1, 0, 917526, 1, 0, 917527, 1, 0, 917528, 1, 0, 917529, 1, 0, 917530, 1, 0, 917531, 1, 0, 917532, 1, 0, 917533, 1, 0, 917534, 1, 0, 917535, 1, 0, 917536, 1, 0, 917537, 1, 0, 917538, 1, 0, 917539, 1, 0, 917540, 1, 0, 917541, 1, 0, 917542, 1, 0, 917544, 1, 0, 917545, 1, 0, 917546, 1, 0, 917547, 1, 0, 917543, 1, 0, 917509, 1, 0, 917508, 1, 0)
 
 [node name="player" parent="." instance=ExtResource("2_bcbvm")]
-position = Vector2(120, 158)
+position = Vector2(124, 158)
 scale = Vector2(0.984563, 0.987805)
 
 [node name="Area2D" type="Area2D" parent="."]
@@ -67,7 +71,17 @@ texture = ExtResource("7_lyobl")
 position = Vector2(-165, 307)
 texture = ExtResource("8_hr24x")
 
+[node name="leaveDoor" type="Area2D" parent="."]
+position = Vector2(45, 219)
+script = ExtResource("9_w2mbr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="leaveDoor"]
+position = Vector2(4, 0)
+shape = SubResource("CircleShape2D_n8jwx")
+
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
 [connection signal="body_entered" from="Area2D2" to="Area2D2" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D2" to="Area2D2" method="_on_body_exited"]
+[connection signal="body_entered" from="leaveDoor" to="leaveDoor" method="_on_body_entered"]
+[connection signal="body_exited" from="leaveDoor" to="leaveDoor" method="_on_body_exited"]
