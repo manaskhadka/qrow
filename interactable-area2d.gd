@@ -4,6 +4,7 @@ extends Area2D
 var entered = false
 
 # Set this to the sprite that this interactable area is related to
+# TODO: This is better for testing purposes but we might want to auto grab this in on_ready
 @export var sprite : Sprite2D;
 
 # Set the correct type of object this is
@@ -24,7 +25,8 @@ var entered = false
 
 func _ready():
 	# $object.texture = load(image)
-	pass
+	entered = false
+	sprite.material.set_shader_parameter("outline_enabled", false)
 		
 func _on_body_entered(body):
 	if (interactable_area_name): 
@@ -38,7 +40,7 @@ func _on_body_exited(body):
 	sprite.material.set_shader_parameter("outline_enabled", false)
 
 func _input(event):
-	if entered and event.is_action_pressed("ui_accept"):
+	if entered and event.is_action_pressed("ui_accept") and len(get_overlapping_areas()) > 0:
 		if dialogue_file:
 			use_dialogue()
 		
@@ -50,8 +52,9 @@ func _input(event):
 			get_tree().change_scene_to_file(transition_scene)
 		
 func _process(delta):
-	if entered == true:
+	if entered == true and len(get_overlapping_areas()) > 0:
 		sprite.material.set_shader_parameter("outline_enabled", true)
+		pass
 
 func use_dialogue():
 	var dialogue = get_parent().get_node("Crow").get_node("Dialogue")

@@ -21,8 +21,8 @@ func start():
 	# next_script()
 
 func load_dialogue():
-	var file = "path"
 	var json_string = FileAccess.get_file_as_string(dialogue_file)
+	print("Accessing", dialogue_file)
 	var json_dict = JSON.parse_string(json_string)
 	print("LOADED TEXT:")
 	print(json_string)
