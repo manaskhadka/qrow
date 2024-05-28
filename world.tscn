@@ -130,9 +130,6 @@ position = Vector2(59.5, 0)
 scale = Vector2(1.58696, 1)
 texture = ExtResource("10_x8pov")
 
-[node name="ReuseableInteracteable" parent="Potions Shelf/Shelf/Shelf2/Shelf/Shelf" instance=ExtResource("25_4nfod")]
-position = Vector2(27.9458, 157)
-
 [node name="2-removebg-preview" type="Sprite2D" parent="Potions Shelf"]
 position = Vector2(186, 11)
 scale = Vector2(0.0391566, 0.0391566)
@@ -749,6 +746,10 @@ texture = ExtResource("22_my6qv")
 stream = ExtResource("23_dksec")
 volume_db = -20.0
 autoplay = true
+
+[node name="Area2D" parent="." instance=ExtResource("25_4nfod")]
+position = Vector2(478, 190)
+scale = Vector2(2.685, 2.685)
 
 [connection signal="body_entered" from="Cedric Door" to="Cedric Door" method="_on_body_entered"]
 [connection signal="body_exited" from="Cedric Door" to="Cedric Door" method="_on_body_exited"]
