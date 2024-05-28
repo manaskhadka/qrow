@@ -750,6 +750,7 @@ autoplay = true
 [node name="Area2D" parent="." instance=ExtResource("25_4nfod")]
 position = Vector2(478, 190)
 scale = Vector2(2.685, 2.685)
+image = "res://3.png"
 
 [connection signal="body_entered" from="Cedric Door" to="Cedric Door" method="_on_body_entered"]
 [connection signal="body_exited" from="Cedric Door" to="Cedric Door" method="_on_body_exited"]

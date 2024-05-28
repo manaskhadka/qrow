@@ -1,9 +1,9 @@
 extends Area2D
 var entered = false
-@export var image : Texture
+@export var image : String = "res://graphics/Top-Down Retro Interior/Shelf.png"
 
 func _ready():
-	$object.texture = preload("res://5.png")
+	$object.texture = load(image)
 		
 func _on_body_entered(body):
 	entered = true # Replace with function body.
