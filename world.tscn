@@ -747,7 +747,7 @@ stream = ExtResource("23_dksec")
 volume_db = -20.0
 autoplay = true
 
-[node name="Area2D" parent="." instance=ExtResource("25_4nfod")]
+[node name="Mushroom" parent="." instance=ExtResource("25_4nfod")]
 position = Vector2(478, 190)
 scale = Vector2(2.685, 2.685)
 image = "res://3.png"
