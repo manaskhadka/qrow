@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bckhqsqy60785"
-path="res://.godot/imported/Bush4_1.png-c4a8a195e955461c5ce7b5a11545e524.ctex"
+uid="uid://do2dai53biuwj"
+path="res://.godot/imported/3.png-30a969ad62367941dbf0c76150602b6e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Bush4_1.png"
-dest_files=["res://.godot/imported/Bush4_1.png-c4a8a195e955461c5ce7b5a11545e524.ctex"]
+source_file="res://graphics/3.png"
+dest_files=["res://.godot/imported/3.png-30a969ad62367941dbf0c76150602b6e.ctex"]
 
 [params]
 

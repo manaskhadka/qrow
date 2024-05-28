@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://ccwb7bmjph5un"]
+[gd_scene load_steps=13 format=3 uid="uid://ccwb7bmjph5un"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_mc4wp"]
 [ext_resource type="Texture2D" uid="uid://t8apljm57jqa" path="res://graphics/Crow Flying Left/CFL1.png" id="2_rx0d0"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bafjcbskond3a" path="res://graphics/Crow Flying Right/CFR1.png" id="5_dg5pa"]
 [ext_resource type="Texture2D" uid="uid://cxndvf4yv20we" path="res://graphics/Crow Flying Right/CFR2.png" id="6_x411j"]
 [ext_resource type="Texture2D" uid="uid://bpimdlpc7hqvn" path="res://graphics/Crow Flying Right/CFR3.png" id="7_6t0g6"]
+[ext_resource type="PackedScene" uid="uid://cppr1vx0grq8r" path="res://dialogues/dialogue.tscn" id="9_3ul48"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_vivnw"]
 animations = [{
@@ -91,6 +92,8 @@ shape = SubResource("CircleShape2D_1mc4c")
 [node name="invincibility-cooldown" type="Timer" parent="."]
 
 [node name="attack-cooldown" type="Timer" parent="."]
+
+[node name="Dialogue" parent="." instance=ExtResource("9_3ul48")]
 
 [connection signal="body_entered" from="player_hitbox" to="." method="_on_player_hitbox_body_entered"]
 [connection signal="body_exited" from="player_hitbox" to="." method="_on_player_hitbox_body_exited"]
