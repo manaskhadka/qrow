@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://b8i3w6yq3u6cb"]
+[gd_scene load_steps=29 format=3 uid="uid://b8i3w6yq3u6cb"]
 
 [ext_resource type="PackedScene" uid="uid://do027h1kv333v" path="res://test-level.tscn" id="1_4m6ml"]
 [ext_resource type="PackedScene" uid="uid://ccwb7bmjph5un" path="res://player.tscn" id="2_bcbvm"]
@@ -22,6 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://clhytlpwgqxwh" path="res://graphics/Pixel Potions/12-removebg-preview.png" id="21_7areq"]
 [ext_resource type="Texture2D" uid="uid://r8pwdy5l5sas" path="res://graphics/Pixel Potions/1-removebg-preview_preview_rev_1.png" id="22_my6qv"]
 [ext_resource type="AudioStream" uid="uid://fgtvl4cddwh6" path="res://Solve the Riddle music.mp3" id="23_dksec"]
+[ext_resource type="Texture2D" uid="uid://depfqa2hxlwc6" path="res://graphics/PNG image-4754-8F17-67-0.png" id="23_lh4bv"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_6fwv1"]
 shader = ExtResource("7_pcqhn")
@@ -133,11 +134,6 @@ texture = ExtResource("10_x8pov")
 
 [node name="Shelf" type="Sprite2D" parent="Potions Shelf/Shelf/Shelf2"]
 position = Vector2(46, 0)
-texture = ExtResource("10_x8pov")
-
-[node name="Shelf" type="Sprite2D" parent="Potions Shelf/Shelf/Shelf2/Shelf"]
-position = Vector2(57.5001, 0)
-scale = Vector2(1.50001, 1)
 texture = ExtResource("10_x8pov")
 
 [node name="2-removebg-preview" type="Sprite2D" parent="Potions Shelf"]
@@ -756,6 +752,15 @@ texture = ExtResource("22_my6qv")
 stream = ExtResource("23_dksec")
 volume_db = -20.0
 autoplay = true
+
+[node name="PngImage-4754-8f17-67-0" type="Sprite2D" parent="."]
+position = Vector2(398, 23)
+texture = ExtResource("23_lh4bv")
+
+[node name="PngImage-4754-8f17-67-1" type="Sprite2D" parent="."]
+position = Vector2(451, 23)
+scale = Vector2(1.3125, 1)
+texture = ExtResource("23_lh4bv")
 
 [connection signal="body_entered" from="Cedric Door" to="Cedric Door" method="_on_body_entered"]
 [connection signal="body_exited" from="Cedric Door" to="Cedric Door" method="_on_body_exited"]
