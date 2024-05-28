@@ -7,13 +7,10 @@ func _ready():
 		
 func _on_body_entered(body):
 	entered = true # Replace with function body.
-	print("I am close")
-
+	
 func _on_body_exited(body):
 	entered = false # Replace with function body.
-	print(find_child("object").material.get_shader_parameter("outline_enabled"))
 	find_child("object").material.set_shader_parameter("outline_enabled", false)
-	print(find_child("object").material.get_shader_parameter("outline_enabled"))
 
 func _process(delta):
 	if entered == true:
