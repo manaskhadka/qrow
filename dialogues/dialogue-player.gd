@@ -24,14 +24,16 @@ func load_dialogue():
 	var file = "path"
 	var json_string = FileAccess.get_file_as_string(dialogue_file)
 	var json_dict = JSON.parse_string(json_string)
+	print("LOADED TEXT:")
 	print(json_string)
+	print("\n")
 	return json_dict
 	
 func _input(event):
 	if not d_active:
 		return 
 		
-	if event.is_action_pressed("attack"):
+	if event.is_action_pressed("ui_accept"):
 		next_script()
 
 func next_script():
@@ -43,7 +45,6 @@ func next_script():
 		$NinePatchRect.visible = false
 		return
 		
-	print("displaying text:", dialogue[curr_dialogue_id]['text'])
 	$NinePatchRect/Name.text = dialogue[curr_dialogue_id]['name']
 	$NinePatchRect/Text.text = dialogue[curr_dialogue_id]['text']
 	
