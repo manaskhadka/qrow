@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://b6jo6pprinsbb"]
 
-[ext_resource type="Texture2D" uid="uid://cxwiqdccs88ub" path="res://graphics/PNG image-9C9ED4F5634B-1.png" id="1_5ttw5"]
+[ext_resource type="Texture2D" uid="uid://cxwiqdccs88ub" path="res://graphics/letter closeup.png" id="1_5ttw5"]
 [ext_resource type="Script" path="res://assets/interactables/Button1.gd" id="2_mbjmb"]
 
 [node name="world2" type="Node2D"]
