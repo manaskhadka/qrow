@@ -10,6 +10,43 @@ offset_right = 1153.0
 offset_bottom = 649.0
 texture = ExtResource("1_7c3wj")
 
+[node name="LineEdit2" type="LineEdit" parent="TextureRect"]
+layout_mode = 0
+offset_left = 235.0
+offset_top = 406.0
+offset_right = 388.0
+offset_bottom = 467.0
+
+[node name="LineEdit3" type="LineEdit" parent="TextureRect"]
+offset_left = 56.0
+offset_top = 406.0
+offset_right = 209.0
+offset_bottom = 467.0
+
+[node name="LineEdit4" type="LineEdit" parent="TextureRect"]
+offset_left = 415.0
+offset_top = 406.0
+offset_right = 568.0
+offset_bottom = 467.0
+
+[node name="LineEdit5" type="LineEdit" parent="TextureRect"]
+offset_left = 590.0
+offset_top = 406.0
+offset_right = 743.0
+offset_bottom = 467.0
+
+[node name="LineEdit6" type="LineEdit" parent="TextureRect"]
+offset_left = 770.0
+offset_top = 406.0
+offset_right = 923.0
+offset_bottom = 467.0
+
+[node name="LineEdit7" type="LineEdit" parent="TextureRect"]
+offset_left = 951.0
+offset_top = 406.0
+offset_right = 1104.0
+offset_bottom = 467.0
+
 [node name="Button" parent="." instance=ExtResource("2_k8it2")]
 offset_left = 987.0
 offset_top = 28.0
