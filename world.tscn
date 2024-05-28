@@ -2,8 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://do027h1kv333v" path="res://test-level.tscn" id="1_4m6ml"]
 [ext_resource type="PackedScene" uid="uid://ccwb7bmjph5un" path="res://player.tscn" id="2_bcbvm"]
+[ext_resource type="Texture2D" uid="uid://4v6w16auncao" path="res://test_door.png" id="5_pxg1d"]
 [ext_resource type="Texture2D" uid="uid://cou65suxdsmc0" path="res://desert-game-assets/note.png" id="5_taxmi"]
-[ext_resource type="Texture2D" uid="uid://d0kl7w8qlyd70" path="res://desert-game-assets/door.jpg" id="6_xnwc7"]
 [ext_resource type="Script" path="res://interactable-area2d.gd" id="7_6h0fw"]
 [ext_resource type="Texture2D" uid="uid://drhulqcvq06o5" path="res://graphics/Witch.png" id="7_lyobl"]
 [ext_resource type="Shader" path="res://world.gdshader" id="7_pcqhn"]
@@ -68,12 +68,12 @@ transition_scene = "res://assets/interactables/puzzle-door.tscn"
 
 [node name="Door" type="Sprite2D" parent="Cedric Door"]
 material = SubResource("ShaderMaterial_6fwv1")
-position = Vector2(528, 102)
-scale = Vector2(0.137097, 0.137097)
-texture = ExtResource("6_xnwc7")
+position = Vector2(525, 108)
+scale = Vector2(0.872, 0.872)
+texture = ExtResource("5_pxg1d")
 
 [node name="Door Collision" type="CollisionShape2D" parent="Cedric Door"]
-position = Vector2(528, 103)
+position = Vector2(525, 104)
 shape = SubResource("CircleShape2D_hlxmn")
 
 [node name="Note2" type="Area2D" parent="." node_paths=PackedStringArray("sprite")]
