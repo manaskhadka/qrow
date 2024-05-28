@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://do027h1kv333v" path="res://test-level.tscn" id="1_4m6ml"]
 [ext_resource type="PackedScene" uid="uid://ccwb7bmjph5un" path="res://player.tscn" id="2_bcbvm"]
 [ext_resource type="Texture2D" uid="uid://4v6w16auncao" path="res://test_door.png" id="5_pxg1d"]
-[ext_resource type="Texture2D" uid="uid://cou65suxdsmc0" path="res://desert-game-assets/note.png" id="5_taxmi"]
+[ext_resource type="Texture2D" uid="uid://cxwiqdccs88ub" path="res://graphics/PNG image-9C9ED4F5634B-1.png" id="6_iyn0l"]
 [ext_resource type="Script" path="res://interactable-area2d.gd" id="7_6h0fw"]
 [ext_resource type="Texture2D" uid="uid://drhulqcvq06o5" path="res://graphics/Witch.png" id="7_lyobl"]
 [ext_resource type="Shader" path="res://world.gdshader" id="7_pcqhn"]
@@ -86,12 +86,13 @@ interactable_area_name = "note"
 
 [node name="Note" type="Sprite2D" parent="Note2"]
 material = SubResource("ShaderMaterial_2hfnc")
-position = Vector2(593, 132)
-scale = Vector2(0.0597222, 0.096243)
-texture = ExtResource("5_taxmi")
+position = Vector2(592, 114)
+rotation = 0.000116149
+scale = Vector2(0.124161, 0.126527)
+texture = ExtResource("6_iyn0l")
 
 [node name="Note Collision" type="CollisionShape2D" parent="Note2"]
-position = Vector2(592, 136)
+position = Vector2(590, 116)
 shape = SubResource("CircleShape2D_hlxmn")
 
 [node name="Witch2" type="Area2D" parent="." node_paths=PackedStringArray("sprite")]
