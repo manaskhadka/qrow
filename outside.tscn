@@ -7,9 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://7xutwwqjt1f1" path="res://graphics/Deep Forest/Foliage/Bush1_3.png" id="5_5mpe6"]
 [ext_resource type="Texture2D" uid="uid://bqx7lwqhohnb4" path="res://graphics/Deep Forest/Foliage/Bush1_4.png" id="6_iru7p"]
 [ext_resource type="PackedScene" uid="uid://cvo2xhojg2kx5" path="res://enemy.tscn" id="7_dri43"]
-[ext_resource type="Texture2D" uid="uid://bckhqsqy60785" path="res://Bush4_1.png" id="8_3fvtt"]
+[ext_resource type="Texture2D" uid="uid://bckhqsqy60785" path="res://graphics/Bush4_1.png" id="8_3fvtt"]
 [ext_resource type="Script" path="res://GetInHouse.gd" id="9_bfioh"]
-[ext_resource type="Texture2D" uid="uid://7gi6woucib8m" path="res://02.png" id="10_821ml"]
+[ext_resource type="Texture2D" uid="uid://7gi6woucib8m" path="res://graphics/02.png" id="10_821ml"]
 [ext_resource type="AudioStream" uid="uid://dg2ehin641gqf" path="res://Magic Tree music.mp3" id="11_uusib"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8o5td"]

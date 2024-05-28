@@ -6,8 +6,8 @@ var entered = false
 # Set this to the sprite that this interactable area is related to
 @export var sprite : Sprite2D;
 
-# Set to true if the interactable is a person with dialogue
-@export var is_char : bool = false 
+# Set the correct type of object this is
+@export_enum("Character", "Item-Collectable", "Item-Viewable") var obj_type
 
 # Set to the file location holding the dialogue if it exists
 @export_file("*.json") var dialogue_file
@@ -42,6 +42,10 @@ func _input(event):
 		if dialogue_file:
 			use_dialogue()
 		
+		if obj_type == 2:
+			# TODO: Add to inventory and remove from world
+			pass 
+
 		if transition_scene:
 			get_tree().change_scene_to_file(transition_scene)
 		

@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://b8i3w6yq3u6cb"]
+[gd_scene load_steps=28 format=3 uid="uid://b8i3w6yq3u6cb"]
 
 [ext_resource type="PackedScene" uid="uid://do027h1kv333v" path="res://test-level.tscn" id="1_4m6ml"]
 [ext_resource type="PackedScene" uid="uid://ccwb7bmjph5un" path="res://player.tscn" id="2_bcbvm"]
@@ -7,7 +7,6 @@
 [ext_resource type="Script" path="res://interactable-area2d.gd" id="7_6h0fw"]
 [ext_resource type="Texture2D" uid="uid://drhulqcvq06o5" path="res://graphics/Witch.png" id="7_lyobl"]
 [ext_resource type="Shader" path="res://world.gdshader" id="7_pcqhn"]
-[ext_resource type="Texture2D" uid="uid://cukpmjqdu1wrp" path="res://graphics/Wood Tile.png" id="8_hr24x"]
 [ext_resource type="Script" path="res://leaveDoor.gd" id="9_w2mbr"]
 [ext_resource type="Texture2D" uid="uid://cxripjdpm6n8a" path="res://graphics/Top-Down Retro Interior/Shelf.png" id="10_x8pov"]
 [ext_resource type="Texture2D" uid="uid://b45u31wqwiemp" path="res://graphics/Pixel Potions/2-removebg-preview.png" id="11_hufkg"]
@@ -64,6 +63,7 @@ scale = Vector2(0.984563, 0.987805)
 position = Vector2(22, 20)
 script = ExtResource("7_6h0fw")
 sprite = NodePath("Door")
+obj_type = 2
 transition_scene = "res://assets/interactables/puzzle-door.tscn"
 
 [node name="Door" type="Sprite2D" parent="Cedric Door"]
@@ -80,7 +80,8 @@ shape = SubResource("CircleShape2D_hlxmn")
 position = Vector2(82, 15)
 script = ExtResource("7_6h0fw")
 sprite = NodePath("Note")
-transition_scene = "res://world4.tscn"
+obj_type = 1
+transition_scene = "res://assets/interactables/cedric-note.tscn"
 interactable_area_name = "note"
 
 [node name="Note" type="Sprite2D" parent="Note2"]
@@ -97,7 +98,7 @@ shape = SubResource("CircleShape2D_hlxmn")
 position = Vector2(82, 15)
 script = ExtResource("7_6h0fw")
 sprite = NodePath("Witch")
-is_char = true
+obj_type = 0
 dialogue_file = "res://dialogues/witch-sample-dialogue.json"
 interactable_area_name = "witch"
 
@@ -109,17 +110,6 @@ texture = ExtResource("7_lyobl")
 [node name="Witch Collision" type="CollisionShape2D" parent="Witch2"]
 position = Vector2(282, 182)
 shape = SubResource("CircleShape2D_hlxmn")
-
-[node name="SpacebarInteract" type="Label" parent="."]
-offset_left = 35.0
-offset_top = 114.0
-offset_right = 237.0
-offset_bottom = 137.0
-text = "Press Spacebar to interact"
-
-[node name="WoodTile" type="Sprite2D" parent="."]
-position = Vector2(-165, 307)
-texture = ExtResource("8_hr24x")
 
 [node name="leaveDoor" type="Area2D" parent="."]
 position = Vector2(45, 219)
