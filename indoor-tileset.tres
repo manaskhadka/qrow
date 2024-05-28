@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=17 format=3 uid="uid://dlr8kjuwtlyrs"]
+[gd_resource type="TileSet" load_steps=17 format=3 uid="uid://d0k7l5qyie72r"]
 
 [ext_resource type="Texture2D" uid="uid://be7yhc0x8bwlv" path="res://desert-game-assets/desert-level-tilemap.png" id="1_dey7i"]
 [ext_resource type="Texture2D" uid="uid://b33q2ng1yrabv" path="res://graphics/Cobblestone Tile.png" id="2_cdrkj"]

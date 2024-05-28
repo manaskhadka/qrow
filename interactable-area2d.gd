@@ -8,6 +8,7 @@ var entered = false
 @export var sprite : Sprite2D;
 
 # Set the correct type of object this is
+enum {CHARACTER, ITEM_C, ITEM_V}
 @export_enum("Character", "Item-Collectable", "Item-Viewable") var obj_type
 
 # Set to the file location holding the dialogue if it exists
@@ -44,7 +45,7 @@ func _input(event):
 		if dialogue_file:
 			use_dialogue()
 		
-		if obj_type == 2:
+		if obj_type == ITEM_C:
 			# TODO: Add to inventory and remove from world
 			pass 
 
