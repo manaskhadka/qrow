@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://b6jo6pprinsbb"]
+
+[ext_resource type="Texture2D" uid="uid://cxwiqdccs88ub" path="res://graphics/PNG image-9C9ED4F5634B-1.png" id="1_5ttw5"]
+[ext_resource type="Script" path="res://assets/interactables/Button1.gd" id="2_mbjmb"]
+
+[node name="world2" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 216.0
+offset_top = 15.0
+offset_right = 965.0
+offset_bottom = 664.0
+texture = ExtResource("1_5ttw5")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 961.0
+offset_top = 26.0
+offset_right = 1131.0
+offset_bottom = 105.0
+text = "EXIT"
+script = ExtResource("2_mbjmb")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

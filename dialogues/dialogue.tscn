@@ -1,0 +1,62 @@
+[gd_scene load_steps=3 format=3 uid="uid://cppr1vx0grq8r"]
+
+[ext_resource type="Script" path="res://dialogues/dialogue-player.gd" id="1_kakav"]
+[ext_resource type="Texture2D" uid="uid://c7eh4g4rb2kvu" path="res://dialogues/dialogue_box.png" id="1_m6oyw"]
+
+[node name="Dialogue" type="CanvasLayer"]
+script = ExtResource("1_kakav")
+dialogue_file = "res://dialogues/text.json"
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+offset_left = 60.0
+offset_top = 391.0
+offset_right = 1099.0
+offset_bottom = 617.0
+texture = ExtResource("1_m6oyw")
+region_rect = Rect2(1.61986, 0, 28.7828, 32)
+
+[node name="Name" type="RichTextLabel" parent="NinePatchRect"]
+layout_mode = 0
+offset_left = 109.0
+offset_top = 172.0
+offset_right = 193.0
+offset_bottom = 216.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 23
+bbcode_enabled = true
+text = "Name"
+
+[node name="Text" type="RichTextLabel" parent="NinePatchRect"]
+layout_mode = 0
+offset_left = 226.0
+offset_top = 57.0
+offset_right = 939.0
+offset_bottom = 169.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 33
+bbcode_enabled = true
+text = "This is sample text that demonstrates just about how many words fit on this box"
+
+[node name="Char Portrait Frame" type="ReferenceRect" parent="NinePatchRect"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 36.0
+offset_right = 196.0
+offset_bottom = 168.0
+border_color = Color(0, 0, 0, 1)
+border_width = 2.0
+editor_only = false
+
+[node name="TextureRect" type="TextureRect" parent="NinePatchRect"]
+layout_mode = 0
+offset_left = 184.0
+offset_top = 62.0
+offset_right = 237.0
+offset_bottom = 101.0
+stretch_mode = 4
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.544
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
