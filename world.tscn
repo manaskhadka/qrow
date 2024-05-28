@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://b8i3w6yq3u6cb"]
+[gd_scene load_steps=29 format=3 uid="uid://b8i3w6yq3u6cb"]
 
 [ext_resource type="PackedScene" uid="uid://do027h1kv333v" path="res://test-level.tscn" id="1_4m6ml"]
 [ext_resource type="PackedScene" uid="uid://ccwb7bmjph5un" path="res://player.tscn" id="2_bcbvm"]
@@ -24,6 +24,7 @@
 [ext_resource type="Texture2D" uid="uid://clhytlpwgqxwh" path="res://graphics/Pixel Potions/12-removebg-preview.png" id="21_7areq"]
 [ext_resource type="Texture2D" uid="uid://r8pwdy5l5sas" path="res://graphics/Pixel Potions/1-removebg-preview_preview_rev_1.png" id="22_my6qv"]
 [ext_resource type="AudioStream" uid="uid://fgtvl4cddwh6" path="res://Solve the Riddle music.mp3" id="23_dksec"]
+[ext_resource type="PackedScene" uid="uid://2ab3m43kro2h" path="res://reuseable_interacteable.tscn" id="25_4nfod"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hlxmn"]
 radius = 25.0799
@@ -128,6 +129,9 @@ texture = ExtResource("10_x8pov")
 position = Vector2(59.5, 0)
 scale = Vector2(1.58696, 1)
 texture = ExtResource("10_x8pov")
+
+[node name="ReuseableInteracteable" parent="Potions Shelf/Shelf/Shelf2/Shelf/Shelf" instance=ExtResource("25_4nfod")]
+position = Vector2(27.9458, 157)
 
 [node name="2-removebg-preview" type="Sprite2D" parent="Potions Shelf"]
 position = Vector2(186, 11)
