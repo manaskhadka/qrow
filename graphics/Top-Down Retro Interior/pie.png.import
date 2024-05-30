@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bqvrvx2s3vn2y"
-path="res://.godot/imported/Shelf.png-e69fca4e5179392cb192812783ad9dd6.ctex"
+uid="uid://ebp0n0jjurct"
+path="res://.godot/imported/pie.png-7a333e41487a9236f4d09ad0b6892d48.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/Top-Down Retro Interior/Shelf.png"
-dest_files=["res://.godot/imported/Shelf.png-e69fca4e5179392cb192812783ad9dd6.ctex"]
+source_file="res://graphics/Top-Down Retro Interior/pie.png"
+dest_files=["res://.godot/imported/pie.png-7a333e41487a9236f4d09ad0b6892d48.ctex"]
 
 [params]
 
