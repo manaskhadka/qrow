@@ -11,6 +11,7 @@ var curr_direction = "right"
 var is_attacking = false
 
 @onready var anim_sprite: AnimatedSprite2D = $AnimatedSprite2D as AnimatedSprite2D	
+@onready var anim_sprite2: AnimatedSprite2D = $AnimatedSprite2D2 as AnimatedSprite2D
 
 func _physics_process(delta) -> void:
 	attack()
@@ -53,11 +54,11 @@ func attack():
 			global.player_current_attack = true
 			is_attacking = true
 			if curr_direction == "right":
+				anim_sprite2.play("Claw")
 				# handle animations
-				pass 
 			if curr_direction == "left":
+				anim_sprite2.play("Claw")
 				# handle animations
-				pass
 			$"attack-cooldown".start()
 	
 	
