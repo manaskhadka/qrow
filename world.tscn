@@ -920,5 +920,6 @@ texture = ExtResource("27_fcbfc")
 [connection signal="body_exited" from="Pie" to="Pie" method="_on_body_exited"]
 [connection signal="body_entered" from="Tea" to="Tea" method="_on_body_entered"]
 [connection signal="body_exited" from="Tea" to="Tea" method="_on_body_exited"]
+[connection signal="input_event" from="test" to="test" method="_on_input_event"]
 [connection signal="mouse_entered" from="test" to="test" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="test" to="test" method="_on_mouse_exited"]

@@ -66,3 +66,8 @@ func _on_mouse_exited():
 		print("Exited interactable area:", interactable_area_name)
 	entered = false 
 	sprite.material.set_shader_parameter("outline_enabled", false)
+
+
+func _on_input_event(viewport, event, shape_idx):
+	if event is InputEventMouseButton:
+		print("pressed")
