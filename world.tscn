@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://b8i3w6yq3u6cb"]
+[gd_scene load_steps=40 format=3 uid="uid://b8i3w6yq3u6cb"]
 
 [ext_resource type="PackedScene" uid="uid://do027h1kv333v" path="res://test-level.tscn" id="1_4m6ml"]
 [ext_resource type="PackedScene" uid="uid://ccwb7bmjph5un" path="res://player.tscn" id="2_bcbvm"]
@@ -23,8 +23,10 @@
 [ext_resource type="Texture2D" uid="uid://r8pwdy5l5sas" path="res://graphics/Pixel Potions/1-removebg-preview_preview_rev_1.png" id="22_my6qv"]
 [ext_resource type="AudioStream" uid="uid://fgtvl4cddwh6" path="res://Solve the Riddle music.mp3" id="23_dksec"]
 [ext_resource type="Texture2D" uid="uid://depfqa2hxlwc6" path="res://graphics/PNG image-4754-8F17-67-0.png" id="23_lh4bv"]
+[ext_resource type="Script" path="res://clickable.gd" id="23_tg6s0"]
 [ext_resource type="Texture2D" uid="uid://ebp0n0jjurct" path="res://graphics/Top-Down Retro Interior/pie.png" id="24_qcgfe"]
 [ext_resource type="Texture2D" uid="uid://cyifakrdeuduj" path="res://graphics/Top-Down Retro Interior/tea.png" id="25_0fkea"]
+[ext_resource type="Texture2D" uid="uid://do2dai53biuwj" path="res://graphics/3.png" id="27_fcbfc"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_6fwv1"]
 shader = ExtResource("7_pcqhn")
@@ -65,6 +67,13 @@ shader_parameter/outline_color = Color(1, 1, 1, 1)
 shader_parameter/outline_enabled = false
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_2mixa"]
+shader = ExtResource("7_pcqhn")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_enabled = false
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jnvxd"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_t4y7a"]
 shader = ExtResource("7_pcqhn")
 shader_parameter/outline_color = Color(1, 1, 1, 1)
 shader_parameter/outline_enabled = false
@@ -880,6 +889,21 @@ texture = ExtResource("25_0fkea")
 position = Vector2(91, -193)
 shape = SubResource("CircleShape2D_ll84j")
 
+[node name="test" type="Area2D" parent="." node_paths=PackedStringArray("sprite")]
+script = ExtResource("23_tg6s0")
+sprite = NodePath("Sprite2D")
+interactable_area_name = "test"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="test"]
+position = Vector2(226, 127)
+shape = SubResource("CircleShape2D_jnvxd")
+
+[node name="Sprite2D" type="Sprite2D" parent="test"]
+material = SubResource("ShaderMaterial_t4y7a")
+position = Vector2(226, 127)
+scale = Vector2(0.320312, 0.273437)
+texture = ExtResource("27_fcbfc")
+
 [connection signal="body_entered" from="Cedric Door" to="Cedric Door" method="_on_body_entered"]
 [connection signal="body_exited" from="Cedric Door" to="Cedric Door" method="_on_body_exited"]
 [connection signal="body_entered" from="Note2" to="Note2" method="_on_body_entered"]
@@ -896,3 +920,5 @@ shape = SubResource("CircleShape2D_ll84j")
 [connection signal="body_exited" from="Pie" to="Pie" method="_on_body_exited"]
 [connection signal="body_entered" from="Tea" to="Tea" method="_on_body_entered"]
 [connection signal="body_exited" from="Tea" to="Tea" method="_on_body_exited"]
+[connection signal="mouse_entered" from="test" to="test" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="test" to="test" method="_on_mouse_exited"]
