@@ -29,7 +29,8 @@ func _ready():
 	sprite.material.set_shader_parameter("outline_enabled", false)
 
 func _input(event):
-	if entered and event.is_action_pressed("ui_accept") and len(get_overlapping_areas()) > 0:
+	if entered and event is InputEventMouseButton:
+		print("pressed")
 		if dialogue_file:
 			use_dialogue()
 		
@@ -68,6 +69,3 @@ func _on_mouse_exited():
 	sprite.material.set_shader_parameter("outline_enabled", false)
 
 
-func _on_input_event(viewport, event, shape_idx):
-	if event is InputEventMouseButton:
-		print("pressed")

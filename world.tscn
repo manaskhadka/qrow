@@ -892,6 +892,7 @@ shape = SubResource("CircleShape2D_ll84j")
 [node name="test" type="Area2D" parent="." node_paths=PackedStringArray("sprite")]
 script = ExtResource("23_tg6s0")
 sprite = NodePath("Sprite2D")
+transition_scene = "res://outside.tscn"
 interactable_area_name = "test"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="test"]
