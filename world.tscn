@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://b8i3w6yq3u6cb"]
+[gd_scene load_steps=40 format=3 uid="uid://b8i3w6yq3u6cb"]
 
 [ext_resource type="PackedScene" uid="uid://do027h1kv333v" path="res://test-level.tscn" id="1_4m6ml"]
 [ext_resource type="PackedScene" uid="uid://ccwb7bmjph5un" path="res://player.tscn" id="2_bcbvm"]
@@ -27,7 +27,6 @@
 [ext_resource type="Texture2D" uid="uid://ebp0n0jjurct" path="res://graphics/Top-Down Retro Interior/pie.png" id="24_qcgfe"]
 [ext_resource type="Texture2D" uid="uid://cyifakrdeuduj" path="res://graphics/Top-Down Retro Interior/tea.png" id="25_0fkea"]
 [ext_resource type="Texture2D" uid="uid://do2dai53biuwj" path="res://graphics/3.png" id="27_fcbfc"]
-[ext_resource type="PackedScene" uid="uid://cftoisbhfytx2" path="res://inventory.tscn" id="28_5tus4"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_6fwv1"]
 shader = ExtResource("7_pcqhn")
@@ -905,11 +904,6 @@ material = SubResource("ShaderMaterial_t4y7a")
 position = Vector2(226, 127)
 scale = Vector2(0.320312, 0.273437)
 texture = ExtResource("27_fcbfc")
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="Inventory" parent="CanvasLayer" instance=ExtResource("28_5tus4")]
-position = Vector2(224, 55)
 
 [connection signal="body_entered" from="Cedric Door" to="Cedric Door" method="_on_body_entered"]
 [connection signal="body_exited" from="Cedric Door" to="Cedric Door" method="_on_body_exited"]
