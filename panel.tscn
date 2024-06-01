@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://cv5kikv2v1anj"]
+
+[ext_resource type="Texture2D" uid="uid://dwna6atgkbg4f" path="res://inventorySlot.png" id="1_bthdt"]
+
+[node name="Panel" type="Panel"]
+custom_minimum_size = Vector2(20, 20)
+anchors_preset = -1
+anchor_right = 0.018
+anchor_bottom = 0.032
+offset_right = -0.736002
+offset_bottom = -0.736
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_bthdt")
+centered = false
