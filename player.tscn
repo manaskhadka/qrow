@@ -103,6 +103,7 @@ unique_name_in_owner = true
 [node name="Inventory" type="CanvasLayer" parent="."]
 
 [node name="Inventory" parent="Inventory" instance=ExtResource("11_5h1gq")]
+position = Vector2(218, 54)
 
 [connection signal="body_entered" from="player_hitbox" to="." method="_on_player_hitbox_body_entered"]
 [connection signal="body_exited" from="player_hitbox" to="." method="_on_player_hitbox_body_exited"]
