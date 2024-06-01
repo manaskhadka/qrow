@@ -34,9 +34,12 @@ func _input(event):
 		if dialogue_file:
 			use_dialogue()
 		
-		if obj_type == 2:
+		if obj_type == 1:
 			# TODO: Add to inventory and remove from world
-			pass 
+			print("can add into inventory")
+			print(global.items)
+			global.items.append(sprite)
+			print(global.items)
 
 		if transition_scene:
 			get_tree().change_scene_to_file(transition_scene)
