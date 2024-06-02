@@ -38,10 +38,22 @@ func _input(event):
 			# TODO: Add to inventory and remove from world
 			print("can add into inventory")
 			print(global.items)
-			var inventory_slot = InventorySlot.new()
-			inventory_slot.texture = sprite.texture
-			inventory_slot.amount = 1
-			global.items.append(inventory_slot)
+			
+			if global.items.size() == 0:
+					var inventory_slot = InventorySlot.new()
+					inventory_slot.texture = sprite.texture
+					inventory_slot.amount = 1
+					global.items.append(inventory_slot)
+			else:
+				for i in range(global.items.size()):
+					if global.items[i].texture == sprite.texture:
+						global.items[i].amount += 1
+						return
+					else:
+						var inventory_slot = InventorySlot.new()
+						inventory_slot.texture = sprite.texture
+						inventory_slot.amount = 1
+						global.items.append(inventory_slot)
 			print(global.items)
 
 		if transition_scene:

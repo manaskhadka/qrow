@@ -23,7 +23,8 @@ func _process(delta):
 		for i in range(min):
 			print("slots at i:", slots[i])
 			print("global items:", global.items)
-			print("specific global item:", global.items[i])
+			print("specific global item texture:", global.items[i].texture)
+			print("specific global item amount:", global.items[i].amount)
 			slots[i].update(global.items[i].texture)
 			
 		if is_open:
