@@ -27,6 +27,25 @@ func _ready():
 	# $object.texture = load(image)
 	entered = false
 	sprite.material.set_shader_parameter("outline_enabled", false)
+	
+func add():
+	if global.items.size() == 0:
+		var inventory_slot = InventorySlot.new()
+		inventory_slot.texture = sprite.texture
+		inventory_slot.amount = 1
+		global.items.append(inventory_slot)
+		return
+	else:
+		for i in range(global.items.size()):
+			if global.items[i].texture == sprite.texture:
+				global.items[i].amount += 1
+				return
+
+		var inventory_slot = InventorySlot.new()
+		inventory_slot.texture = sprite.texture
+		inventory_slot.amount = 1
+		global.items.append(inventory_slot)
+		return
 
 func _input(event):
 	if entered and event is InputEventMouseButton and event.pressed == true:
@@ -35,24 +54,8 @@ func _input(event):
 			use_dialogue()
 		
 		if obj_type == 1:	
-			if global.items.size() == 0:
-					var inventory_slot = InventorySlot.new()
-					inventory_slot.texture = sprite.texture
-					inventory_slot.amount = 1
-					global.items.append(inventory_slot)
-					return
-			else:
-				for i in range(global.items.size()):
-					if global.items[i].texture == sprite.texture:
-						global.items[i].amount += 1
-						return
-
-				var inventory_slot = InventorySlot.new()
-				inventory_slot.texture = sprite.texture
-				inventory_slot.amount = 1
-				global.items.append(inventory_slot)
-				return
-
+			add()
+			
 		if transition_scene:
 			get_tree().change_scene_to_file(transition_scene)
 		
