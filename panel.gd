@@ -2,6 +2,7 @@ extends Panel
 
 @onready var backgroundSprite: Sprite2D = $background
 @onready var itemSprite: Sprite2D = $CenterContainer/Panel2/item
+@onready var itemLabel: Label = $CenterContainer/Panel2/itemLabel
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -12,14 +13,13 @@ func update(item2: InventorySlot):
 	if !item2:
 		backgroundSprite.frame = 0
 		itemSprite.visible = false
-		$CenterContainer/Panel2/itemLabelabel.visible = false
+		itemLabel.visible = false
 	else:
 		backgroundSprite.frame = 1
 		itemSprite.visible = true
-		$CenterContainer/Panel2/itemLabel.visible = true
-		$CenterContainer/Panel2/itemLabel.text = str(item2.amount)
-		print("show image")
-		$CenterContainer/Panel2/item.texture = item2.texture
+		itemLabel.visible = true
+		itemLabel.text = str(item2.amount)
+		itemSprite.texture = item2.texture
 		
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
