@@ -1,5 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://cv5kikv2v1anj"]
+[gd_scene load_steps=3 format=3 uid="uid://cv5kikv2v1anj"]
 
+[ext_resource type="Script" path="res://panel.gd" id="1_4umdq"]
 [ext_resource type="Texture2D" uid="uid://dwna6atgkbg4f" path="res://inventorySlot.png" id="1_bthdt"]
 
 [node name="Panel" type="Panel"]
@@ -9,7 +10,10 @@ anchor_right = 0.018
 anchor_bottom = 0.032
 offset_right = -0.736002
 offset_bottom = -0.736
+script = ExtResource("1_4umdq")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="background" type="Sprite2D" parent="."]
 texture = ExtResource("1_bthdt")
 centered = false
+
+[node name="item" type="Sprite2D" parent="."]
