@@ -917,7 +917,7 @@ texture = ExtResource("27_fcbfc")
 position = Vector2(149, 167)
 script = ExtResource("23_tg6s0")
 sprite = NodePath("Sprite2D")
-obj_type = 1
+obj_type = 2
 interactable_area_name = "finite"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="test2"]

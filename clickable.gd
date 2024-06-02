@@ -56,6 +56,10 @@ func _input(event):
 		if obj_type == 1:	
 			add()
 			
+		if obj_type == 2:
+			queue_free()
+			add()
+			
 		if transition_scene:
 			get_tree().change_scene_to_file(transition_scene)
 		
