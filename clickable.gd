@@ -29,7 +29,7 @@ func _ready():
 	sprite.material.set_shader_parameter("outline_enabled", false)
 
 func _input(event):
-	if entered and event is InputEventMouseButton:
+	if entered and event is InputEventMouseButton and event.pressed == true:
 		print("pressed")
 		if dialogue_file:
 			use_dialogue()
