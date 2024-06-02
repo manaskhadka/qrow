@@ -1,7 +1,7 @@
 extends Panel
 
 @onready var backgroundSprite: Sprite2D = $background
-@onready var itemSprite: Sprite2D = $item
+@onready var itemSprite: Sprite2D = $CenterContainer/Panel2/item
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -16,7 +16,7 @@ func update(item2: Sprite2D):
 		backgroundSprite.frame = 1
 		itemSprite.visible = true
 		print("show image")
-		$item.texture = item2.texture
+		$CenterContainer/Panel2/item.texture = item2.texture
 		
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
