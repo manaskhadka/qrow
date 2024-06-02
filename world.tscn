@@ -26,8 +26,8 @@
 [ext_resource type="Script" path="res://clickable.gd" id="23_tg6s0"]
 [ext_resource type="Texture2D" uid="uid://ebp0n0jjurct" path="res://graphics/Top-Down Retro Interior/pie.png" id="24_qcgfe"]
 [ext_resource type="Texture2D" uid="uid://cyifakrdeuduj" path="res://graphics/Top-Down Retro Interior/tea.png" id="25_0fkea"]
-[ext_resource type="Texture2D" uid="uid://do2dai53biuwj" path="res://graphics/3.png" id="27_fcbfc"]
-[ext_resource type="Texture2D" uid="uid://ditv5bibxmw85" path="res://graphics/5.png" id="28_sbtxa"]
+[ext_resource type="Texture2D" uid="uid://gjn5rlp524ej" path="res://graphics/3.png" id="27_fcbfc"]
+[ext_resource type="Texture2D" uid="uid://4qiw72u7d54r" path="res://graphics/5.png" id="28_sbtxa"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_6fwv1"]
 shader = ExtResource("7_pcqhn")
