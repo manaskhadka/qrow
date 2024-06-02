@@ -8,7 +8,7 @@ var entered = false
 @export var sprite : Sprite2D;
 
 # Set the correct type of object this is
-@export_enum("Character", "Item-Collectable", "Item-Viewable") var obj_type
+@export_enum("Character", "Item-Collectable-Infinite", "Item-Collectable-Finite", "Item-Viewable") var obj_type
 
 # Set to the file location holding the dialogue if it exists
 @export_file("*.json") var dialogue_file
@@ -34,27 +34,24 @@ func _input(event):
 		if dialogue_file:
 			use_dialogue()
 		
-		if obj_type == 1:
-			# TODO: Add to inventory and remove from world
-			print("can add into inventory")
-			print(global.items)
-			
+		if obj_type == 1:	
 			if global.items.size() == 0:
 					var inventory_slot = InventorySlot.new()
 					inventory_slot.texture = sprite.texture
 					inventory_slot.amount = 1
 					global.items.append(inventory_slot)
+					return
 			else:
 				for i in range(global.items.size()):
 					if global.items[i].texture == sprite.texture:
 						global.items[i].amount += 1
 						return
-					else:
-						var inventory_slot = InventorySlot.new()
-						inventory_slot.texture = sprite.texture
-						inventory_slot.amount = 1
-						global.items.append(inventory_slot)
-			print(global.items)
+
+				var inventory_slot = InventorySlot.new()
+				inventory_slot.texture = sprite.texture
+				inventory_slot.amount = 1
+				global.items.append(inventory_slot)
+				return
 
 		if transition_scene:
 			get_tree().change_scene_to_file(transition_scene)
