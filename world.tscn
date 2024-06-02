@@ -850,6 +850,7 @@ position = Vector2(45, 219)
 script = ExtResource("7_6h0fw")
 sprite = NodePath("Bookshelf")
 obj_type = 2
+transition_scene = "res://test.tscn"
 
 [node name="Bookshelf" type="Sprite2D" parent="BookshelfInteract"]
 z_index = 1
