@@ -7,7 +7,7 @@ extends Panel
 func _ready():
 	pass # Replace with function body.
 
-func update(item2: Sprite2D):
+func update(item2: Texture2D):
 	print("update was called")
 	if !item2:
 		backgroundSprite.frame = 0
@@ -16,7 +16,7 @@ func update(item2: Sprite2D):
 		backgroundSprite.frame = 1
 		itemSprite.visible = true
 		print("show image")
-		$CenterContainer/Panel2/item.texture = item2.texture
+		$CenterContainer/Panel2/item.texture = item2
 		
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

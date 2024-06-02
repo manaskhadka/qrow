@@ -16,14 +16,15 @@ func close():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if Input.is_action_just_pressed("i"):
-		print("minimum size")
+		print("just pressed i")
 		var min = min(global.items.size(), slots.size())
-		print(min)
-		print("i")
+		print("min:", min)
+		
 		for i in range(min):
-			print("slot")
-			print(slots[i])
-			slots[i].update(global.items[i])
+			print("slots at i:", slots[i])
+			print("global items:", global.items)
+			print("specific global item:", global.items[i])
+			slots[i].update(global.items[i].texture)
 			
 		if is_open:
 			close()
