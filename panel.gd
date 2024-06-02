@@ -12,9 +12,12 @@ func update(item2: Texture2D):
 	if !item2:
 		backgroundSprite.frame = 0
 		itemSprite.visible = false
+		$CenterContainer/Panel2/itemLabelabel.visible = false
 	else:
 		backgroundSprite.frame = 1
 		itemSprite.visible = true
+		$CenterContainer/Panel2/itemLabel.visible = true
+		$CenterContainer/Panel2/itemLabel.text = "1"
 		print("show image")
 		$CenterContainer/Panel2/item.texture = item2
 		
