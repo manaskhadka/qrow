@@ -25,7 +25,7 @@ func _process(delta):
 			print("global items:", global.items)
 			print("specific global item texture:", global.items[i].texture)
 			print("specific global item amount:", global.items[i].amount)
-			slots[i].update(global.items[i].texture)
+			slots[i].update(global.items[i])
 			
 		if is_open:
 			close()

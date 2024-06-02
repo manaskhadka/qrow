@@ -7,7 +7,7 @@ extends Panel
 func _ready():
 	pass # Replace with function body.
 
-func update(item2: Texture2D):
+func update(item2: InventorySlot):
 	print("update was called")
 	if !item2:
 		backgroundSprite.frame = 0
@@ -17,9 +17,9 @@ func update(item2: Texture2D):
 		backgroundSprite.frame = 1
 		itemSprite.visible = true
 		$CenterContainer/Panel2/itemLabel.visible = true
-		$CenterContainer/Panel2/itemLabel.text = "1"
+		$CenterContainer/Panel2/itemLabel.text = str(item2.amount)
 		print("show image")
-		$CenterContainer/Panel2/item.texture = item2
+		$CenterContainer/Panel2/item.texture = item2.texture
 		
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
