@@ -1,4 +1,4 @@
-extends Panel
+extends Button
 
 @onready var backgroundSprite: Sprite2D = $background
 @onready var itemSprite: Sprite2D = $CenterContainer/Panel2/item
@@ -28,3 +28,6 @@ func update(item2: InventorySlot):
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
+
+func _on_pressed():
+	print("slot pressed") # Replace with function body.
