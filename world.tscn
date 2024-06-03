@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://b8i3w6yq3u6cb"]
+[gd_scene load_steps=28 format=3 uid="uid://b8i3w6yq3u6cb"]
 
 [ext_resource type="PackedScene" uid="uid://do027h1kv333v" path="res://test-level.tscn" id="1_4m6ml"]
 [ext_resource type="PackedScene" uid="uid://ccwb7bmjph5un" path="res://player.tscn" id="2_bcbvm"]
@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://drhulqcvq06o5" path="res://graphics/Witch.png" id="7_lyobl"]
 [ext_resource type="Shader" path="res://world.gdshader" id="7_pcqhn"]
 [ext_resource type="Script" path="res://leaveDoor.gd" id="9_w2mbr"]
-[ext_resource type="Texture2D" uid="uid://bqvrvx2s3vn2y" path="res://graphics/Top-Down Retro Interior/Shelf.png" id="10_x8pov"]
+[ext_resource type="Texture2D" uid="uid://cxripjdpm6n8a" path="res://graphics/Top-Down Retro Interior/Shelf.png" id="10_x8pov"]
 [ext_resource type="Texture2D" uid="uid://b45u31wqwiemp" path="res://graphics/Pixel Potions/2-removebg-preview.png" id="11_hufkg"]
 [ext_resource type="Texture2D" uid="uid://cauy77q6x75d" path="res://graphics/Pixel Potions/3-removebg-preview.png" id="12_nm1qh"]
 [ext_resource type="Texture2D" uid="uid://caovrtvi45sdq" path="res://graphics/Pixel Potions/4-removebg-preview.png" id="13_wbhrj"]
@@ -22,12 +22,6 @@
 [ext_resource type="Texture2D" uid="uid://clhytlpwgqxwh" path="res://graphics/Pixel Potions/12-removebg-preview.png" id="21_7areq"]
 [ext_resource type="Texture2D" uid="uid://r8pwdy5l5sas" path="res://graphics/Pixel Potions/1-removebg-preview_preview_rev_1.png" id="22_my6qv"]
 [ext_resource type="AudioStream" uid="uid://fgtvl4cddwh6" path="res://Solve the Riddle music.mp3" id="23_dksec"]
-[ext_resource type="Texture2D" uid="uid://depfqa2hxlwc6" path="res://graphics/PNG image-4754-8F17-67-0.png" id="23_lh4bv"]
-[ext_resource type="Script" path="res://clickable.gd" id="23_tg6s0"]
-[ext_resource type="Texture2D" uid="uid://ebp0n0jjurct" path="res://graphics/Top-Down Retro Interior/pie.png" id="24_qcgfe"]
-[ext_resource type="Texture2D" uid="uid://cyifakrdeuduj" path="res://graphics/Top-Down Retro Interior/tea.png" id="25_0fkea"]
-[ext_resource type="Texture2D" uid="uid://gjn5rlp524ej" path="res://graphics/3.png" id="27_fcbfc"]
-[ext_resource type="Texture2D" uid="uid://4qiw72u7d54r" path="res://graphics/5.png" id="28_sbtxa"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_6fwv1"]
 shader = ExtResource("7_pcqhn")
@@ -50,42 +44,6 @@ shader_parameter/outline_enabled = false
 [sub_resource type="CircleShape2D" id="CircleShape2D_n8jwx"]
 radius = 14.0357
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_2r78c"]
-shader = ExtResource("7_pcqhn")
-shader_parameter/outline_color = Color(1, 1, 1, 1)
-shader_parameter/outline_enabled = false
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_ll84j"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_kbdxn"]
-shader = ExtResource("7_pcqhn")
-shader_parameter/outline_color = Color(1, 1, 1, 1)
-shader_parameter/outline_enabled = false
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_hdkng"]
-shader = ExtResource("7_pcqhn")
-shader_parameter/outline_color = Color(1, 1, 1, 1)
-shader_parameter/outline_enabled = false
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_2mixa"]
-shader = ExtResource("7_pcqhn")
-shader_parameter/outline_color = Color(1, 1, 1, 1)
-shader_parameter/outline_enabled = false
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_jnvxd"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_t4y7a"]
-shader = ExtResource("7_pcqhn")
-shader_parameter/outline_color = Color(1, 1, 1, 1)
-shader_parameter/outline_enabled = false
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_hpvs1"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_nfyxu"]
-shader = ExtResource("7_pcqhn")
-shader_parameter/outline_color = Color(1, 1, 1, 1)
-shader_parameter/outline_enabled = false
-
 [node name="Cottage" type="Node2D"]
 position = Vector2(0, -1)
 
@@ -94,11 +52,11 @@ layer_0/tile_data = PackedInt32Array(0, 1, 0, 1, 1, 0, 2, 1, 0, 3, 1, 0, 4, 1, 0
 layer_1/tile_data = PackedInt32Array(196609, 327684, 5, 262145, 327684, 6, 327681, 393220, 6, 196610, 393220, 6, 262146, 393220, 6, 327682, 393220, 6, 196611, 458756, 6, 262147, 458756, 6, 327683, 458756, 6, 196612, 458756, 6, 262148, 393220, 6, 327684, 393220, 6, 196613, 458756, 6, 262149, 458756, 6, 327685, 393220, 6, 196614, 393220, 5, 262150, 393220, 6, 327686, 458756, 6, 196615, 458756, 5, 262151, 458756, 6, 327687, 393220, 6, 196616, 524292, 5, 262152, 524292, 6, 327688, 458756, 6, 393217, 393220, 6, 458753, 327684, 6, 524289, 327684, 7, 393218, 458756, 6, 458754, 393220, 6, 524290, 393220, 7, 393219, 393220, 6, 458755, 458756, 6, 524291, 458756, 7, 393220, 393220, 6, 458756, 393220, 6, 524292, 393220, 6, 393221, 393220, 6, 458757, 458756, 6, 524293, 393220, 6, 393222, 458756, 6, 458758, 458756, 6, 524294, 458756, 6, 393223, 393220, 6, 458759, 393220, 6, 524295, 393220, 7, 393224, 458756, 6, 458760, 393220, 6, 524296, 458756, 7, 393225, 524292, 6, 458761, 458756, 6, 524297, 524292, 7, 327689, 524292, 5)
 layer_2/tile_data = PackedInt32Array(0, 1, 0, 1, 1, 0, 2, 1, 0, 3, 1, 0, 4, 1, 0, 5, 1, 0, 6, 1, 0, 7, 1, 0, 8, 1, 0, 9, 1, 0, 10, 1, 0, 720913, 720902, 8, 720914, 786438, 8, 720915, 655365, 3, 720916, 720901, 3, 917504, 1, 0, 65536, 1, 0, 131072, 1, 0, 196608, 1, 0, 262144, 1, 0, 327680, 1, 0, 393216, 1, 0, 458752, 1, 0, 524288, 1, 0, 589824, 1, 0, 655360, 1, 0, 720896, 1, 0, 786432, 1, 0, 851968, 1, 0, 65537, 262149, 12, 131073, 262149, 13, 196609, 262149, 14, 65538, 327685, 12, 131074, 327685, 13, 196610, 327685, 14, 65539, 393221, 12, 131075, 393221, 13, 196611, 393221, 14, 65540, 458757, 12, 131076, 458757, 13, 196612, 458757, 14, 65541, 524293, 12, 131077, 524293, 13, 196613, 524293, 14, 65542, 589829, 12, 131078, 589829, 13, 196614, 589829, 14, 65543, 655365, 12, 131079, 655365, 13, 196615, 655365, 14, 65544, 720901, 12, 131080, 720901, 13, 196616, 720901, 14, 262152, 720901, 15, 65545, 786437, 12, 131081, 786437, 13, 196617, 786437, 14, 262153, 786437, 15, 262154, 1, 0, 327690, 1, 0, 393226, 1, 0, 458762, 1, 0, 524298, 1, 0, 65546, 1, 0, 131082, 1, 0, 196618, 1, 0, -131070, 393219, 8, -65534, 393219, 9, -131069, 458755, 8, -65533, 458755, 9, -131066, 393219, 8, -65530, 393219, 9, -131065, 458755, 8, -65529, 458755, 9, 786450, 65542, 10, 851986, 65542, 11, 786451, 131078, 10, 851987, 131078, 11, 786452, 196614, 10, 851988, 196614, 11, 786453, 262150, 10, 851989, 262150, 11, 655384, 131077, 268435463, 720920, 131077, 268435464, 786456, 131077, 268435465, 655377, 720902, 7, 786449, 720902, 9, 655378, 786438, 7, 655379, 655365, 2, 655380, 720901, 2, 655381, 786437, 2, 720917, 786437, 3, 524306, 327686, 10, 589842, 327686, 11, 524307, 393222, 10, 589843, 393222, 11, 524308, 458758, 10, 589844, 458758, 11, 524309, 524294, 10, 589845, 524294, 11, 393227, 589829, 4, 458763, 589829, 5, 524299, 589829, 6, 196623, 5, 2, 262159, 5, 3, 262160, 65541, 3, 262161, 131077, 3, -131059, 393219, 3, -65523, 393219, 4, -131058, 458755, 3, -65522, 458755, 4, -131057, 393219, 3, -65521, 393219, 4, -131056, 458755, 3, -65520, 458755, 4, -131047, 393219, 3, -65511, 393219, 4, -131046, 458755, 3, -65510, 458755, 4, -131045, 393219, 3, -65509, 393219, 4, -131044, 458755, 3, -65508, 458755, 4, 720897, 196614, 7, 786433, 196614, 8, 851969, 196614, 9, 196625, 131077, 2, 196624, 65541, 2, 65566, 327686, 4, 131102, 327686, 5, 196638, 327686, 4, 262174, 327686, 5, 327710, 327686, 6)
 layer_3/name = "added"
-layer_3/tile_data = PackedInt32Array(131081, 393223, 1, 262147, 524294, 2, 262148, 589830, 2, 196627, 589830, 8, 262163, 589830, 9, 196628, 655366, 8, 262164, 655366, 9, 917505, 1, 0, 917506, 327680, 0, 917507, 327680, 0, 917510, 1, 0, 917511, 1, 0, 917512, 1, 0, 917513, 1, 0, 917514, 1, 0, 917515, 1, 0, 917516, 1, 0, 917517, 1, 0, 917518, 1, 0, 917519, 1, 0, 917520, 1, 0, 917521, 1, 0, 917522, 1, 0, 917523, 1, 0, 917524, 1, 0, 917525, 1, 0, 917526, 1, 0, 917527, 1, 0, 917528, 1, 0, 917529, 1, 0, 917530, 1, 0, 917531, 1, 0, 917532, 1, 0, 917533, 1, 0, 917534, 1, 0, 917535, 1, 0, 917536, 1, 0, 917537, 1, 0, 917538, 1, 0, 917539, 1, 0, 917540, 1, 0, 917541, 1, 0, 917542, 1, 0, 917544, 1, 0, 917545, 1, 0, 917546, 1, 0, 917547, 1, 0, 917543, 1, 0, 917509, 1, 0, 917508, 1, 0)
+layer_3/tile_data = PackedInt32Array(65543, 327687, 7, 65544, 458759, 7, 131081, 393223, 1, 262147, 524294, 2, 262148, 589830, 2, 196627, 589830, 8, 262163, 589830, 9, 196628, 655366, 8, 262164, 655366, 9, 917505, 1, 0, 917506, 327680, 0, 917507, 327680, 0, 917510, 1, 0, 917511, 1, 0, 917512, 1, 0, 917513, 1, 0, 917514, 1, 0, 917515, 1, 0, 917516, 1, 0, 917517, 1, 0, 917518, 1, 0, 917519, 1, 0, 917520, 1, 0, 917521, 1, 0, 917522, 1, 0, 917523, 1, 0, 917524, 1, 0, 917525, 1, 0, 917526, 1, 0, 917527, 1, 0, 917528, 1, 0, 917529, 1, 0, 917530, 1, 0, 917531, 1, 0, 917532, 1, 0, 917533, 1, 0, 917534, 1, 0, 917535, 1, 0, 917536, 1, 0, 917537, 1, 0, 917538, 1, 0, 917539, 1, 0, 917540, 1, 0, 917541, 1, 0, 917542, 1, 0, 917544, 1, 0, 917545, 1, 0, 917546, 1, 0, 917547, 1, 0, 917543, 1, 0, 917509, 1, 0, 917508, 1, 0)
 
 [node name="Crow" parent="." instance=ExtResource("2_bcbvm")]
 z_index = 3
-position = Vector2(65, 172)
+position = Vector2(48, 188)
 scale = Vector2(0.984563, 0.987805)
 
 [node name="Cedric Door" type="Area2D" parent="." node_paths=PackedStringArray("sprite")]
@@ -164,679 +122,633 @@ shape = SubResource("CircleShape2D_n8jwx")
 
 [node name="Potions Shelf" type="Node" parent="."]
 
-[node name="PotionShelf" type="Area2D" parent="Potions Shelf" node_paths=PackedStringArray("sprite")]
-position = Vector2(45, 218)
-script = ExtResource("7_6h0fw")
-sprite = NodePath("Shelf")
-obj_type = 2
-
-[node name="Shelf" type="Sprite2D" parent="Potions Shelf/PotionShelf"]
-z_index = 1
-material = SubResource("ShaderMaterial_2r78c")
-position = Vector2(166, -195)
+[node name="Shelf" type="Sprite2D" parent="Potions Shelf"]
+position = Vector2(210, 22)
 scale = Vector2(1.43478, 1)
 texture = ExtResource("10_x8pov")
 
-[node name="Shelf2" type="Sprite2D" parent="Potions Shelf/PotionShelf/Shelf"]
-position = Vector2(45.5001, -1)
-scale = Vector2(0.950127, 1)
+[node name="Shelf2" type="Sprite2D" parent="Potions Shelf/Shelf"]
+position = Vector2(46, 0)
 texture = ExtResource("10_x8pov")
 
-[node name="Shelf" type="Sprite2D" parent="Potions Shelf/PotionShelf/Shelf/Shelf2"]
-position = Vector2(46.3734, 0)
-scale = Vector2(1.02392, 1)
+[node name="Shelf" type="Sprite2D" parent="Potions Shelf/Shelf/Shelf2"]
+position = Vector2(46, 0)
 texture = ExtResource("10_x8pov")
 
-[node name="CollisionShelf" type="CollisionShape2D" parent="Potions Shelf/PotionShelf"]
-position = Vector2(163, -192)
-scale = Vector2(4, 4)
-shape = SubResource("CircleShape2D_ll84j")
+[node name="Shelf" type="Sprite2D" parent="Potions Shelf/Shelf/Shelf2/Shelf"]
+position = Vector2(57.5001, 0)
+scale = Vector2(1.50001, 1)
+texture = ExtResource("10_x8pov")
 
 [node name="2-removebg-preview" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
 position = Vector2(186, 11)
 scale = Vector2(0.0391566, 0.0391566)
 texture = ExtResource("11_hufkg")
 
 [node name="3-removebg-preview" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
 position = Vector2(218, 37)
 scale = Vector2(0.0382353, 0.0382353)
 texture = ExtResource("12_nm1qh")
 
 [node name="4-removebg-preview" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
 position = Vector2(226, 12)
 scale = Vector2(0.0250001, 0.0250001)
 texture = ExtResource("13_wbhrj")
 
 [node name="5-removebg-preview" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
 position = Vector2(196, 11)
 scale = Vector2(0.04375, 0.04375)
 texture = ExtResource("14_nhy2m")
 
 [node name="6-removebg-preview" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
 position = Vector2(200, 12)
 scale = Vector2(0.0308823, 0.0308823)
 texture = ExtResource("15_hs06n")
 
 [node name="7-removebg-preview" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
 position = Vector2(203, 11)
 scale = Vector2(0.0377907, 0.0377907)
 texture = ExtResource("16_m03h8")
 
 [node name="8-removebg-preview" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
 position = Vector2(215, 11)
 scale = Vector2(0.0406977, 0.0406977)
 texture = ExtResource("17_2lq4m")
 
 [node name="9-removebg-preview" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
 position = Vector2(229, 37)
 scale = Vector2(0.04375, 0.04375)
 texture = ExtResource("18_b7n6u")
 
 [node name="10-removebg-preview" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
 position = Vector2(230, 11)
 scale = Vector2(0.0426471, 0.0426472)
 texture = ExtResource("19_15a5d")
 
 [node name="11-removebg-preview" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
 position = Vector2(236, 11)
 scale = Vector2(0.0382351, 0.0382351)
 texture = ExtResource("20_ic0nc")
 
 [node name="12-removebg-preview" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
 position = Vector2(219.469, 11.8327)
 scale = Vector2(0.0345588, 0.0345588)
 texture = ExtResource("21_7areq")
 
 [node name="1-removebg-previewPreviewRev2" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
 position = Vector2(182.438, 20.4125)
 scale = Vector2(0.0359375, 0.0359375)
 texture = ExtResource("22_my6qv")
 
 [node name="2-removebg-preview2" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
 position = Vector2(227, 20)
 scale = Vector2(0.0391566, 0.0391566)
 texture = ExtResource("11_hufkg")
 
 [node name="3-removebg-preview2" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
 position = Vector2(190.438, 20.4125)
 scale = Vector2(0.0382353, 0.0382353)
 texture = ExtResource("12_nm1qh")
 
 [node name="4-removebg-preview2" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
 position = Vector2(230, 21)
 scale = Vector2(0.0250001, 0.0250001)
 texture = ExtResource("13_wbhrj")
 
 [node name="5-removebg-preview2" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
 position = Vector2(186, 20)
 scale = Vector2(0.04375, 0.04375)
 texture = ExtResource("14_nhy2m")
 
 [node name="6-removebg-preview2" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
 position = Vector2(200.438, 21.4125)
 scale = Vector2(0.0308823, 0.0308823)
 texture = ExtResource("15_hs06n")
 
 [node name="7-removebg-preview2" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
 position = Vector2(183, 37)
 scale = Vector2(0.0377907, 0.0377907)
 texture = ExtResource("16_m03h8")
 
 [node name="8-removebg-preview2" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
 position = Vector2(197, 37)
 scale = Vector2(0.0406977, 0.0406977)
 texture = ExtResource("17_2lq4m")
 
 [node name="9-removebg-preview2" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
 position = Vector2(211.438, 20.4125)
 scale = Vector2(0.04375, 0.04375)
 texture = ExtResource("18_b7n6u")
 
 [node name="10-removebg-preview2" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
 position = Vector2(207.438, 20.4125)
 scale = Vector2(0.0426471, 0.0426472)
 texture = ExtResource("19_15a5d")
 
 [node name="11-removebg-preview2" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
 position = Vector2(223.438, 21.4125)
 scale = Vector2(0.0382351, 0.0382351)
 texture = ExtResource("20_ic0nc")
 
 [node name="12-removebg-preview2" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
 position = Vector2(209, 29)
 scale = Vector2(0.0345588, 0.0345588)
 texture = ExtResource("21_7areq")
 
 [node name="1-removebg-previewPreviewRev3" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
 position = Vector2(202, 37)
 scale = Vector2(0.0359375, 0.0359375)
 texture = ExtResource("22_my6qv")
 
 [node name="2-removebg-preview3" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
 position = Vector2(186.438, 28.4125)
 scale = Vector2(0.0391566, 0.0391566)
 texture = ExtResource("11_hufkg")
 
 [node name="3-removebg-preview3" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
 position = Vector2(190, 37)
 scale = Vector2(0.0382353, 0.0382353)
 texture = ExtResource("12_nm1qh")
 
 [node name="4-removebg-preview3" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
 position = Vector2(193.438, 29.4125)
 scale = Vector2(0.0250001, 0.0250001)
 texture = ExtResource("13_wbhrj")
 
 [node name="5-removebg-preview3" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
 position = Vector2(196.438, 28.4125)
 scale = Vector2(0.04375, 0.04375)
 texture = ExtResource("14_nhy2m")
 
 [node name="6-removebg-preview3" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
 position = Vector2(200.438, 29.4125)
 scale = Vector2(0.0308823, 0.0308823)
 texture = ExtResource("15_hs06n")
 
 [node name="7-removebg-preview3" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
 position = Vector2(203.438, 28.4125)
 scale = Vector2(0.0377907, 0.0377907)
 texture = ExtResource("16_m03h8")
 
 [node name="8-removebg-preview3" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
 position = Vector2(215.438, 28.4125)
 scale = Vector2(0.0406977, 0.0406977)
 texture = ExtResource("17_2lq4m")
 
 [node name="9-removebg-preview3" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
 position = Vector2(231, 28)
 scale = Vector2(0.04375, 0.04375)
 texture = ExtResource("18_b7n6u")
 
 [node name="10-removebg-preview3" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
 position = Vector2(212, 37)
 scale = Vector2(0.0426471, 0.0426472)
 texture = ExtResource("19_15a5d")
 
 [node name="11-removebg-preview3" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
 position = Vector2(227, 29)
 scale = Vector2(0.0382351, 0.0382351)
 texture = ExtResource("20_ic0nc")
 
 [node name="12-removebg-preview3" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
 position = Vector2(219.906, 29.2452)
 scale = Vector2(0.0345588, 0.0345588)
 texture = ExtResource("21_7areq")
 
 [node name="1-removebg-previewPreviewRev1" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
 position = Vector2(182, 11)
 scale = Vector2(0.0359375, 0.0359375)
 texture = ExtResource("22_my6qv")
 
 [node name="2-removebg-preview4" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
+z_index = 1
 position = Vector2(253, 11)
 scale = Vector2(0.0391566, 0.0391566)
 texture = ExtResource("11_hufkg")
 
 [node name="3-removebg-preview4" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
+z_index = 1
 position = Vector2(286, 37)
 scale = Vector2(0.0382353, 0.0382353)
 texture = ExtResource("12_nm1qh")
 
 [node name="4-removebg-preview4" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
+z_index = 1
 position = Vector2(272, 38)
 scale = Vector2(0.0250001, 0.0250001)
 texture = ExtResource("13_wbhrj")
 
 [node name="5-removebg-preview4" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
+z_index = 1
 position = Vector2(264, 11)
 scale = Vector2(0.04375, 0.04375)
 texture = ExtResource("14_nhy2m")
 
 [node name="6-removebg-preview4" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
+z_index = 1
 position = Vector2(271, 21)
 scale = Vector2(0.0308823, 0.0308823)
 texture = ExtResource("15_hs06n")
 
 [node name="7-removebg-preview4" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
+z_index = 1
 position = Vector2(271, 11)
 scale = Vector2(0.0377907, 0.0377907)
 texture = ExtResource("16_m03h8")
 
 [node name="8-removebg-preview4" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
+z_index = 1
 position = Vector2(280, 11)
 scale = Vector2(0.0406977, 0.0406977)
 texture = ExtResource("17_2lq4m")
 
 [node name="9-removebg-preview4" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
+z_index = 1
 position = Vector2(297, 37)
 scale = Vector2(0.04375, 0.04375)
 texture = ExtResource("18_b7n6u")
 
 [node name="10-removebg-preview4" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
+z_index = 1
 position = Vector2(295, 11)
 scale = Vector2(0.0426471, 0.0426472)
 texture = ExtResource("19_15a5d")
 
 [node name="11-removebg-preview4" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
+z_index = 1
 position = Vector2(299, 11)
 scale = Vector2(0.0382351, 0.0382351)
 texture = ExtResource("20_ic0nc")
 
 [node name="12-removebg-preview4" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
+z_index = 1
 position = Vector2(288, 12)
 scale = Vector2(0.0345588, 0.0345588)
 texture = ExtResource("21_7areq")
 
 [node name="1-removebg-previewPreviewRev4" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
+z_index = 1
 position = Vector2(272, 28)
 scale = Vector2(0.0359375, 0.0359375)
 texture = ExtResource("22_my6qv")
 
 [node name="2-removebg-preview5" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
+z_index = 1
 position = Vector2(294.438, 19.3031)
 scale = Vector2(0.0391566, 0.0391566)
 texture = ExtResource("11_hufkg")
 
 [node name="3-removebg-preview5" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
+z_index = 1
 position = Vector2(257.875, 19.7156)
 scale = Vector2(0.0382353, 0.0382353)
 texture = ExtResource("12_nm1qh")
 
 [node name="4-removebg-preview5" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
+z_index = 1
 position = Vector2(297.438, 20.3031)
 scale = Vector2(0.0250001, 0.0250001)
 texture = ExtResource("13_wbhrj")
 
 [node name="5-removebg-preview5" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
+z_index = 1
 position = Vector2(262, 37)
 scale = Vector2(0.04375, 0.04375)
 texture = ExtResource("14_nhy2m")
 
 [node name="6-removebg-preview5" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
+z_index = 1
 position = Vector2(267.875, 20.7156)
 scale = Vector2(0.0308823, 0.0308823)
 texture = ExtResource("15_hs06n")
 
 [node name="7-removebg-preview5" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
+z_index = 1
 position = Vector2(250, 37)
 scale = Vector2(0.0377907, 0.0377907)
 texture = ExtResource("16_m03h8")
 
 [node name="8-removebg-preview5" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
+z_index = 1
 position = Vector2(276, 11)
 scale = Vector2(0.0406977, 0.0406977)
 texture = ExtResource("17_2lq4m")
 
 [node name="9-removebg-preview5" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
+z_index = 1
 position = Vector2(278.875, 19.7156)
 scale = Vector2(0.04375, 0.04375)
 texture = ExtResource("18_b7n6u")
 
 [node name="10-removebg-preview5" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
+z_index = 1
 position = Vector2(274.875, 19.7156)
 scale = Vector2(0.0426471, 0.0426472)
 texture = ExtResource("19_15a5d")
 
 [node name="11-removebg-preview5" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
+z_index = 1
 position = Vector2(293, 37)
 scale = Vector2(0.0382351, 0.0382351)
 texture = ExtResource("20_ic0nc")
 
 [node name="12-removebg-preview5" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
+z_index = 1
 position = Vector2(276.438, 28.3031)
 scale = Vector2(0.0345588, 0.0345588)
 texture = ExtResource("21_7areq")
 
 [node name="1-removebg-previewPreviewRev5" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
+z_index = 1
 position = Vector2(288, 20)
 scale = Vector2(0.0359375, 0.0359375)
 texture = ExtResource("22_my6qv")
 
 [node name="2-removebg-preview6" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
+z_index = 1
 position = Vector2(254, 28)
 scale = Vector2(0.0391566, 0.0391566)
 texture = ExtResource("11_hufkg")
 
 [node name="3-removebg-preview6" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
+z_index = 1
 position = Vector2(257, 37)
 scale = Vector2(0.0382353, 0.0382353)
 texture = ExtResource("12_nm1qh")
 
 [node name="4-removebg-preview6" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
+z_index = 1
 position = Vector2(260.875, 28.7156)
 scale = Vector2(0.0250001, 0.0250001)
 texture = ExtResource("13_wbhrj")
 
 [node name="5-removebg-preview6" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
+z_index = 1
 position = Vector2(263.875, 27.7156)
 scale = Vector2(0.04375, 0.04375)
 texture = ExtResource("14_nhy2m")
 
 [node name="6-removebg-preview6" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
+z_index = 1
 position = Vector2(267.875, 28.7156)
 scale = Vector2(0.0308823, 0.0308823)
 texture = ExtResource("15_hs06n")
 
 [node name="7-removebg-preview6" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
+z_index = 1
 position = Vector2(259, 11)
 scale = Vector2(0.0377907, 0.0377907)
 texture = ExtResource("16_m03h8")
 
 [node name="8-removebg-preview6" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
+z_index = 1
 position = Vector2(282.875, 27.7156)
 scale = Vector2(0.0406977, 0.0406977)
 texture = ExtResource("17_2lq4m")
 
 [node name="9-removebg-preview6" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
+z_index = 1
 position = Vector2(298.438, 27.3031)
 scale = Vector2(0.04375, 0.04375)
 texture = ExtResource("18_b7n6u")
 
 [node name="10-removebg-preview6" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
+z_index = 1
 position = Vector2(279, 37)
 scale = Vector2(0.0426471, 0.0426472)
 texture = ExtResource("19_15a5d")
 
 [node name="11-removebg-preview6" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
+z_index = 1
 position = Vector2(294.438, 28.3031)
 scale = Vector2(0.0382351, 0.0382351)
 texture = ExtResource("20_ic0nc")
 
 [node name="12-removebg-preview6" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
+z_index = 1
 position = Vector2(287.344, 28.5484)
 scale = Vector2(0.0345588, 0.0345588)
 texture = ExtResource("21_7areq")
 
 [node name="1-removebg-previewPreviewRev6" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
+z_index = 1
 position = Vector2(249, 11)
 scale = Vector2(0.0359375, 0.0359375)
 texture = ExtResource("22_my6qv")
 
 [node name="2-removebg-preview7" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
-position = Vector2(318.438, 11.3031)
+z_index = 1
+position = Vector2(319.438, 11.3031)
 scale = Vector2(0.0391566, 0.0391566)
 texture = ExtResource("11_hufkg")
 
 [node name="3-removebg-preview7" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
-position = Vector2(350.438, 37.3031)
+z_index = 1
+position = Vector2(351.438, 37.3031)
 scale = Vector2(0.0382353, 0.0382353)
 texture = ExtResource("12_nm1qh")
 
 [node name="4-removebg-preview7" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
-position = Vector2(358.438, 12.3031)
+z_index = 1
+position = Vector2(359.438, 12.3031)
 scale = Vector2(0.0250001, 0.0250001)
 texture = ExtResource("13_wbhrj")
 
 [node name="5-removebg-preview7" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
-position = Vector2(328.438, 11.3031)
+z_index = 1
+position = Vector2(329.438, 11.3031)
 scale = Vector2(0.04375, 0.04375)
 texture = ExtResource("14_nhy2m")
 
 [node name="6-removebg-preview7" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
-position = Vector2(332.438, 12.3031)
+z_index = 1
+position = Vector2(333.438, 12.3031)
 scale = Vector2(0.0308823, 0.0308823)
 texture = ExtResource("15_hs06n")
 
 [node name="7-removebg-preview7" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
-position = Vector2(335.438, 11.3031)
+z_index = 1
+position = Vector2(336.438, 11.3031)
 scale = Vector2(0.0377907, 0.0377907)
 texture = ExtResource("16_m03h8")
 
 [node name="8-removebg-preview7" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
-position = Vector2(347.438, 11.3031)
+z_index = 1
+position = Vector2(348.438, 11.3031)
 scale = Vector2(0.0406977, 0.0406977)
 texture = ExtResource("17_2lq4m")
 
 [node name="9-removebg-preview7" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
-position = Vector2(368, 28)
+z_index = 1
+position = Vector2(369, 28)
 scale = Vector2(0.04375, 0.04375)
 texture = ExtResource("18_b7n6u")
 
 [node name="10-removebg-preview7" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
-position = Vector2(362.438, 11.3031)
+z_index = 1
+position = Vector2(363.438, 11.3031)
 scale = Vector2(0.0426471, 0.0426472)
 texture = ExtResource("19_15a5d")
 
 [node name="11-removebg-preview7" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
-position = Vector2(353, 11)
+z_index = 1
+position = Vector2(354, 11)
 scale = Vector2(0.0382351, 0.0382351)
 texture = ExtResource("20_ic0nc")
 
 [node name="12-removebg-preview7" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
-position = Vector2(357, 38)
+z_index = 1
+position = Vector2(358, 38)
 scale = Vector2(0.0345588, 0.0345588)
 texture = ExtResource("21_7areq")
 
 [node name="1-removebg-previewPreviewRev7" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
-position = Vector2(314.875, 20.7156)
+z_index = 1
+position = Vector2(315.875, 20.7156)
 scale = Vector2(0.0359375, 0.0359375)
 texture = ExtResource("22_my6qv")
 
 [node name="2-removebg-preview8" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
-position = Vector2(359.438, 20.3031)
+z_index = 1
+position = Vector2(360.438, 20.3031)
 scale = Vector2(0.0391566, 0.0391566)
 texture = ExtResource("11_hufkg")
 
 [node name="3-removebg-preview8" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
-position = Vector2(322.875, 20.7156)
+z_index = 1
+position = Vector2(323.875, 20.7156)
 scale = Vector2(0.0382353, 0.0382353)
 texture = ExtResource("12_nm1qh")
 
 [node name="4-removebg-preview8" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
-position = Vector2(362.438, 21.3031)
+z_index = 1
+position = Vector2(363.438, 21.3031)
 scale = Vector2(0.0250001, 0.0250001)
 texture = ExtResource("13_wbhrj")
 
 [node name="5-removebg-preview8" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
-position = Vector2(314, 37)
+z_index = 1
+position = Vector2(315, 37)
 scale = Vector2(0.04375, 0.04375)
 texture = ExtResource("14_nhy2m")
 
 [node name="6-removebg-preview8" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
-position = Vector2(333, 21)
+z_index = 1
+position = Vector2(334, 21)
 scale = Vector2(0.0308823, 0.0308823)
 texture = ExtResource("15_hs06n")
 
 [node name="7-removebg-preview8" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
-position = Vector2(327, 20)
+z_index = 1
+position = Vector2(328, 20)
 scale = Vector2(0.0377907, 0.0377907)
 texture = ExtResource("16_m03h8")
 
 [node name="8-removebg-preview8" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
-position = Vector2(329.438, 37.3031)
+z_index = 1
+position = Vector2(330.438, 37.3031)
 scale = Vector2(0.0406977, 0.0406977)
 texture = ExtResource("17_2lq4m")
 
 [node name="9-removebg-preview8" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
-position = Vector2(348, 20)
+z_index = 1
+position = Vector2(349, 20)
 scale = Vector2(0.04375, 0.04375)
 texture = ExtResource("18_b7n6u")
 
 [node name="10-removebg-preview8" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
-position = Vector2(340, 20)
+z_index = 1
+position = Vector2(341, 20)
 scale = Vector2(0.0426471, 0.0426472)
 texture = ExtResource("19_15a5d")
 
 [node name="11-removebg-preview8" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
-position = Vector2(356, 20)
+z_index = 1
+position = Vector2(357, 20)
 scale = Vector2(0.0382351, 0.0382351)
 texture = ExtResource("20_ic0nc")
 
 [node name="12-removebg-preview8" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
-position = Vector2(341, 38)
+z_index = 1
+position = Vector2(342, 38)
 scale = Vector2(0.0345588, 0.0345588)
 texture = ExtResource("21_7areq")
 
 [node name="1-removebg-previewPreviewRev8" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
-position = Vector2(334.438, 37.3031)
+z_index = 1
+position = Vector2(335.438, 37.3031)
 scale = Vector2(0.0359375, 0.0359375)
 texture = ExtResource("22_my6qv")
 
 [node name="2-removebg-preview9" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
-position = Vector2(319, 28)
+z_index = 1
+position = Vector2(320, 28)
 scale = Vector2(0.0391566, 0.0391566)
 texture = ExtResource("11_hufkg")
 
 [node name="3-removebg-preview9" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
-position = Vector2(322.438, 37.3031)
+z_index = 1
+position = Vector2(323.438, 37.3031)
 scale = Vector2(0.0382353, 0.0382353)
 texture = ExtResource("12_nm1qh")
 
 [node name="4-removebg-preview9" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
-position = Vector2(326, 29)
+z_index = 1
+position = Vector2(327, 29)
 scale = Vector2(0.0250001, 0.0250001)
 texture = ExtResource("13_wbhrj")
 
 [node name="5-removebg-preview9" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
-position = Vector2(329, 28)
+z_index = 1
+position = Vector2(330, 28)
 scale = Vector2(0.04375, 0.04375)
 texture = ExtResource("14_nhy2m")
 
 [node name="6-removebg-preview9" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
-position = Vector2(322, 12)
+z_index = 1
+position = Vector2(323, 12)
 scale = Vector2(0.0308823, 0.0308823)
 texture = ExtResource("15_hs06n")
 
 [node name="7-removebg-preview9" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
-position = Vector2(336, 28)
+z_index = 1
+position = Vector2(337, 28)
 scale = Vector2(0.0377907, 0.0377907)
 texture = ExtResource("16_m03h8")
 
 [node name="8-removebg-preview9" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
-position = Vector2(348, 28)
+z_index = 1
+position = Vector2(349, 28)
 scale = Vector2(0.0406977, 0.0406977)
 texture = ExtResource("17_2lq4m")
 
 [node name="9-removebg-preview9" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
-position = Vector2(338, 37)
+z_index = 1
+position = Vector2(339, 37)
 scale = Vector2(0.04375, 0.04375)
 texture = ExtResource("18_b7n6u")
 
 [node name="10-removebg-preview9" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
-position = Vector2(314, 11)
+z_index = 1
+position = Vector2(315, 11)
 scale = Vector2(0.0426471, 0.0426472)
 texture = ExtResource("19_15a5d")
 
 [node name="11-removebg-preview9" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
-position = Vector2(359, 28)
+z_index = 1
+position = Vector2(360, 28)
 scale = Vector2(0.0382351, 0.0382351)
 texture = ExtResource("20_ic0nc")
 
 [node name="12-removebg-preview9" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
-position = Vector2(352, 28)
+z_index = 1
+position = Vector2(353, 28)
 scale = Vector2(0.0345588, 0.0345588)
 texture = ExtResource("21_7areq")
 
 [node name="1-removebg-previewPreviewRev9" type="Sprite2D" parent="Potions Shelf"]
-z_index = 2
-position = Vector2(322, 28)
+z_index = 1
+position = Vector2(323, 28)
 scale = Vector2(0.0359375, 0.0359375)
 texture = ExtResource("22_my6qv")
 
@@ -844,91 +756,6 @@ texture = ExtResource("22_my6qv")
 stream = ExtResource("23_dksec")
 volume_db = -20.0
 autoplay = true
-
-[node name="BookshelfInteract" type="Area2D" parent="." node_paths=PackedStringArray("sprite")]
-position = Vector2(45, 219)
-script = ExtResource("7_6h0fw")
-sprite = NodePath("Bookshelf")
-obj_type = 2
-transition_scene = "res://test.tscn"
-
-[node name="Bookshelf" type="Sprite2D" parent="BookshelfInteract"]
-z_index = 1
-material = SubResource("ShaderMaterial_kbdxn")
-position = Vector2(351, -196)
-texture = ExtResource("23_lh4bv")
-
-[node name="Bookshelf2" type="Sprite2D" parent="BookshelfInteract/Bookshelf"]
-position = Vector2(54.75, 0)
-scale = Vector2(1.32292, 1)
-texture = ExtResource("23_lh4bv")
-
-[node name="CollisionBookshelf" type="CollisionShape2D" parent="BookshelfInteract"]
-position = Vector2(348, -196)
-scale = Vector2(4, 4)
-shape = SubResource("CircleShape2D_ll84j")
-
-[node name="Pie" type="Area2D" parent="." node_paths=PackedStringArray("sprite")]
-position = Vector2(45, 219)
-script = ExtResource("7_6h0fw")
-sprite = NodePath("Pie")
-obj_type = 2
-
-[node name="Pie" type="Sprite2D" parent="Pie"]
-material = SubResource("ShaderMaterial_hdkng")
-position = Vector2(62, -193)
-texture = ExtResource("24_qcgfe")
-
-[node name="CollisionPie" type="CollisionShape2D" parent="Pie"]
-position = Vector2(62, -193)
-shape = SubResource("CircleShape2D_ll84j")
-
-[node name="Tea" type="Area2D" parent="." node_paths=PackedStringArray("sprite")]
-position = Vector2(45, 219)
-script = ExtResource("7_6h0fw")
-sprite = NodePath("Tea")
-obj_type = 2
-
-[node name="Tea" type="Sprite2D" parent="Tea"]
-material = SubResource("ShaderMaterial_2mixa")
-position = Vector2(91, -193)
-texture = ExtResource("25_0fkea")
-
-[node name="CollisionTea" type="CollisionShape2D" parent="Tea"]
-position = Vector2(91, -193)
-shape = SubResource("CircleShape2D_ll84j")
-
-[node name="test" type="Area2D" parent="." node_paths=PackedStringArray("sprite")]
-script = ExtResource("23_tg6s0")
-sprite = NodePath("Sprite2D")
-obj_type = 1
-interactable_area_name = "test"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="test"]
-position = Vector2(223, 113)
-shape = SubResource("CircleShape2D_jnvxd")
-
-[node name="Sprite2D" type="Sprite2D" parent="test"]
-material = SubResource("ShaderMaterial_t4y7a")
-position = Vector2(222, 113)
-scale = Vector2(0.320312, 0.273437)
-texture = ExtResource("27_fcbfc")
-
-[node name="test2" type="Area2D" parent="." node_paths=PackedStringArray("sprite")]
-position = Vector2(149, 167)
-script = ExtResource("23_tg6s0")
-sprite = NodePath("Sprite2D")
-obj_type = 2
-interactable_area_name = "finite"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="test2"]
-shape = SubResource("CircleShape2D_hpvs1")
-
-[node name="Sprite2D" type="Sprite2D" parent="test2"]
-material = SubResource("ShaderMaterial_nfyxu")
-position = Vector2(-1, 1)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("28_sbtxa")
 
 [connection signal="body_entered" from="Cedric Door" to="Cedric Door" method="_on_body_entered"]
 [connection signal="body_exited" from="Cedric Door" to="Cedric Door" method="_on_body_exited"]
@@ -938,16 +765,3 @@ texture = ExtResource("28_sbtxa")
 [connection signal="body_exited" from="Witch2" to="Witch2" method="_on_body_exited"]
 [connection signal="body_entered" from="leaveDoor" to="leaveDoor" method="_on_body_entered"]
 [connection signal="body_exited" from="leaveDoor" to="leaveDoor" method="_on_body_exited"]
-[connection signal="body_entered" from="Potions Shelf/PotionShelf" to="Potions Shelf/PotionShelf" method="_on_body_entered"]
-[connection signal="body_exited" from="Potions Shelf/PotionShelf" to="Potions Shelf/PotionShelf" method="_on_body_exited"]
-[connection signal="body_entered" from="BookshelfInteract" to="BookshelfInteract" method="_on_body_entered"]
-[connection signal="body_exited" from="BookshelfInteract" to="BookshelfInteract" method="_on_body_exited"]
-[connection signal="body_entered" from="Pie" to="Pie" method="_on_body_entered"]
-[connection signal="body_exited" from="Pie" to="Pie" method="_on_body_exited"]
-[connection signal="body_entered" from="Tea" to="Tea" method="_on_body_entered"]
-[connection signal="body_exited" from="Tea" to="Tea" method="_on_body_exited"]
-[connection signal="input_event" from="test" to="test" method="_on_input_event"]
-[connection signal="mouse_entered" from="test" to="test" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="test" to="test" method="_on_mouse_exited"]
-[connection signal="mouse_entered" from="test2" to="test2" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="test2" to="test2" method="_on_mouse_exited"]
