@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://cj5bc30nwosw0"]
+[gd_scene load_steps=9 format=3 uid="uid://cj5bc30nwosw0"]
 
 [ext_resource type="Texture2D" uid="uid://epq2snulklfa" path="res://graphics/PNG image-746C70BB82B2-1.png" id="1_dwivl"]
 [ext_resource type="Script" path="res://interactable-area-clickable.gd" id="2_4t2hv"]
 [ext_resource type="Shader" path="res://world.gdshader" id="3_vicrf"]
 [ext_resource type="Texture2D" uid="uid://bmbrqipku82kl" path="res://graphics/Pixel Potions/11-removebg-preview.png" id="4_1u22u"]
 [ext_resource type="PackedScene" uid="uid://hxwwmunqojcr" path="res://assets/interactables/reusable_backbutton.tscn" id="5_qfnm2"]
+[ext_resource type="PackedScene" uid="uid://cftoisbhfytx2" path="res://inventory.tscn" id="6_g65vi"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jli43"]
 radius = 64.0078
@@ -42,6 +43,9 @@ offset_left = 1025.0
 offset_top = 15.0
 offset_right = 1121.0
 offset_bottom = 67.0
+
+[node name="Inventory" parent="." instance=ExtResource("6_g65vi")]
+position = Vector2(215, 73)
 
 [connection signal="mouse_entered" from="Area2D" to="Area2D" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Area2D" to="Area2D" method="_on_mouse_exited"]
