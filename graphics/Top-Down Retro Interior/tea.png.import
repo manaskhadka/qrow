@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cfl0r2l3yu2so"
-path="res://.godot/imported/7.png-fcfc73c010cc9756f0b328b2a8110bf6.ctex"
+uid="uid://cyifakrdeuduj"
+path="res://.godot/imported/tea.png-3e1b0b0d0b89484ad4b4f5ac9010fcca.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/7.png"
-dest_files=["res://.godot/imported/7.png-fcfc73c010cc9756f0b328b2a8110bf6.ctex"]
+source_file="res://graphics/Top-Down Retro Interior/tea.png"
+dest_files=["res://.godot/imported/tea.png-3e1b0b0d0b89484ad4b4f5ac9010fcca.ctex"]
 
 [params]
 
