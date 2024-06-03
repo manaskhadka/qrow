@@ -1,8 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://c7amwgkmq7it6"]
+[gd_scene load_steps=2 format=3 uid="uid://e8vj65dlf6yi"]
 
 [ext_resource type="TileSet" uid="uid://8gea1ppxsuby" path="res://forest.tres" id="1_h1lxk"]
 
-[node name="DeepForest" type="Node2D"]
+[node name="DeepForest2" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource("1_h1lxk")
