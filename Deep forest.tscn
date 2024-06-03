@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bldmoa0yvd21i" path="res://graphics/Deep Forest/Foliage/Bush4_1.png" id="5_0rvvx"]
 [ext_resource type="Texture2D" uid="uid://dkfrmss4jdd5i" path="res://graphics/Deep Forest/Foliage/Bush9_1.png" id="6_5pxrc"]
 [ext_resource type="Texture2D" uid="uid://blod27a8tknoh" path="res://graphics/Deep Forest/Foliage/Pixel Art Tree (2).png" id="7_twogx"]
-[ext_resource type="Texture2D" uid="uid://dh3xbr0pcjnrp" path="res://graphics/Bush4_1.png" id="8_dj3ea"]
+[ext_resource type="Texture2D" uid="uid://bckhqsqy60785" path="res://graphics/Bush4_1.png" id="8_dj3ea"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y8xc4"]
 texture = ExtResource("1_r01h0")

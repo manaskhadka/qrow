@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=12 format=3 uid="uid://8gea1ppxsuby"]
+[gd_resource type="TileSet" load_steps=11 format=3 uid="uid://8gea1ppxsuby"]
 
 [ext_resource type="Texture2D" uid="uid://ca0p2ak06ttgp" path="res://graphics/Deep Forest/sheet.png" id="1_4tdu1"]
 [ext_resource type="Texture2D" uid="uid://vcl2x323ggjd" path="res://graphics/Deep Forest/DarkHouseTiles.png" id="2_wer45"]
@@ -4609,8 +4609,6 @@ texture = ExtResource("5_l4b1i")
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 
-[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_6uof0"]
-
 [resource]
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_tydk2")
@@ -4618,4 +4616,3 @@ sources/1 = SubResource("TileSetAtlasSource_ip1hh")
 sources/2 = SubResource("TileSetAtlasSource_1lmdw")
 sources/3 = SubResource("TileSetAtlasSource_secuw")
 sources/4 = SubResource("TileSetAtlasSource_o33c5")
-sources/5 = SubResource("TileSetScenesCollectionSource_6uof0")
