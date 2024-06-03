@@ -919,6 +919,7 @@ position = Vector2(149, 167)
 script = ExtResource("23_tg6s0")
 sprite = NodePath("Sprite2D")
 obj_type = 2
+text = "wow a purple mushroom"
 interactable_area_name = "finite"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="test2"]

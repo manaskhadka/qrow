@@ -30,4 +30,13 @@ func _process(delta):
 	pass
 
 func _on_pressed():
+	print(global.selected)
 	print("slot pressed") # Replace with function body.
+	global.selected = true
+	var inventory_slot = InventorySlot.new()
+	inventory_slot.texture = itemSprite.texture
+	inventory_slot.amount = str(itemLabel)
+	global.selectedItem = inventory_slot
+	print(global.selected)
+	
+
