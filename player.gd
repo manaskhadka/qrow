@@ -94,10 +94,6 @@ func _on_attackcooldown_timeout():
 
 func _input(event):
 	if global.selected:
-		$inventoryItem.texture = global.selectedItem.texture
-		$inventoryItem.global_position = get_global_mouse_position()
-	#	var sprite = Sprite2D.new()
-	#	sprite.texture = global.selectedItem.texture
-	#	add_child(sprite)
-	#	sprite.global_position = get_global_mouse_position()
+		$InventoryItem.texture = global.selectedItem.texture
+		$InventoryItem.global_position = get_global_mouse_position()
 		print("I am supposed to have something")
