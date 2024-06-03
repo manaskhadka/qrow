@@ -50,6 +50,7 @@ func _input(event):
 			pass 
 
 		if transition_scene:
+			global.returnPosition = self.global_position
 			get_tree().change_scene_to_file(transition_scene)
 		
 func _process(delta):

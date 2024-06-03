@@ -97,3 +97,15 @@ func _input(event):
 		$InventoryItem.texture = global.selectedItem.texture
 		$InventoryItem.global_position = get_global_mouse_position()
 		print("I am supposed to have something")
+
+func _ready():
+	#$AnimatedSprite2D.position = Vector2(100,-100)
+	if global.returnPosition != Vector2(0,0):
+		print("I AM GOING TO TRY TO CHANGE MY POSITION")
+		print("BEFORE", $AnimatedSprite2D.global_position)
+		print("GOAL", global.returnPosition)
+		$AnimatedSprite2D.global_position = Vector2(400, 15)#global.returnPosition
+		$Camera2D.global_position = Vector2(400, 15)
+		print("AFTER", $AnimatedSprite2D.global_position)
+	print("I RAN THE READY FUNC")
+

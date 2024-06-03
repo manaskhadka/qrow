@@ -14,4 +14,4 @@ func _process(delta):
 
 func _on_pressed():
 	print("hi")
-	get_tree().change_scene_to_file("res://world.tscn")
+	get_tree().change_scene_to_file(scene)
