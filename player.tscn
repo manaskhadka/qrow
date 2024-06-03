@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bafjcbskond3a" path="res://graphics/Crow Flying Right/CFR1.png" id="5_dg5pa"]
 [ext_resource type="Texture2D" uid="uid://cxndvf4yv20we" path="res://graphics/Crow Flying Right/CFR2.png" id="6_x411j"]
 [ext_resource type="Texture2D" uid="uid://bpimdlpc7hqvn" path="res://graphics/Crow Flying Right/CFR3.png" id="7_6t0g6"]
-[ext_resource type="PackedScene" uid="uid://cppr1vx0grq8r" path="res://dialogues/dialogue.tscn" id="9_3ul48"]
+[ext_resource type="PackedScene" path="res://dialogues/dialogue.tscn" id="9_3ul48"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_vivnw"]
 animations = [{
