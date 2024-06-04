@@ -39,6 +39,11 @@ func movement():
 		if (velocity.x <= max_speed):
 			velocity.x += speed
 		anim_sprite.play("flying right")
+	if Input.is_action_just_released("left"):
+		anim_sprite.play("standing l")
+	if Input.is_action_just_released("right"):
+		anim_sprite.play("standing r")
+		
 	
 	velocity.y *= decel_coeff
 	velocity.x *= decel_coeff

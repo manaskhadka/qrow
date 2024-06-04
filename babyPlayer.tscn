@@ -1,14 +1,14 @@
 [gd_scene load_steps=16 format=3 uid="uid://dvg308mbut0ul"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_adg2i"]
-[ext_resource type="Texture2D" uid="uid://cgnq1wffg6nmg" path="res://graphics/Egg1.png" id="2_ook1p"]
-[ext_resource type="Texture2D" uid="uid://blpxj3csky5s5" path="res://graphics/Egg2.png" id="3_0vku4"]
-[ext_resource type="Texture2D" uid="uid://bem5rnyvd2jo5" path="res://graphics/Egg3 game asset.png" id="4_8hr7q"]
-[ext_resource type="Texture2D" uid="uid://duj3ip6wsmq0l" path="res://graphics/Egg4.png" id="5_nvmo6"]
-[ext_resource type="Texture2D" uid="uid://bafjcbskond3a" path="res://graphics/Crow Flying Right/CFR1.png" id="5_yipbg"]
-[ext_resource type="Texture2D" uid="uid://cxndvf4yv20we" path="res://graphics/Crow Flying Right/CFR2.png" id="6_f3ns2"]
-[ext_resource type="Texture2D" uid="uid://bpimdlpc7hqvn" path="res://graphics/Crow Flying Right/CFR3.png" id="7_w4mxo"]
-[ext_resource type="Texture2D" uid="uid://wtdv6vtna6by" path="res://graphics/Adult Crow.png" id="8_uag0j"]
+[ext_resource type="Texture2D" uid="uid://cxuns0vy1aw4i" path="res://graphics/Baby Crow Walking/BCrow1.png" id="2_fkm2u"]
+[ext_resource type="Texture2D" uid="uid://csfpvi1oh7v57" path="res://graphics/Baby Crow Walking/BCrow2.png" id="3_l5ccq"]
+[ext_resource type="Texture2D" uid="uid://brnvvbc7fu380" path="res://graphics/Baby Crow Walking/BCrow3.png" id="4_wg8f3"]
+[ext_resource type="Texture2D" uid="uid://dg3o1axjyd458" path="res://graphics/Baby Crow Walking/BCrowR1.png" id="5_6l6vl"]
+[ext_resource type="Texture2D" uid="uid://bta1p5tu4uexa" path="res://graphics/Baby Crow Walking/BCrowR2.png" id="6_t8i81"]
+[ext_resource type="Texture2D" uid="uid://ifh8vvguey8t" path="res://graphics/Baby Crow Walking/BCrowR3.png" id="7_2osi7"]
+[ext_resource type="Texture2D" uid="uid://by35fscukp1w4" path="res://graphics/Baby Crow.png" id="8_mt6as"]
+[ext_resource type="Texture2D" uid="uid://e3ty44yma51p" path="res://graphics/Baby Crow R.png" id="9_q24je"]
 [ext_resource type="PackedScene" uid="uid://cppr1vx0grq8r" path="res://dialogues/dialogue.tscn" id="9_r5ao5"]
 [ext_resource type="PackedScene" uid="uid://c0cf6vgdrekja" path="res://pause_menu.tscn" id="10_2omes"]
 [ext_resource type="PackedScene" uid="uid://cftoisbhfytx2" path="res://inventory.tscn" id="11_v8sly"]
@@ -17,50 +17,46 @@
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_ook1p")
+"texture": ExtResource("2_fkm2u")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_0vku4")
+"texture": ExtResource("3_l5ccq")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_8hr7q")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_nvmo6")
+"texture": ExtResource("4_wg8f3")
 }],
-"loop": false,
+"loop": true,
 "name": &"flying left",
-"speed": 0.5
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_yipbg")
+"texture": ExtResource("5_6l6vl")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_f3ns2")
+"texture": ExtResource("6_t8i81")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_w4mxo")
+"texture": ExtResource("7_2osi7")
 }],
 "loop": true,
 "name": &"flying right",
-"speed": 8.0
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("8_uag0j")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_uag0j")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_uag0j")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_uag0j")
+"texture": ExtResource("8_mt6as")
 }],
 "loop": true,
-"name": &"sitting",
+"name": &"standing l",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_q24je")
+}],
+"loop": true,
+"name": &"standing r",
 "speed": 5.0
 }]
 
@@ -70,7 +66,7 @@ size = Vector2(18.1818, 14.5455)
 [sub_resource type="CircleShape2D" id="CircleShape2D_1mc4c"]
 radius = 12.0
 
-[node name="player" type="CharacterBody2D"]
+[node name="babyPlayer" type="CharacterBody2D"]
 collision_layer = 3
 script = ExtResource("1_adg2i")
 
@@ -78,8 +74,8 @@ script = ExtResource("1_adg2i")
 position = Vector2(-4.76837e-07, -4.76837e-07)
 scale = Vector2(0.37375, 0.37375)
 sprite_frames = SubResource("SpriteFrames_vivnw")
-animation = &"flying right"
-autoplay = "flying left"
+animation = &"standing r"
+autoplay = "standing l"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, -2.38419e-07)
