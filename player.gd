@@ -91,7 +91,8 @@ func _on_attackcooldown_timeout():
 func _ready():
 	#$AnimatedSprite2D.position = Vector2(100,-100)
 	if global.returnPosition != Vector2(0,0):
+		print("I have somewhere to return to")
 		$".".global_position = global.returnPosition
 		$Camera2D.global_position = global.returnPosition
-		global.returnPosition = Vector2(0,0)
+		#global.returnPosition = Vector2(0,0)
 

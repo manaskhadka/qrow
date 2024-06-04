@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://cxndvf4yv20we" path="res://graphics/Crow Flying Right/CFR2.png" id="6_f3ns2"]
 [ext_resource type="Texture2D" uid="uid://bpimdlpc7hqvn" path="res://graphics/Crow Flying Right/CFR3.png" id="7_w4mxo"]
 [ext_resource type="Texture2D" uid="uid://wtdv6vtna6by" path="res://graphics/Adult Crow.png" id="8_uag0j"]
-[ext_resource type="PackedScene" path="res://dialogues/dialogue.tscn" id="9_r5ao5"]
+[ext_resource type="PackedScene" uid="uid://cppr1vx0grq8r" path="res://dialogues/dialogue.tscn" id="9_r5ao5"]
 [ext_resource type="PackedScene" uid="uid://c0cf6vgdrekja" path="res://pause_menu.tscn" id="10_2omes"]
 [ext_resource type="PackedScene" uid="uid://cftoisbhfytx2" path="res://inventory.tscn" id="11_v8sly"]
 

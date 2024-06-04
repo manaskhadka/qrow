@@ -10,3 +10,4 @@ func _ready():
 func _process(delta):
 	if ($TextureRect/c.text == "c" and $TextureRect/e.text == "e" and $TextureRect/d.text == "d" and $TextureRect/r.text == "r" and $TextureRect/i.text == "i" and $TextureRect/c2.text == "c"):
 		print("password guessed")
+		get_tree().change_scene_to_file("res://bedroom.tscn")
