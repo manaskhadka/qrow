@@ -1,11 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://ksohjbka5n50"]
+[gd_scene load_steps=5 format=3 uid="uid://ksohjbka5n50"]
 
 [ext_resource type="Script" path="res://IntroZoom.gd" id="1_73orx"]
 [ext_resource type="Texture2D" uid="uid://bdeuqm3dnutw" path="res://treezoom.png" id="1_oo2a7"]
 [ext_resource type="PackedScene" uid="uid://dvg308mbut0ul" path="res://babyPlayer.tscn" id="3_hl1wr"]
+[ext_resource type="AudioStream" uid="uid://dg2ehin641gqf" path="res://Magic Tree music.mp3" id="4_ysqyl"]
 
 [node name="DeepForest" type="Node2D"]
 script = ExtResource("1_73orx")
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2(3.05176e-05, 1.52588e-05)
+scale = Vector2(1, 1)
+format = 2
 
 [node name="Bush41" type="Sprite2D" parent="."]
 position = Vector2(-426, -244)
@@ -20,3 +26,8 @@ texture = ExtResource("1_oo2a7")
 
 [node name="player" parent="." instance=ExtResource("3_hl1wr")]
 position = Vector2(-41, 20)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_ysqyl")
+volume_db = -20.0
+autoplay = true
