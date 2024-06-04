@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://b8i3w6yq3u6cb"]
+[gd_scene load_steps=49 format=3 uid="uid://b8i3w6yq3u6cb"]
 
 [ext_resource type="PackedScene" uid="uid://do027h1kv333v" path="res://test-level.tscn" id="1_4m6ml"]
 [ext_resource type="PackedScene" uid="uid://ccwb7bmjph5un" path="res://player.tscn" id="2_bcbvm"]
@@ -28,6 +28,11 @@
 [ext_resource type="Texture2D" uid="uid://cyifakrdeuduj" path="res://graphics/Top-Down Retro Interior/tea.png" id="25_0fkea"]
 [ext_resource type="Texture2D" uid="uid://gjn5rlp524ej" path="res://graphics/3.png" id="27_fcbfc"]
 [ext_resource type="Texture2D" uid="uid://4qiw72u7d54r" path="res://graphics/5.png" id="28_sbtxa"]
+[ext_resource type="Texture2D" uid="uid://53jutxgi87rp" path="res://potion1.png" id="32_1b5bw"]
+[ext_resource type="Texture2D" uid="uid://bh7uyg6gwt10i" path="res://potion2.png" id="33_kxhq2"]
+[ext_resource type="Texture2D" uid="uid://7l2qa6m2lwf6" path="res://potion3.png" id="34_utdfa"]
+[ext_resource type="Texture2D" uid="uid://7qqw23ajupj4" path="res://potion4.png" id="35_gpuhy"]
+[ext_resource type="Texture2D" uid="uid://jim8b5d2idet" path="res://potion5.png" id="36_k12l1"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_6fwv1"]
 shader = ExtResource("7_pcqhn")
@@ -85,6 +90,29 @@ shader_parameter/outline_enabled = false
 shader = ExtResource("7_pcqhn")
 shader_parameter/outline_color = Color(1, 1, 1, 1)
 shader_parameter/outline_enabled = false
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_j5o15"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("32_1b5bw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_kxhq2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_utdfa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_gpuhy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_k12l1")
+}],
+"loop": true,
+"name": &"flying right",
+"speed": 8.0
+}]
 
 [node name="Cottage" type="Node2D"]
 position = Vector2(0, -1)
@@ -937,6 +965,13 @@ material = SubResource("ShaderMaterial_nfyxu")
 position = Vector2(-1, 1)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("28_sbtxa")
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+position = Vector2(384, 62)
+scale = Vector2(0.612188, 0.637188)
+sprite_frames = SubResource("SpriteFrames_j5o15")
+animation = &"flying right"
+autoplay = "flying right"
 
 [connection signal="body_entered" from="Cedric Door" to="Cedric Door" method="_on_body_entered"]
 [connection signal="body_exited" from="Cedric Door" to="Cedric Door" method="_on_body_exited"]

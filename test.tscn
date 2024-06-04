@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://interactable-area-clickable.gd" id="2_4t2hv"]
 [ext_resource type="Shader" path="res://world.gdshader" id="3_vicrf"]
 [ext_resource type="Texture2D" uid="uid://bmbrqipku82kl" path="res://graphics/Pixel Potions/11-removebg-preview.png" id="4_1u22u"]
-[ext_resource type="PackedScene" uid="uid://hxwwmunqojcr" path="res://assets/interactables/reusable_backbutton.tscn" id="5_qfnm2"]
+[ext_resource type="PackedScene" path="res://assets/interactables/reusable_backbutton.tscn" id="5_qfnm2"]
 [ext_resource type="PackedScene" uid="uid://cftoisbhfytx2" path="res://inventory.tscn" id="6_g65vi"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jli43"]
