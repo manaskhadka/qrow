@@ -1,0 +1,110 @@
+[gd_scene load_steps=15 format=3 uid="uid://dvg308mbut0ul"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_adg2i"]
+[ext_resource type="Texture2D" uid="uid://t8apljm57jqa" path="res://graphics/Crow Flying Left/CFL1.png" id="2_c8764"]
+[ext_resource type="Texture2D" uid="uid://r1c7k07431dx" path="res://graphics/Crow Flying Left/CFL2.png" id="3_3vj4p"]
+[ext_resource type="Texture2D" uid="uid://b24smn2lw4f0v" path="res://graphics/Crow Flying Left/CFL3.png" id="4_5vkvv"]
+[ext_resource type="Texture2D" uid="uid://bafjcbskond3a" path="res://graphics/Crow Flying Right/CFR1.png" id="5_yipbg"]
+[ext_resource type="Texture2D" uid="uid://cxndvf4yv20we" path="res://graphics/Crow Flying Right/CFR2.png" id="6_f3ns2"]
+[ext_resource type="Texture2D" uid="uid://bpimdlpc7hqvn" path="res://graphics/Crow Flying Right/CFR3.png" id="7_w4mxo"]
+[ext_resource type="Texture2D" uid="uid://wtdv6vtna6by" path="res://graphics/Adult Crow.png" id="8_uag0j"]
+[ext_resource type="PackedScene" path="res://dialogues/dialogue.tscn" id="9_r5ao5"]
+[ext_resource type="PackedScene" uid="uid://c0cf6vgdrekja" path="res://pause_menu.tscn" id="10_2omes"]
+[ext_resource type="PackedScene" path="res://inventory.tscn" id="11_v8sly"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vivnw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_c8764")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_3vj4p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_5vkvv")
+}],
+"loop": true,
+"name": &"flying left",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_yipbg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_f3ns2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_w4mxo")
+}],
+"loop": true,
+"name": &"flying right",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_uag0j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_uag0j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_uag0j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_uag0j")
+}],
+"loop": true,
+"name": &"sitting",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rvteo"]
+size = Vector2(18.1818, 14.5455)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1mc4c"]
+radius = 12.0
+
+[node name="player" type="CharacterBody2D"]
+collision_layer = 3
+script = ExtResource("1_adg2i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-4.76837e-07, -4.76837e-07)
+scale = Vector2(0.37375, 0.37375)
+sprite_frames = SubResource("SpriteFrames_vivnw")
+animation = &"flying left"
+autoplay = "flying left"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, -2.38419e-07)
+scale = Vector2(1.1, 1.1)
+shape = SubResource("RectangleShape2D_rvteo")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(3, 3)
+
+[node name="player_hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player_hitbox"]
+shape = SubResource("CircleShape2D_1mc4c")
+
+[node name="invincibility-cooldown" type="Timer" parent="."]
+
+[node name="attack-cooldown" type="Timer" parent="."]
+
+[node name="Dialogue" parent="." instance=ExtResource("9_r5ao5")]
+unique_name_in_owner = true
+
+[node name="PauseMenu" parent="." instance=ExtResource("10_2omes")]
+
+[node name="Inventory" type="CanvasLayer" parent="."]
+
+[node name="Inventory" parent="Inventory" instance=ExtResource("11_v8sly")]
+position = Vector2(225, 54)
+
+[connection signal="body_entered" from="player_hitbox" to="." method="_on_player_hitbox_body_entered"]
+[connection signal="body_exited" from="player_hitbox" to="." method="_on_player_hitbox_body_exited"]
+[connection signal="timeout" from="invincibility-cooldown" to="." method="_on_invincibilitycooldown_timeout"]
+[connection signal="timeout" from="attack-cooldown" to="." method="_on_attackcooldown_timeout"]
