@@ -17,6 +17,10 @@ func check_if_can_make(potionName: String):
 			print("not enough to make potion, sorry")
 			return
 		print("yay you can make the potion")
+		global.items[ingredient].amount -= 1
+		if global.items[ingredient].amount == 0:
+			global.items.erase(ingredient)
+		
 	
 
 func _on_pressed():
