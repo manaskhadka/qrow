@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://bchnngednr14u"]
+[gd_scene load_steps=3 format=3 uid="uid://bchnngednr14u"]
 
 [ext_resource type="PackedScene" uid="uid://do027h1kv333v" path="res://test-level.tscn" id="1_2of21"]
+[ext_resource type="Texture2D" uid="uid://hh53uuw21m0u" path="res://graphics/Cane.png" id="2_tpmay"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -10,3 +11,9 @@ layer_1/tile_data = PackedInt32Array(65537, 131076, 1, 131073, 131076, 2, 196609
 layer_2/tile_data = PackedInt32Array(196613, 5, 7, 262149, 5, 8, 327685, 5, 9, 196614, 65541, 7, 262150, 65541, 8, 327686, 65541, 9, 393222, 655366, 2, 458758, 655366, 3, 196615, 5, 7, 262151, 5, 8, 327687, 5, 9, 393223, 720902, 2, 458759, 720902, 3, 196616, 65541, 7, 262152, 65541, 8, 327688, 65541, 9, 393224, 786438, 2, 458760, 786438, 3, 262153, 196614, 2, 327689, 196614, 3, 262154, 262150, 2, 327690, 262150, 3)
 layer_3/name = "added"
 layer_3/tile_data = PackedInt32Array(196610, 458758, 7, 262146, 458758, 8, 327682, 458758, 9, 196611, 524294, 7, 262147, 524294, 8, 327683, 524294, 9, 131076, 7, 1, 65541, 393219, 8, 131077, 393219, 9, 196613, 131079, 3, 65542, 458755, 8, 131078, 458755, 9, 196614, 131079, 3, 131080, 65543, 1, 196616, 393223, 1, 393224, 6, 2, 458760, 6, 3, 393225, 65542, 2, 458761, 65542, 3, 196618, 6, 16, 262154, 6, 17, 393226, 131078, 2, 458762, 131078, 3)
+
+[node name="Cane" type="Sprite2D" parent="."]
+position = Vector2(80, 75)
+rotation = 0.262685
+scale = Vector2(0.484375, 0.484375)
+texture = ExtResource("2_tpmay")
