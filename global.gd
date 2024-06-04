@@ -6,4 +6,4 @@ var items = {}
 var returnPosition: Vector2;
 var camPosition: Vector2;
 
-var recipes = {"healing": ["mushroom1", "mushroom2"]}
+var recipes = {"healing": ["apple", "orange"]}

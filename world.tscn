@@ -116,7 +116,7 @@ layer_3/tile_data = PackedInt32Array(131081, 393223, 1, 262147, 524294, 2, 26214
 
 [node name="Crow" parent="." instance=ExtResource("2_bcbvm")]
 z_index = 3
-position = Vector2(65, 172)
+position = Vector2(65, 156)
 scale = Vector2(0.984563, 0.987805)
 
 [node name="Cedric Door" type="Area2D" parent="." node_paths=PackedStringArray("sprite")]
