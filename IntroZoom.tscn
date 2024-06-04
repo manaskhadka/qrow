@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://IntroZoom.gd" id="1_73orx"]
 [ext_resource type="Texture2D" uid="uid://bdeuqm3dnutw" path="res://treezoom.png" id="1_oo2a7"]
-[ext_resource type="PackedScene" uid="uid://ccwb7bmjph5un" path="res://player.tscn" id="3_4xx31"]
+[ext_resource type="PackedScene" uid="uid://dvg308mbut0ul" path="res://babyPlayer.tscn" id="3_hl1wr"]
 
 [node name="DeepForest" type="Node2D"]
 script = ExtResource("1_73orx")
@@ -18,4 +18,5 @@ position = Vector2(-10, -3)
 scale = Vector2(5.19828, 3.08699)
 texture = ExtResource("1_oo2a7")
 
-[node name="player" parent="." instance=ExtResource("3_4xx31")]
+[node name="player" parent="." instance=ExtResource("3_hl1wr")]
+position = Vector2(-41, 20)
