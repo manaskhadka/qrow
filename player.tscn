@@ -108,7 +108,7 @@ script = ExtResource("1_mc4wp")
 position = Vector2(-4.76837e-07, -4.76837e-07)
 scale = Vector2(0.37375, 0.37375)
 sprite_frames = SubResource("SpriteFrames_vivnw")
-animation = &"flying right"
+animation = &"baby walking right"
 autoplay = "flying left"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

@@ -1,8 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://bchnngednr14u"]
+[gd_scene load_steps=8 format=3 uid="uid://bchnngednr14u"]
 
 [ext_resource type="PackedScene" uid="uid://do027h1kv333v" path="res://test-level.tscn" id="1_2of21"]
 [ext_resource type="Texture2D" uid="uid://hh53uuw21m0u" path="res://graphics/Cane.png" id="2_tpmay"]
 [ext_resource type="PackedScene" uid="uid://ccwb7bmjph5un" path="res://player.tscn" id="3_3g3ab"]
+[ext_resource type="Script" path="res://interactable-area.gd" id="3_han3g"]
+[ext_resource type="Shader" path="res://world.gdshader" id="4_0b5m2"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_10gp6"]
+shader = ExtResource("4_0b5m2")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_enabled = false
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1rmcf"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -13,11 +22,28 @@ layer_2/tile_data = PackedInt32Array(196613, 5, 7, 262149, 5, 8, 327685, 5, 9, 1
 layer_3/name = "added"
 layer_3/tile_data = PackedInt32Array(196610, 458758, 7, 262146, 458758, 8, 327682, 458758, 9, 196611, 524294, 7, 262147, 524294, 8, 327683, 524294, 9, 131076, 7, 1, 65541, 393219, 8, 131077, 393219, 9, 196613, 131079, 3, 65542, 458755, 8, 131078, 458755, 9, 196614, 131079, 3, 131080, 65543, 1, 196616, 393223, 1, 393224, 6, 2, 458760, 6, 3, 393225, 65542, 2, 458761, 65542, 3, 196618, 6, 16, 262154, 6, 17, 393226, 131078, 2, 458762, 131078, 3)
 
-[node name="Cane" type="Sprite2D" parent="."]
-position = Vector2(80, 75)
-rotation = 0.262685
-scale = Vector2(0.484375, 0.484375)
+[node name="Cane" type="Area2D" parent="." node_paths=PackedStringArray("sprite")]
+position = Vector2(45, 218)
+script = ExtResource("3_han3g")
+sprite = NodePath("Cane")
+obj_type = 2
+
+[node name="Cane" type="Sprite2D" parent="Cane"]
+z_index = 1
+material = SubResource("ShaderMaterial_10gp6")
+position = Vector2(33, -144)
+rotation = 0.259168
+scale = Vector2(0.499215, 0.499215)
 texture = ExtResource("2_tpmay")
 
+[node name="CollisionCane" type="CollisionShape2D" parent="Cane"]
+position = Vector2(35, -139)
+scale = Vector2(2, 2)
+shape = SubResource("CircleShape2D_1rmcf")
+
 [node name="player" parent="." instance=ExtResource("3_3g3ab")]
-position = Vector2(45, 120)
+z_index = 1
+position = Vector2(50, 133)
+
+[connection signal="body_entered" from="Cane" to="Cane" method="_on_body_entered"]
+[connection signal="body_exited" from="Cane" to="Cane" method="_on_body_exited"]
