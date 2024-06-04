@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bafjcbskond3a" path="res://graphics/Crow Flying Right/CFR1.png" id="5_dg5pa"]
 [ext_resource type="Texture2D" uid="uid://cxndvf4yv20we" path="res://graphics/Crow Flying Right/CFR2.png" id="6_x411j"]
 [ext_resource type="Texture2D" uid="uid://bpimdlpc7hqvn" path="res://graphics/Crow Flying Right/CFR3.png" id="7_6t0g6"]
-[ext_resource type="PackedScene" path="res://dialogues/dialogue.tscn" id="9_3ul48"]
+[ext_resource type="PackedScene" uid="uid://cppr1vx0grq8r" path="res://dialogues/dialogue.tscn" id="9_3ul48"]
 [ext_resource type="PackedScene" uid="uid://c0cf6vgdrekja" path="res://pause_menu.tscn" id="9_evono"]
 [ext_resource type="PackedScene" uid="uid://cftoisbhfytx2" path="res://inventory.tscn" id="11_5h1gq"]
 
@@ -103,7 +103,6 @@ visible = false
 visible = false
 
 [node name="Inventory" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="Inventory" parent="Inventory" instance=ExtResource("11_5h1gq")]
 position = Vector2(35, 70)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://fhs5g3p1gswn"]
+[gd_scene load_steps=22 format=3 uid="uid://fe13bp6cdnst"]
 
 [ext_resource type="Texture2D" uid="uid://epq2snulklfa" path="res://graphics/PNG image-746C70BB82B2-1.png" id="1_kqnoy"]
 [ext_resource type="Texture2D" uid="uid://b45u31wqwiemp" path="res://graphics/Pixel Potions/2-removebg-preview.png" id="2_p106a"]
@@ -13,19 +13,35 @@
 [ext_resource type="Texture2D" uid="uid://bmbrqipku82kl" path="res://graphics/Pixel Potions/11-removebg-preview.png" id="11_dbqi5"]
 [ext_resource type="Texture2D" uid="uid://clhytlpwgqxwh" path="res://graphics/Pixel Potions/12-removebg-preview.png" id="12_vqtyc"]
 [ext_resource type="Texture2D" uid="uid://r8pwdy5l5sas" path="res://graphics/Pixel Potions/1-removebg-preview_preview_rev_1.png" id="13_1qb31"]
+[ext_resource type="Script" path="res://interactable-area-clickable.gd" id="14_bx3up"]
+[ext_resource type="Shader" path="res://world.gdshader" id="14_j0o2n"]
+[ext_resource type="PackedScene" uid="uid://cftoisbhfytx2" path="res://inventory.tscn" id="16_fycd7"]
+[ext_resource type="PackedScene" uid="uid://hxwwmunqojcr" path="res://assets/interactables/reusable_backbutton.tscn" id="17_1vejn"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pofav"]
+radius = 3.0303
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_j2t1r"]
+shader = ExtResource("14_j0o2n")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_enabled = false
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_m4jhy"]
+radius = 67.0298
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_eruhl"]
+shader = ExtResource("14_j0o2n")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_enabled = false
 
 [node name="Node2D" type="Node2D"]
+position = Vector2(53, 5)
 
 [node name="Shelf w_ Potions" type="Sprite2D" parent="."]
-position = Vector2(152, 86)
-scale = Vector2(6.56522, 4.57576)
-texture = ExtResource("1_kqnoy")
-
-[node name="2-removebg-preview" type="Sprite2D" parent="Shelf w_ Potions"]
 z_index = 1
-position = Vector2(-14.6225, -10.4901)
-scale = Vector2(0.0391566, 0.0391566)
-texture = ExtResource("2_p106a")
+position = Vector2(516.75, 293.367)
+scale = Vector2(22.4457, 14.7078)
+texture = ExtResource("1_kqnoy")
 
 [node name="3-removebg-preview" type="Sprite2D" parent="Shelf w_ Potions"]
 z_index = 1
@@ -116,12 +132,6 @@ z_index = 1
 position = Vector2(-14.6225, -1.74834)
 scale = Vector2(0.04375, 0.04375)
 texture = ExtResource("5_fdtcm")
-
-[node name="6-removebg-preview2" type="Sprite2D" parent="Shelf w_ Potions"]
-z_index = 1
-position = Vector2(-0.152319, -0.874173)
-scale = Vector2(0.0308823, 0.0308823)
-texture = ExtResource("6_hfk8s")
 
 [node name="7-removebg-preview2" type="Sprite2D" parent="Shelf w_ Potions"]
 z_index = 1
@@ -236,3 +246,55 @@ z_index = 1
 position = Vector2(-18.2782, -10.2715)
 scale = Vector2(0.0359375, 0.0359375)
 texture = ExtResource("13_1qb31")
+
+[node name="Inventory" parent="." instance=ExtResource("16_fycd7")]
+z_index = 2
+position = Vector2(-18, 72)
+
+[node name="Area2D" type="Area2D" parent="." node_paths=PackedStringArray("sprite")]
+position = Vector2(516.75, 293.367)
+scale = Vector2(22.4457, 14.7078)
+script = ExtResource("14_bx3up")
+sprite = NodePath("Sprite2D")
+obj_type = 2
+interactable_area_name = "orange"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0.011138, -0.228954)
+shape = SubResource("CircleShape2D_pofav")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+z_index = 1
+material = SubResource("ShaderMaterial_j2t1r")
+position = Vector2(0.100243, -0.976858)
+scale = Vector2(0.03262, 0.033809)
+texture = ExtResource("3_hvre5")
+
+[node name="Area2D2" type="Area2D" parent="." node_paths=PackedStringArray("sprite")]
+script = ExtResource("14_bx3up")
+sprite = NodePath("Sprite2D")
+obj_type = 2
+interactable_area_name = "apple"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2(223, 152)
+shape = SubResource("CircleShape2D_m4jhy")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D2"]
+z_index = 1
+material = SubResource("ShaderMaterial_eruhl")
+position = Vector2(226, 137)
+scale = Vector2(0.801205, 0.590909)
+texture = ExtResource("2_p106a")
+
+[node name="Button" parent="." instance=ExtResource("17_1vejn")]
+z_index = 1
+offset_left = 959.0
+offset_top = -3.0
+offset_right = 1099.0
+offset_bottom = 76.0
+
+[connection signal="mouse_entered" from="Area2D" to="Area2D" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="Area2D" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Area2D2" to="Area2D2" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D2" to="Inventory" method="_on_area_2d_2_mouse_exited"]
