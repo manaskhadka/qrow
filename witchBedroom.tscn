@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://b6akn3lpcnxcd"]
 
-[ext_resource type="TileSet" uid="uid://d0k7l5qyie72r" path="res://indoor-tileset.tres" id="1_wlphs"]
+[ext_resource type="TileSet" uid="uid://dna8mrtmpej2d" path="res://indoor-tileset.tres" id="1_wlphs"]
 [ext_resource type="PackedScene" uid="uid://ccwb7bmjph5un" path="res://player.tscn" id="2_n0kw1"]
 [ext_resource type="Texture2D" uid="uid://d0kl7w8qlyd70" path="res://desert-game-assets/door.jpg" id="3_ufr1e"]
 [ext_resource type="Texture2D" uid="uid://dedxaelim2x8l" path="res://desert-game-assets/letter.png" id="4_nosso"]
