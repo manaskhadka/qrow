@@ -20,7 +20,6 @@ func set_is_paused(value):
 	visible = is_paused
 	
 func _on_resume_btn_pressed():
-	#self.is_paused = false
 	set_is_paused(false)
 	
 
