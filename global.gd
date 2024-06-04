@@ -1,10 +1,9 @@
 extends Node
 
 var player_current_attack = false
-var items: Array[InventorySlot] = []
-
-var selected = false
-var selectedItem: InventorySlot;
+var items = {}
 
 var returnPosition: Vector2;
 var camPosition: Vector2;
+
+var recipes = {"healing": ["mushroom1", "mushroom2"]}

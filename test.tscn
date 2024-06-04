@@ -45,7 +45,7 @@ offset_right = 1121.0
 offset_bottom = 67.0
 
 [node name="Inventory" parent="." instance=ExtResource("6_g65vi")]
-position = Vector2(215, 73)
+position = Vector2(113, 73)
 
 [connection signal="mouse_entered" from="Area2D" to="Area2D" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Area2D" to="Area2D" method="_on_mouse_exited"]

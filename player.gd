@@ -88,11 +88,6 @@ func _on_attackcooldown_timeout():
 	global.player_current_attack = false 
 	is_attacking = false
 
-func _input(event): 
-	if global.selected:
-		$InventoryItem.texture = global.selectedItem.texture
-		$InventoryItem.global_position = get_global_mouse_position()
-
 func _ready():
 	#$AnimatedSprite2D.position = Vector2(100,-100)
 	if global.returnPosition != Vector2(0,0):
