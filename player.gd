@@ -102,8 +102,6 @@ func _ready():
 		$Camera2D.global_position = global.returnPosition
 		global.returnPosition = Vector2(0,0)
 		
-func _process(event):
-	print(	$".".global_position )
 
 
 
