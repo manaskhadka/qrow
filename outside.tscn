@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://c2nfwoja71ay6" path="res://graphics/Deep Forest/Foliage/Bush1_2.png" id="4_tywwl"]
 [ext_resource type="Texture2D" uid="uid://7xutwwqjt1f1" path="res://graphics/Deep Forest/Foliage/Bush1_3.png" id="5_5mpe6"]
 [ext_resource type="Texture2D" uid="uid://bqx7lwqhohnb4" path="res://graphics/Deep Forest/Foliage/Bush1_4.png" id="6_iru7p"]
-[ext_resource type="PackedScene" path="res://enemy.tscn" id="7_dri43"]
+[ext_resource type="PackedScene" uid="uid://cvo2xhojg2kx5" path="res://enemy.tscn" id="7_dri43"]
 [ext_resource type="Texture2D" uid="uid://dh3xbr0pcjnrp" path="res://graphics/Bush4_1.png" id="8_3fvtt"]
 [ext_resource type="Script" path="res://GetInHouse.gd" id="9_bfioh"]
 [ext_resource type="Texture2D" uid="uid://blbqoin1phksy" path="res://graphics/02.png" id="10_821ml"]
