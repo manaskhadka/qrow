@@ -60,14 +60,12 @@ func attack():
 				pass
 			$"attack-cooldown".start()
 	
-	
 func player():
 	pass
 	
 func _on_player_hitbox_body_entered(body):
 	if body.has_method("enemy"): 
 		enemy_in_attack_range = true
-
 
 func _on_player_hitbox_body_exited(body):
 	if body.has_method("enemy"):
@@ -80,11 +78,9 @@ func enemy_attack():
 		health -= 10
 		print("Health:", health)
 
-
 func _on_invincibilitycooldown_timeout():
 	# This gets called whenever the invincibility timer goes off
 	enemy_attack_cooldown = true
-
 
 func _on_attackcooldown_timeout():
 	print("Player attacked!")
@@ -92,20 +88,15 @@ func _on_attackcooldown_timeout():
 	global.player_current_attack = false 
 	is_attacking = false
 
-func _input(event):
+func _input(event): 
 	if global.selected:
 		$InventoryItem.texture = global.selectedItem.texture
 		$InventoryItem.global_position = get_global_mouse_position()
-		print("I am supposed to have something")
 
 func _ready():
 	#$AnimatedSprite2D.position = Vector2(100,-100)
 	if global.returnPosition != Vector2(0,0):
-		print("I AM GOING TO TRY TO CHANGE MY POSITION")
-		print("BEFORE", $AnimatedSprite2D.global_position)
-		print("GOAL", global.returnPosition)
-		$AnimatedSprite2D.global_position = Vector2(400, 15)#global.returnPosition
-		$Camera2D.global_position = Vector2(400, 15)
-		print("AFTER", $AnimatedSprite2D.global_position)
-	print("I RAN THE READY FUNC")
+		$".".global_position = global.returnPosition
+		$Camera2D.global_position = global.returnPosition
+		global.returnPosition = Vector2(0,0)
 
