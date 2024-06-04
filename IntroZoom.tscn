@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://ksohjbka5n50"]
+[gd_scene load_steps=3 format=3 uid="uid://ksohjbka5n50"]
 
-[ext_resource type="Texture2D" path="res://treezoom.png" id="1_oo2a7"]
+[ext_resource type="Script" path="res://IntroZoom.gd" id="1_73orx"]
+[ext_resource type="Texture2D" uid="uid://bdeuqm3dnutw" path="res://treezoom.png" id="1_oo2a7"]
 
 [node name="DeepForest" type="Node2D"]
+script = ExtResource("1_73orx")
 
 [node name="Bush41" type="Sprite2D" parent="."]
 position = Vector2(-426, -244)
@@ -11,6 +13,6 @@ scale = Vector2(1.75, 2.25)
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 
 [node name="Treezoom" type="Sprite2D" parent="."]
-position = Vector2(268.375, 246.25)
-scale = Vector2(6.8525, 6.955)
+position = Vector2(707, 97.125)
+scale = Vector2(12.08, 7.5575)
 texture = ExtResource("1_oo2a7")
