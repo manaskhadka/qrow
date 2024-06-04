@@ -3,9 +3,12 @@ extends CanvasLayer
 
 var is_paused = false
 
+func _ready():
+	is_paused = false
+	visible = is_paused
+	
 func _unhandled_input(event):
 	if event.is_action_pressed("pause"):
-		#self.is_paused = !is_paused
 		toggle_pause()
 
 func toggle_pause():

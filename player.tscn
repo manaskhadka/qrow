@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://bpimdlpc7hqvn" path="res://graphics/Crow Flying Right/CFR3.png" id="7_6t0g6"]
 [ext_resource type="PackedScene" uid="uid://cppr1vx0grq8r" path="res://dialogues/dialogue.tscn" id="9_3ul48"]
 [ext_resource type="PackedScene" uid="uid://c0cf6vgdrekja" path="res://pause_menu.tscn" id="9_evono"]
-[ext_resource type="PackedScene" uid="uid://cftoisbhfytx2" path="res://inventory.tscn" id="11_5h1gq"]
+[ext_resource type="PackedScene" path="res://inventory.tscn" id="11_5h1gq"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_vivnw"]
 animations = [{
@@ -66,7 +66,7 @@ size = Vector2(18.1818, 14.5455)
 [sub_resource type="CircleShape2D" id="CircleShape2D_1mc4c"]
 radius = 12.0
 
-[node name="player" type="CharacterBody2D"]
+[node name="player2" type="CharacterBody2D"]
 collision_layer = 3
 script = ExtResource("1_mc4wp")
 
