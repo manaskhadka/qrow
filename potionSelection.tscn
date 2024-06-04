@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://d353gwpd1hqth"]
+
+[ext_resource type="Script" path="res://potionSelection.gd" id="1_g2cud"]
+[ext_resource type="Texture2D" uid="uid://dwna6atgkbg4f" path="res://inventorySlot.png" id="1_xkvi0"]
+[ext_resource type="FontFile" uid="uid://eh5g0kttdrh1" path="res://ArchitectsDaughter.ttf" id="2_0lcds"]
+
+[node name="PotionSelection" type="Button"]
+custom_minimum_size = Vector2(40, 15)
+script = ExtResource("1_g2cud")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(20, 7.5)
+scale = Vector2(2.1, 0.85)
+texture = ExtResource("1_xkvi0")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 1.0
+offset_right = 37.0
+offset_bottom = 14.0
+theme_override_fonts/font = ExtResource("2_0lcds")
+theme_override_font_sizes/font_size = 7
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

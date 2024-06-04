@@ -1,16 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://cftoisbhfytx2"]
+[gd_scene load_steps=5 format=3 uid="uid://cftoisbhfytx2"]
 
 [ext_resource type="Script" path="res://inventory.gd" id="1_w6ekb"]
 [ext_resource type="Texture2D" uid="uid://coqfc4kh7r77w" path="res://InventoryRect.png" id="2_uawfs"]
 [ext_resource type="PackedScene" uid="uid://cv5kikv2v1anj" path="res://panel.tscn" id="3_3my4d"]
+[ext_resource type="PackedScene" uid="uid://d353gwpd1hqth" path="res://potionSelection.tscn" id="4_aii3v"]
 
 [node name="Inventory" type="Node2D"]
 scale = Vector2(6.56, 6.56)
 script = ExtResource("1_w6ekb")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
-offset_right = 106.0
-offset_bottom = 82.0
+offset_right = 110.0
+offset_bottom = 81.0
 texture = ExtResource("2_uawfs")
 patch_margin_left = 6
 patch_margin_top = 6
@@ -67,3 +68,29 @@ layout_mode = 2
 
 [node name="Panel12" parent="NinePatchRect/GridContainer" instance=ExtResource("3_3my4d")]
 layout_mode = 2
+
+[node name="PotionTypes" type="NinePatchRect" parent="."]
+offset_left = 110.0
+offset_right = 165.0
+offset_bottom = 81.0
+texture = ExtResource("2_uawfs")
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 6
+
+[node name="PotionSelection2" parent="PotionTypes" instance=ExtResource("4_aii3v")]
+layout_mode = 0
+offset_left = 7.68293
+offset_top = 19.0549
+offset_right = 47.6829
+offset_bottom = 34.0549
+potionName = "healing"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 119.512
+offset_top = 3.20122
+offset_right = 159.512
+offset_bottom = 16.2012
+theme_override_font_sizes/font_size = 9
+text = "potions"

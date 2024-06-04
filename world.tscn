@@ -902,7 +902,7 @@ shape = SubResource("CircleShape2D_ll84j")
 script = ExtResource("23_tg6s0")
 sprite = NodePath("Sprite2D")
 obj_type = 1
-interactable_area_name = "test"
+interactable_area_name = "mushroom1"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="test"]
 position = Vector2(223, 113)
@@ -920,7 +920,7 @@ script = ExtResource("23_tg6s0")
 sprite = NodePath("Sprite2D")
 obj_type = 2
 text = "wow a purple mushroom"
-interactable_area_name = "finite"
+interactable_area_name = "mushroom2"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="test2"]
 shape = SubResource("CircleShape2D_hpvs1")

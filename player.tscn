@@ -1,53 +1,19 @@
-[gd_scene load_steps=21 format=3 uid="uid://ccwb7bmjph5un"]
+[gd_scene load_steps=15 format=3 uid="uid://ccwb7bmjph5un"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_mc4wp"]
-[ext_resource type="Texture2D" uid="uid://cxuns0vy1aw4i" path="res://graphics/Baby Crow Walking/BCrow1.png" id="2_0soyh"]
 [ext_resource type="Texture2D" uid="uid://t8apljm57jqa" path="res://graphics/Crow Flying Left/CFL1.png" id="2_rx0d0"]
 [ext_resource type="Texture2D" uid="uid://wtdv6vtna6by" path="res://graphics/Adult Crow.png" id="2_vi6hk"]
 [ext_resource type="Texture2D" uid="uid://r1c7k07431dx" path="res://graphics/Crow Flying Left/CFL2.png" id="3_jf7wp"]
-[ext_resource type="Texture2D" uid="uid://csfpvi1oh7v57" path="res://graphics/Baby Crow Walking/BCrow2.png" id="3_kn0b0"]
 [ext_resource type="Texture2D" uid="uid://b24smn2lw4f0v" path="res://graphics/Crow Flying Left/CFL3.png" id="4_2xujj"]
-[ext_resource type="Texture2D" uid="uid://brnvvbc7fu380" path="res://graphics/Baby Crow Walking/BCrow3.png" id="4_7mxp7"]
-[ext_resource type="Texture2D" uid="uid://dg3o1axjyd458" path="res://graphics/Baby Crow Walking/BCrowR1.png" id="5_2rkdb"]
 [ext_resource type="Texture2D" uid="uid://bafjcbskond3a" path="res://graphics/Crow Flying Right/CFR1.png" id="5_dg5pa"]
-[ext_resource type="Texture2D" uid="uid://bta1p5tu4uexa" path="res://graphics/Baby Crow Walking/BCrowR2.png" id="6_5nj1s"]
 [ext_resource type="Texture2D" uid="uid://cxndvf4yv20we" path="res://graphics/Crow Flying Right/CFR2.png" id="6_x411j"]
 [ext_resource type="Texture2D" uid="uid://bpimdlpc7hqvn" path="res://graphics/Crow Flying Right/CFR3.png" id="7_6t0g6"]
-[ext_resource type="Texture2D" uid="uid://ifh8vvguey8t" path="res://graphics/Baby Crow Walking/BCrowR3.png" id="7_h3abn"]
 [ext_resource type="PackedScene" uid="uid://cppr1vx0grq8r" path="res://dialogues/dialogue.tscn" id="9_3ul48"]
 [ext_resource type="PackedScene" uid="uid://c0cf6vgdrekja" path="res://pause_menu.tscn" id="9_evono"]
 [ext_resource type="PackedScene" uid="uid://cftoisbhfytx2" path="res://inventory.tscn" id="11_5h1gq"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_vivnw"]
 animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_0soyh")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_kn0b0")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_7mxp7")
-}],
-"loop": true,
-"name": &"baby walking left",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("5_2rkdb")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_5nj1s")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_h3abn")
-}],
-"loop": true,
-"name": &"baby walking right",
-"speed": 5.0
-}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_rx0d0")
@@ -90,7 +56,7 @@ animations = [{
 "texture": ExtResource("2_vi6hk")
 }],
 "loop": true,
-"name": &"standing",
+"name": &"sitting",
 "speed": 5.0
 }]
 
@@ -108,8 +74,9 @@ script = ExtResource("1_mc4wp")
 position = Vector2(-4.76837e-07, -4.76837e-07)
 scale = Vector2(0.37375, 0.37375)
 sprite_frames = SubResource("SpriteFrames_vivnw")
-animation = &"baby walking right"
+animation = &"flying right"
 autoplay = "flying left"
+frame_progress = 0.805727
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, -2.38419e-07)
@@ -136,9 +103,7 @@ unique_name_in_owner = true
 [node name="Inventory" type="CanvasLayer" parent="."]
 
 [node name="Inventory" parent="Inventory" instance=ExtResource("11_5h1gq")]
-position = Vector2(225, 54)
-
-[node name="InventoryItem" type="Sprite2D" parent="."]
+position = Vector2(35, 70)
 
 [connection signal="body_entered" from="player_hitbox" to="." method="_on_player_hitbox_body_entered"]
 [connection signal="body_exited" from="player_hitbox" to="." method="_on_player_hitbox_body_exited"]
