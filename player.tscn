@@ -103,7 +103,6 @@ visible = false
 visible = false
 
 [node name="Inventory" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="Inventory" parent="Inventory" instance=ExtResource("11_5h1gq")]
 position = Vector2(35, 70)
