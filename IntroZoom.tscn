@@ -10,7 +10,6 @@ script = ExtResource("1_73orx")
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(3.05176e-05, 1.52588e-05)
-scale = Vector2(1, 1)
 format = 2
 
 [node name="Bush41" type="Sprite2D" parent="."]

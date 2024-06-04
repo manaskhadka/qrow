@@ -1,14 +1,16 @@
-[gd_scene load_steps=10 format=3 uid="uid://dbpv566fqmwu2"]
+[gd_scene load_steps=11 format=3 uid="uid://dbpv566fqmwu2"]
 
 [ext_resource type="Script" path="res://IntroForest.gd" id="1_m1mmt"]
 [ext_resource type="TileSet" uid="uid://c2kjmlqk85esq" path="res://IntroForest.tres" id="3_qin8l"]
+[ext_resource type="Script" path="res://Sign.gd" id="6_flngg"]
 [ext_resource type="Texture2D" uid="uid://dh3xbr0pcjnrp" path="res://graphics/Bush4_1.png" id="8_p56hp"]
 [ext_resource type="AudioStream" uid="uid://dg2ehin641gqf" path="res://Magic Tree music.mp3" id="9_3elor"]
 [ext_resource type="Texture2D" uid="uid://c2nfwoja71ay6" path="res://graphics/Deep Forest/Foliage/Bush1_2.png" id="12_yw2f5"]
 [ext_resource type="Texture2D" uid="uid://b8js4d1dc27qi" path="res://trees.png" id="13_4b8y0"]
 [ext_resource type="PackedScene" uid="uid://ccwb7bmjph5un" path="res://player.tscn" id="13_il8fa"]
-[ext_resource type="Script" path="res://sign.gd" id="14_jn40h"]
 [ext_resource type="Texture2D" uid="uid://b27hbrj41dxug" path="res://01.png" id="14_wekay"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0lsx1"]
 
 [node name="IntroForest" type="Node2D"]
 script = ExtResource("1_m1mmt")
@@ -44,11 +46,17 @@ position = Vector2(462, 982)
 scale = Vector2(0.28169, 0.299528)
 texture = ExtResource("13_4b8y0")
 
-[node name="01" type="Sprite2D" parent="."]
+[node name="Sign" type="Area2D" parent="."]
 position = Vector2(-701, -160)
 scale = Vector2(1.98438, 1.41146)
+script = ExtResource("6_flngg")
+
+[node name="01" type="Sprite2D" parent="Sign"]
+scale = Vector2(1, 1)
 texture = ExtResource("14_wekay")
-script = ExtResource("14_jn40h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sign"]
+shape = SubResource("RectangleShape2D_0lsx1")
 
 [node name="Treezoom" type="Sprite2D" parent="."]
 position = Vector2(326, -45)
