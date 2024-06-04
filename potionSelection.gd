@@ -11,14 +11,17 @@ func _ready():
 func _process(delta):
 	$Label.text = potionName
 	
-func _check_if_can_make(potionName: String):
-	for i in range(global.items.size()):
-		# need to check if we have all of the necessary ingredients
-		pass 
+func check_if_can_make(potionName: String):
+	for ingredient in global.recipes[potionName]:
+		if !global.items.has(ingredient):
+			print("not enough to make potion, sorry")
+			return
+		print("yay you can make the potion")
 	
 
 func _on_pressed():
 	print("you pressed a potion type") # Replace with function body.
 	print("potion name", potionName)
 	print("potion ingredients", global.recipes[potionName])
+	check_if_can_make(potionName)
 	
