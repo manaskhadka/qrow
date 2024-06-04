@@ -24,8 +24,14 @@ enum {CHARACTER, ITEM_C, ITEM_V}
 # For debugging purposes:
 @export var interactable_area_name : String;
 
+var shader = preload("res://world.gdshader")
 func _ready():
 	# $object.texture = load(image)
+	if (not sprite): 
+		print("ERROR: You did not attach a sprite to an interactable area")
+	
+	sprite.material = ShaderMaterial.new()
+	sprite.material.shader = shader
 	entered = false
 	sprite.material.set_shader_parameter("outline_enabled", false)
 		
