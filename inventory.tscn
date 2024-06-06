@@ -70,9 +70,10 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="PotionTypes" type="NinePatchRect" parent="."]
-offset_left = 110.0
-offset_right = 165.0
-offset_bottom = 81.0
+offset_left = 108.689
+offset_top = 0.609756
+offset_right = 163.689
+offset_bottom = 81.6098
 texture = ExtResource("2_uawfs")
 patch_margin_left = 6
 patch_margin_top = 6
@@ -94,3 +95,21 @@ offset_right = 159.512
 offset_bottom = 16.2012
 theme_override_font_sizes/font_size = 9
 text = "potions"
+
+[node name="Ingredients" type="NinePatchRect" parent="."]
+offset_left = 1.0
+offset_top = 81.0
+offset_right = 165.0
+offset_bottom = 99.0
+
+[node name="GridContainer" type="GridContainer" parent="Ingredients"]
+layout_mode = 0
+offset_right = 174.0
+offset_bottom = 17.0
+columns = 6
+
+[node name="Panel" parent="Ingredients/GridContainer" instance=ExtResource("3_3my4d")]
+layout_mode = 2
+
+[node name="Panel2" parent="Ingredients/GridContainer" instance=ExtResource("3_3my4d")]
+layout_mode = 2
