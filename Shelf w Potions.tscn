@@ -292,7 +292,7 @@ offset_bottom = 76.0
 
 [node name="PotionMaking" parent="." instance=ExtResource("17_j4bn8")]
 z_index = 1
-position = Vector2(-56, 0)
+position = Vector2(-53, 0)
 
 [connection signal="mouse_entered" from="Area2D" to="Area2D" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Area2D" to="Area2D" method="_on_mouse_exited"]

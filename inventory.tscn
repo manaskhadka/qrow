@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://coqfc4kh7r77w" path="res://InventoryRect.png" id="2_uawfs"]
 [ext_resource type="PackedScene" uid="uid://cv5kikv2v1anj" path="res://panel.tscn" id="3_3my4d"]
 [ext_resource type="PackedScene" uid="uid://d353gwpd1hqth" path="res://potionSelection.tscn" id="4_aii3v"]
-[ext_resource type="Script" path="res://createButton.gd" id="5_t8x1s"]
+[ext_resource type="PackedScene" uid="uid://blinnbo5jotyt" path="res://createButton.tscn" id="5_qkawc"]
 
 [node name="Inventory" type="Node2D"]
 position = Vector2(24, 44)
@@ -155,15 +155,12 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 9
 text = "Recipe"
 
-[node name="Button" type="Button" parent="."]
+[node name="CreateButton" parent="." instance=ExtResource("5_qkawc")]
 z_index = 1
-custom_minimum_size = Vector2(10, 10)
-offset_left = 118.894
-offset_top = 88.1106
-offset_right = 160.894
-offset_bottom = 101.111
-theme_override_font_sizes/font_size = 8
-text = "create "
-script = ExtResource("5_t8x1s")
+offset_left = 118.525
+offset_top = 88.6636
+offset_right = 175.525
+offset_bottom = 119.664
+scale = Vector2(0.375, 0.375)
 
-[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="pressed" from="CreateButton" to="CreateButton" method="_on_pressed"]
