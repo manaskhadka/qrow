@@ -11,3 +11,6 @@ var recipes = {"death": {"apple": [1,"res://graphics/Pixel Potions/2-removebg-pr
 
 # saves selected potion in inventory
 var selectedPotion: String = ""
+
+# lets you know which inventory to show
+var hideRegularInventory: bool = false

@@ -94,8 +94,6 @@ func _on_attackcooldown_timeout():
 	is_attacking = false
 
 func _ready():
-	#$AnimatedSprite2D.position = Vector2(100,-100)
-	
 	if global.returnPosition != Vector2(0,0):
 		print("I have somewhere to return to")
 		$".".global_position = global.returnPosition

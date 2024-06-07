@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://b8i3w6yq3u6cb"]
+[gd_scene load_steps=40 format=3 uid="uid://b8i3w6yq3u6cb"]
 
 [ext_resource type="PackedScene" uid="uid://do027h1kv333v" path="res://test-level.tscn" id="1_4m6ml"]
 [ext_resource type="PackedScene" uid="uid://ccwb7bmjph5un" path="res://player.tscn" id="2_bcbvm"]
@@ -25,11 +25,8 @@
 [ext_resource type="Texture2D" uid="uid://depfqa2hxlwc6" path="res://graphics/PNG image-4754-8F17-67-0.png" id="23_lh4bv"]
 [ext_resource type="Texture2D" uid="uid://ebp0n0jjurct" path="res://graphics/Top-Down Retro Interior/pie.png" id="24_qcgfe"]
 [ext_resource type="Texture2D" uid="uid://cyifakrdeuduj" path="res://graphics/Top-Down Retro Interior/tea.png" id="25_0fkea"]
+[ext_resource type="Script" path="res://cauldron.gd" id="26_ohhgt"]
 [ext_resource type="Texture2D" uid="uid://53jutxgi87rp" path="res://potion1.png" id="32_1b5bw"]
-[ext_resource type="Texture2D" uid="uid://bh7uyg6gwt10i" path="res://potion2.png" id="33_kxhq2"]
-[ext_resource type="Texture2D" uid="uid://7l2qa6m2lwf6" path="res://potion3.png" id="34_utdfa"]
-[ext_resource type="Texture2D" uid="uid://7qqw23ajupj4" path="res://potion4.png" id="35_gpuhy"]
-[ext_resource type="Texture2D" uid="uid://jim8b5d2idet" path="res://potion5.png" id="36_k12l1"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_6fwv1"]
 shader = ExtResource("7_pcqhn")
@@ -74,28 +71,13 @@ shader = ExtResource("7_pcqhn")
 shader_parameter/outline_color = Color(1, 1, 1, 1)
 shader_parameter/outline_enabled = false
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_j5o15"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("32_1b5bw")
-}, {
-"duration": 1.0,
-"texture": ExtResource("33_kxhq2")
-}, {
-"duration": 1.0,
-"texture": ExtResource("34_utdfa")
-}, {
-"duration": 1.0,
-"texture": ExtResource("35_gpuhy")
-}, {
-"duration": 1.0,
-"texture": ExtResource("36_k12l1")
-}],
-"loop": true,
-"name": &"flying right",
-"speed": 8.0
-}]
+[sub_resource type="CircleShape2D" id="CircleShape2D_kpgcm"]
+radius = 22.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4f4ip"]
+shader = ExtResource("7_pcqhn")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_enabled = false
 
 [node name="Cottage" type="Node2D"]
 position = Vector2(0, -1)
@@ -916,12 +898,19 @@ texture = ExtResource("25_0fkea")
 position = Vector2(91, -193)
 shape = SubResource("CircleShape2D_ll84j")
 
-[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
-position = Vector2(384, 62)
-scale = Vector2(0.612188, 0.637188)
-sprite_frames = SubResource("SpriteFrames_j5o15")
-animation = &"flying right"
-autoplay = "flying right"
+[node name="cauldron" type="Area2D" parent="." node_paths=PackedStringArray("sprite")]
+script = ExtResource("26_ohhgt")
+sprite = NodePath("Sprite2D")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cauldron"]
+position = Vector2(352, 93)
+shape = SubResource("CircleShape2D_kpgcm")
+
+[node name="Sprite2D" type="Sprite2D" parent="cauldron"]
+material = SubResource("ShaderMaterial_4f4ip")
+position = Vector2(353, 89)
+scale = Vector2(0.5625, 0.575)
+texture = ExtResource("32_1b5bw")
 
 [connection signal="body_entered" from="Cedric Door" to="Cedric Door" method="_on_body_entered"]
 [connection signal="body_exited" from="Cedric Door" to="Cedric Door" method="_on_body_exited"]
@@ -939,3 +928,5 @@ autoplay = "flying right"
 [connection signal="body_exited" from="Pie" to="Pie" method="_on_body_exited"]
 [connection signal="body_entered" from="Tea" to="Tea" method="_on_body_entered"]
 [connection signal="body_exited" from="Tea" to="Tea" method="_on_body_exited"]
+[connection signal="body_entered" from="cauldron" to="cauldron" method="_on_body_entered"]
+[connection signal="body_exited" from="cauldron" to="cauldron" method="_on_body_exited"]

@@ -36,6 +36,7 @@ func updateIngredients(num: int, imageLoc: String):
 	var height = itemSprite.texture.get_height()
 	var scale = (size[0] - 5) / height
 	itemSprite.scale = Vector2(scale, scale)
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass

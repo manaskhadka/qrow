@@ -90,6 +90,7 @@ offset_left = 56.2096
 offset_top = 2.49777
 offset_right = 96.2096
 offset_bottom = 17.4978
+keep_pressed_outside = true
 potionName = "healing"
 
 [node name="PotionSelection" parent="PotionTypes" instance=ExtResource("4_aii3v")]
