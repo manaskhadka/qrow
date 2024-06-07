@@ -15,8 +15,8 @@
 [ext_resource type="Texture2D" uid="uid://r8pwdy5l5sas" path="res://graphics/Pixel Potions/1-removebg-preview_preview_rev_1.png" id="13_1qb31"]
 [ext_resource type="Script" path="res://interactable-area-clickable.gd" id="14_bx3up"]
 [ext_resource type="Shader" path="res://world.gdshader" id="14_j0o2n"]
-[ext_resource type="PackedScene" uid="uid://cftoisbhfytx2" path="res://inventory.tscn" id="16_fycd7"]
 [ext_resource type="PackedScene" uid="uid://hxwwmunqojcr" path="res://assets/interactables/reusable_backbutton.tscn" id="17_1vejn"]
+[ext_resource type="PackedScene" uid="uid://dfrvhtyhvd8n1" path="res://assets/regularInventory.tscn" id="17_j4bn8"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pofav"]
 radius = 3.0303
@@ -247,10 +247,6 @@ position = Vector2(-18.2782, -10.2715)
 scale = Vector2(0.0359375, 0.0359375)
 texture = ExtResource("13_1qb31")
 
-[node name="Inventory" parent="." instance=ExtResource("16_fycd7")]
-z_index = 2
-position = Vector2(-18, 72)
-
 [node name="Area2D" type="Area2D" parent="." node_paths=PackedStringArray("sprite")]
 position = Vector2(516.75, 293.367)
 scale = Vector2(22.4457, 14.7078)
@@ -294,7 +290,10 @@ offset_top = -3.0
 offset_right = 1099.0
 offset_bottom = 76.0
 
+[node name="PotionMaking" parent="." instance=ExtResource("17_j4bn8")]
+z_index = 1
+position = Vector2(-56, 0)
+
 [connection signal="mouse_entered" from="Area2D" to="Area2D" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Area2D" to="Area2D" method="_on_mouse_exited"]
 [connection signal="mouse_entered" from="Area2D2" to="Area2D2" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="Area2D2" to="Inventory" method="_on_area_2d_2_mouse_exited"]
