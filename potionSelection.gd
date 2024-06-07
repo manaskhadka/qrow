@@ -16,6 +16,10 @@ func _process(delta):
 func show_ingredients(potionName: String):
 	print("CALLING SHOW INGREDIENTS")
 	var ingredientKeys = global.recipes[potionName].keys()
+	# not ideal but should work to clear all items before adding new images
+	for i in range(ingredientSlots.size()):
+		ingredientSlots[i].updateIngredients(0, "")
+		
 	for i in range(ingredientKeys.size()):
 		var ingredient = ingredientKeys[i]
 		var num = global.recipes[potionName][ingredient][0]

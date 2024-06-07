@@ -26,7 +26,12 @@ func update(item2: InventorySlot):
 		itemSprite.scale = Vector2(scale, scale)
 		
 func updateIngredients(num: int, imageLoc: String):
-	print("CALLING UPDATE INGREDIENTS")
+	if num == 0:
+		backgroundSprite.frame = 0
+		itemSprite.visible = false
+		itemLabel.visible = false
+		return
+		
 	backgroundSprite.frame = 1
 	itemSprite.visible = true
 	itemLabel.visible = true
