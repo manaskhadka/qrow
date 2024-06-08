@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://beve8unndvi8n"]
+[gd_scene load_steps=18 format=3 uid="uid://beve8unndvi8n"]
 
 [ext_resource type="PackedScene" uid="uid://ccwb7bmjph5un" path="res://player.tscn" id="1_1j6s7"]
 [ext_resource type="TileSet" uid="uid://8gea1ppxsuby" path="res://forest.tres" id="1_opfij"]
@@ -12,12 +12,21 @@
 [ext_resource type="Texture2D" uid="uid://blbqoin1phksy" path="res://graphics/02.png" id="10_821ml"]
 [ext_resource type="Script" path="res://interactable-area.gd" id="11_ehjrr"]
 [ext_resource type="AudioStream" uid="uid://dg2ehin641gqf" path="res://Magic Tree music.mp3" id="11_uusib"]
+[ext_resource type="Shader" path="res://world.gdshader" id="13_ri81m"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8o5td"]
 radius = 24.3311
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ggqcq"]
 radius = 20.6093
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_upsbr"]
+shader = ExtResource("13_ri81m")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_enabled = false
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xjm7s"]
+radius = 33.1361
 
 [node name="Outside" type="Node2D"]
 
@@ -154,7 +163,24 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 9
 text = "Deep Forest"
 
+[node name="bushWithBerries2" type="Area2D" parent="." node_paths=PackedStringArray("sprite")]
+script = ExtResource("11_ehjrr")
+sprite = NodePath("bushWithBerries")
+transition_scene = "res://berryBushFront.tscn"
+interactable_area_name = "Bush"
+
+[node name="bushWithBerries" type="Sprite2D" parent="bushWithBerries2"]
+material = SubResource("ShaderMaterial_upsbr")
+position = Vector2(542, -87)
+texture = ExtResource("5_5mpe6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bushWithBerries2"]
+position = Vector2(543, -87)
+shape = SubResource("CircleShape2D_xjm7s")
+
 [connection signal="body_entered" from="Cottage Door" to="Cottage Door" method="_on_body_entered"]
 [connection signal="body_exited" from="Cottage Door" to="Cottage Door" method="_on_body_exited"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
+[connection signal="body_entered" from="bushWithBerries2" to="bushWithBerries2" method="_on_body_entered"]
+[connection signal="body_exited" from="bushWithBerries2" to="bushWithBerries2" method="_on_body_exited"]
