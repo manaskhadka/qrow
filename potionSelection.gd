@@ -1,5 +1,6 @@
 extends Button
 @export var potionName: String;
+@export var iconPic: String;
 @onready var slots: Array = $"../../NinePatchRect/GridContainer".get_children()
 @onready var ingredientSlots: Array = $"../../Ingredients/GridContainer".get_children()
 
@@ -12,6 +13,8 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	$Label.text = potionName
+	$icon.texture = load(iconPic)
+	$icon.scale = Vector2(0.2, 0.2)
 		
 func show_ingredients(potionName: String):
 	print("CALLING SHOW INGREDIENTS")

@@ -17,3 +17,6 @@ var hideRegularInventory: bool = false
 
 # stores created potions and how many you have made
 var createdPotions = {}
+
+#stores associated symbols
+var potionIcons = {"healing": "res://dialogues/Pixel Heart Sprite Sheet 32x32.png", "death":"res://Skull&Bones - FrodoUndead.png" }

@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://d1usvmq3jlfxt" path="res://assets/potionMessage.tscn" id="6_5aox5"]
 
 [node name="Inventory" type="Node2D"]
-position = Vector2(24, 44)
+position = Vector2(5, 44)
 scale = Vector2(5.425, 5.425)
 script = ExtResource("1_w6ekb")
 
@@ -87,21 +87,25 @@ patch_margin_bottom = 6
 [node name="PotionSelection2" parent="PotionTypes" instance=ExtResource("4_aii3v")]
 z_index = -1
 layout_mode = 0
-offset_left = 56.2096
-offset_top = 2.49777
-offset_right = 96.2096
-offset_bottom = 17.4978
+offset_left = 56.5783
+offset_top = 24.6176
+offset_right = 96.5783
+offset_bottom = 39.6176
+scale = Vector2(0.705, 0.705)
 keep_pressed_outside = true
 potionName = "healing"
+iconPic = "res://dialogues/Pixel Heart Sprite Sheet 32x32.png"
 
 [node name="PotionSelection" parent="PotionTypes" instance=ExtResource("4_aii3v")]
 z_index = -1
 layout_mode = 0
-offset_left = 56.7742
-offset_top = 19.1705
-offset_right = 96.7742
-offset_bottom = 34.1705
+offset_left = 57.5115
+offset_top = 38.5253
+offset_right = 97.5115
+offset_bottom = 53.5253
+scale = Vector2(0.685, 0.685)
 potionName = "death"
+iconPic = "res://Skull&Bones - FrodoUndead.png"
 
 [node name="Ingredients" type="NinePatchRect" parent="."]
 z_index = 1
@@ -166,7 +170,27 @@ scale = Vector2(0.375, 0.375)
 
 [node name="PotionMessage" parent="." instance=ExtResource("6_5aox5")]
 z_index = 1
-position = Vector2(-6.45161, 75.2074)
+position = Vector2(-2.58064, 75.2074)
 scale = Vector2(0.54, 0.54)
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="."]
+offset_left = 167.29
+offset_right = 211.29
+offset_bottom = 23.0
+texture = ExtResource("2_uawfs")
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 6
+
+[node name="Label3" type="Label" parent="."]
+z_index = 1
+offset_left = 172.369
+offset_top = 3.553
+offset_right = 206.369
+offset_bottom = 16.553
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 9
+text = "Potions"
 
 [connection signal="pressed" from="CreateButton" to="CreateButton" method="_on_pressed"]

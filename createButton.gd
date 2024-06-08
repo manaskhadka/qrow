@@ -48,18 +48,29 @@ func check_if_can_make(potionName: String):
 		if global.items[ingredient].amount == 0:
 			global.items.erase(ingredient)
 			
-		# Update ingredients displayed in inventory
-		var min = min(global.items.size(), slots.size())
-		# this is unideal but it works
-		for i in range(slots.size()):
-			slots[i].update(null)
+	# Add the created potion symbol to inventory
+	if !global.items.has(potionName):
+		var inventory_slot = InventorySlot.new()
+		inventory_slot.texture = load(global.potionIcons[potionName])
+		inventory_slot.amount = 1
+		global.items[potionName] = inventory_slot
+	else:
+		global.items[potionName].amount += 1
+	
+	# Update ingredients displayed in inventory
+	var min = min(global.items.size(), slots.size())
+	# this is unideal but it works
+	for i in range(slots.size()):
+		slots[i].update(null)
 			
-		for i in range(min):
-			var keys = global.items.keys()
-			var key = keys[i]
-			print(global.items)
-			print(global.items.size())
-			slots[i].update(global.items[key])
+	for i in range(min):
+		var keys = global.items.keys()
+		var key = keys[i]
+		print(global.items)
+		print(global.items.size())
+		slots[i].update(global.items[key])
+		
+	# clear selected potion value
 	global.selectedPotion = ""
 
 func _on_pressed():

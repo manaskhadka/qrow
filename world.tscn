@@ -873,6 +873,7 @@ position = Vector2(45, 219)
 script = ExtResource("7_6h0fw")
 sprite = NodePath("Pie")
 obj_type = 2
+dialogue_file = "res://dialogues/pieDialogue.json"
 
 [node name="Pie" type="Sprite2D" parent="Pie"]
 material = SubResource("ShaderMaterial_hdkng")
@@ -888,6 +889,7 @@ position = Vector2(45, 219)
 script = ExtResource("7_6h0fw")
 sprite = NodePath("Tea")
 obj_type = 2
+dialogue_file = "res://dialogues/teaDialogue.json"
 
 [node name="Tea" type="Sprite2D" parent="Tea"]
 material = SubResource("ShaderMaterial_2mixa")
