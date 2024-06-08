@@ -905,7 +905,7 @@ script = ExtResource("26_ohhgt")
 sprite = NodePath("Sprite2D")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="cauldron"]
-position = Vector2(352, 93)
+position = Vector2(351, 92)
 shape = SubResource("CircleShape2D_kpgcm")
 
 [node name="Sprite2D" type="Sprite2D" parent="cauldron"]

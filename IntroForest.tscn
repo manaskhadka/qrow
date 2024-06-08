@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://dbpv566fqmwu2"]
 
 [ext_resource type="Script" path="res://IntroForest.gd" id="1_m1mmt"]
-[ext_resource type="TileSet" uid="uid://c2kjmlqk85esq" path="res://IntroForest.tres" id="3_qin8l"]
+[ext_resource type="TileSet" uid="uid://clrtknw2lr2xu" path="res://IntroForest.tres" id="3_qin8l"]
 [ext_resource type="Script" path="res://Sign.gd" id="6_flngg"]
 [ext_resource type="Texture2D" uid="uid://dh3xbr0pcjnrp" path="res://graphics/Bush4_1.png" id="8_p56hp"]
 [ext_resource type="AudioStream" uid="uid://dg2ehin641gqf" path="res://Magic Tree music.mp3" id="9_3elor"]

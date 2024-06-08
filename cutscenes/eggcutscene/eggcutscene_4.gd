@@ -4,8 +4,8 @@ extends Node2D
 func _unhandled_input(event):
 	#if event.is_action_pressed("ui_select"):
 		#get_tree().change_scene_to_file("res://cutscenes/eggcutscene/eggcutscene_3.tscn")
-	if Input.is_action_pressed("left"):
-		get_tree().change_scene_to_file("res://cutscenes/eggcutscene/eggcutscene_3.tscn")
+	if Input.is_action_pressed("ui_accept"):
+		get_tree().change_scene_to_file("res://IntroZoom.tscn")
 
 # Called when the node enters the scene tree for the first time.
 #func _ready():

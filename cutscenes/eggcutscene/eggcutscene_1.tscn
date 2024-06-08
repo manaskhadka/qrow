@@ -1,12 +1,26 @@
 [gd_scene load_steps=3 format=3 uid="uid://b0rbvnm0wtbil"]
 
 [ext_resource type="Script" path="res://cutscenes/eggcutscene/eggcutscene_1.gd" id="1_a65c5"]
-[ext_resource type="Texture2D" uid="uid://ct00wkhogxk4a" path="res://graphics/cutscene graphics/egg1.png" id="2_yemak"]
+[ext_resource type="Texture2D" uid="uid://cgnq1wffg6nmg" path="res://graphics/Egg1.png" id="2_4yy1c"]
 
 [node name="Eggcutscene1" type="Node2D"]
 script = ExtResource("1_a65c5")
 
-[node name="Egg1" type="Sprite2D" parent="."]
-position = Vector2(575.5, 324)
-scale = Vector2(5.13839, 2.90179)
-texture = ExtResource("2_yemak")
+[node name="Label" type="Label" parent="."]
+offset_left = 995.0
+offset_top = 589.0
+offset_right = 1113.0
+offset_bottom = 637.0
+theme_override_font_sizes/font_size = 25
+text = "space >>>"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -1
+offset_right = 1158.0
+offset_bottom = 699.0
+color = Color(0.00820202, 0.00820202, 0.00820202, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(567, 363)
+scale = Vector2(3, 3)
+texture = ExtResource("2_4yy1c")
