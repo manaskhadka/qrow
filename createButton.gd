@@ -14,6 +14,7 @@ func _process(delta):
 	pass
 	
 func check_if_can_make(potionName: String):
+	# CANNOT MAKE THE POTION
 	if potionName == "":
 			$"../PotionMessage".message = "You must first choose a potion to create it"
 			$"../PotionMessage".visible = true
@@ -24,14 +25,30 @@ func check_if_can_make(potionName: String):
 			$"../PotionMessage".message = "Not enough ingredients to make " + potionName + " potion"
 			$"../PotionMessage".visible = true
 			return
+		
+		if global.recipes[potionName][ingredient][0] > global.items[ingredient].amount:
+			$"../PotionMessage".message = "Not enough ingredients to make " + potionName + " potion"
+			$"../PotionMessage".visible = true
+			return
 			
+	# CAN AND DO MAKE THE POTION	
+	for ingredient in global.recipes[potionName].keys():	
+		
+		# Add to dictionary for created potions
+		if !global.createdPotions.has(potionName):
+			global.createdPotions[potionName] = 0
+		global.createdPotions[potionName] += 1	
+		
+		# Handle message to users that potion has been created
 		$"../PotionMessage".message = "Successfully created " + potionName + " potion"
 		$"../PotionMessage".visible = true
-		global.items[ingredient].amount -= 1
+		
+		# Reduce amount of available ingredients
+		global.items[ingredient].amount -= global.recipes[potionName][ingredient][0]
 		if global.items[ingredient].amount == 0:
 			global.items.erase(ingredient)
 			
-		# seeing if I can register an automatic update or not
+		# Update ingredients displayed in inventory
 		var min = min(global.items.size(), slots.size())
 		# this is unideal but it works
 		for i in range(slots.size()):
@@ -48,3 +65,4 @@ func check_if_can_make(potionName: String):
 func _on_pressed():
 	print("presed create") # Replace with function body.
 	check_if_can_make(global.selectedPotion)
+	print("CREATED POTIONS", global.createdPotions)
