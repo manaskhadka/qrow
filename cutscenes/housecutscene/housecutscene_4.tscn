@@ -20,8 +20,8 @@ scale = Vector2(2.69141, 3.91016)
 texture = ExtResource("2_mtcom")
 
 [node name="AdultCrow" type="Sprite2D" parent="."]
-position = Vector2(302, 205)
-scale = Vector2(2.53125, 2.42187)
+position = Vector2(1006, 98)
+scale = Vector2(1.125, 1.05469)
 texture = ExtResource("3_vxlcc")
 
 [node name="Cauldron" type="Sprite2D" parent="."]
@@ -45,7 +45,8 @@ offset_left = 293.0
 offset_top = 7.0
 offset_right = 874.0
 offset_bottom = 106.0
-theme_override_colors/background_color = Color(0, 0, 0, 1)
+theme_override_colors/background_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
 text = "I began helping her out with her magic,
 learning quite a few skills myself.

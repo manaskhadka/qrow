@@ -18,8 +18,8 @@ flip_h = true
 
 [node name="Witch" type="Sprite2D" parent="."]
 z_index = 1
-position = Vector2(246, 423)
-scale = Vector2(3.75391, 5.17578)
+position = Vector2(214.063, 423)
+scale = Vector2(4.75195, 5.17578)
 texture = ExtResource("2_uyf26")
 
 [node name="Room1" type="Sprite2D" parent="."]
@@ -46,10 +46,10 @@ your weary wings. There awaits a sumptuous fish,
 procured through rather… delightful means, just for you."
 
 [node name="TextEdit2" type="TextEdit" parent="."]
-offset_left = 310.0
-offset_top = 24.0
-offset_right = 902.0
-offset_bottom = 88.0
-theme_override_colors/background_color = Color(0, 0, 0, 1)
+offset_left = 250.0
+offset_right = 873.0
+offset_bottom = 64.0
+theme_override_colors/background_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
 text = "The witch welcomed me into her home"
