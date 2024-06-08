@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://ccwb7bmjph5un"]
+[gd_scene load_steps=16 format=3 uid="uid://ccwb7bmjph5un"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_mc4wp"]
 [ext_resource type="Texture2D" uid="uid://t8apljm57jqa" path="res://graphics/Crow Flying Left/CFL1.png" id="2_rx0d0"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://cppr1vx0grq8r" path="res://dialogues/dialogue.tscn" id="9_3ul48"]
 [ext_resource type="PackedScene" uid="uid://c0cf6vgdrekja" path="res://pause_menu.tscn" id="9_evono"]
 [ext_resource type="PackedScene" uid="uid://cftoisbhfytx2" path="res://inventory.tscn" id="11_5h1gq"]
+[ext_resource type="PackedScene" uid="uid://dfrvhtyhvd8n1" path="res://assets/regularInventory.tscn" id="11_hmuwd"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_vivnw"]
 animations = [{
@@ -102,8 +103,12 @@ unique_name_in_owner = true
 
 [node name="Inventory" type="CanvasLayer" parent="."]
 
-[node name="Inventory" parent="Inventory" instance=ExtResource("11_5h1gq")]
-position = Vector2(35, 70)
+[node name="PotionMaking" parent="Inventory" instance=ExtResource("11_hmuwd")]
+
+[node name="PotionMaking" type="CanvasLayer" parent="."]
+
+[node name="Inventory" parent="PotionMaking" instance=ExtResource("11_5h1gq")]
+position = Vector2(17, 35)
 
 [connection signal="body_entered" from="player_hitbox" to="." method="_on_player_hitbox_body_entered"]
 [connection signal="body_exited" from="player_hitbox" to="." method="_on_player_hitbox_body_exited"]

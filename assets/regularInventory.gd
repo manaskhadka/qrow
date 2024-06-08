@@ -16,7 +16,7 @@ func close():
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if Input.is_action_just_pressed("i") and global.hideRegularInventory:
+	if Input.is_action_just_pressed("i") and !global.hideRegularInventory:
 		var min = min(global.items.size(), slots.size())
 		
 		# this is unideal but it works
