@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://daecaffwfep3a"]
+
+[ext_resource type="Texture2D" uid="uid://de08bvbuqerym" path="res://graphics/cutscene graphics/egg4.png" id="1_2bnba"]
+[ext_resource type="Script" path="res://cutscenes/eggcutscene/eggcutscene_4.gd" id="1_qabgl"]
+
+[node name="Eggcutscene4" type="Node2D"]
+script = ExtResource("1_qabgl")
+
+[node name="Egg4" type="Sprite2D" parent="."]
+position = Vector2(575.25, 326.5)
+scale = Vector2(1.95331, 1.09661)
+texture = ExtResource("1_2bnba")
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_left = 457.0
+offset_top = 141.0
+offset_right = 553.0
+offset_bottom = 193.0
+theme_override_font_sizes/font_size = 30
+text = "Chirp"

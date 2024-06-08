@@ -1,0 +1,59 @@
+[gd_scene load_steps=7 format=3 uid="uid://dlie7um0p4sxs"]
+
+[ext_resource type="Texture2D" uid="uid://1xd88uxyvjb6" path="res://graphics/cutscene graphics/forest.png" id="1_iysy7"]
+[ext_resource type="Script" path="res://cutscenes/woodscutscene/woodcutscene_1.gd" id="1_pi10q"]
+[ext_resource type="Texture2D" uid="uid://bawjea5b4pdtx" path="res://graphics/cutscene graphics/monster1.png" id="2_ugm04"]
+[ext_resource type="Texture2D" uid="uid://de7vvnlpc3p6x" path="res://graphics/cutscene graphics/monster2.png" id="3_h65td"]
+[ext_resource type="Texture2D" uid="uid://drhulqcvq06o5" path="res://graphics/Witch.png" id="4_mdr0r"]
+[ext_resource type="Texture2D" uid="uid://wtdv6vtna6by" path="res://graphics/Adult Crow.png" id="5_s2sfo"]
+
+[node name="Woodcutscene1" type="Node2D"]
+script = ExtResource("1_pi10q")
+
+[node name="Forest" type="Sprite2D" parent="."]
+position = Vector2(583.04, 324.302)
+scale = Vector2(0.876174, 0.788989)
+texture = ExtResource("1_iysy7")
+
+[node name="Monster1" type="Sprite2D" parent="."]
+position = Vector2(702, 270)
+scale = Vector2(0.466621, 0.580078)
+texture = ExtResource("2_ugm04")
+flip_h = true
+
+[node name="Monster2" type="Sprite2D" parent="."]
+position = Vector2(925, 275)
+scale = Vector2(0.524876, 0.628906)
+texture = ExtResource("3_h65td")
+
+[node name="Witch" type="Sprite2D" parent="."]
+position = Vector2(397, 478)
+scale = Vector2(2.96875, 3.29688)
+texture = ExtResource("4_mdr0r")
+
+[node name="AdultCrow" type="Sprite2D" parent="."]
+position = Vector2(392, 379)
+scale = Vector2(1.48437, 1.5)
+texture = ExtResource("5_s2sfo")
+flip_h = true
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_left = 449.0
+offset_top = 426.0
+offset_right = 797.0
+offset_bottom = 533.0
+theme_override_colors/background_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "We must prepare for battle, my
+dear. Time is short, and the world 
+teeters on the brink of doom. "
+
+[node name="TextEdit2" type="TextEdit" parent="."]
+offset_left = 188.0
+offset_top = 23.0
+offset_right = 998.0
+offset_bottom = 83.0
+theme_override_colors/background_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Monsters are running rampant, terrorizing all the land"

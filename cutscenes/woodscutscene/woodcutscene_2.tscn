@@ -1,0 +1,49 @@
+[gd_scene load_steps=5 format=3 uid="uid://dqb3g0tb7t8j2"]
+
+[ext_resource type="Script" path="res://cutscenes/woodscutscene/woodcutscene_2.gd" id="1_1hk0b"]
+[ext_resource type="Texture2D" uid="uid://8h38ei08ptvy" path="res://graphics/cutscene graphics/witchbedroom.png" id="1_silbj"]
+[ext_resource type="Texture2D" uid="uid://wtdv6vtna6by" path="res://graphics/Adult Crow.png" id="2_2lfv0"]
+[ext_resource type="Texture2D" uid="uid://drhulqcvq06o5" path="res://graphics/Witch.png" id="3_y1p27"]
+
+[node name="Woodcutscene2" type="Node2D"]
+script = ExtResource("1_1hk0b")
+
+[node name="Witchbedroom" type="Sprite2D" parent="."]
+position = Vector2(579, 323.5)
+scale = Vector2(2.23828, 1.65385)
+texture = ExtResource("1_silbj")
+
+[node name="AdultCrow" type="Sprite2D" parent="."]
+position = Vector2(839, 253)
+scale = Vector2(2.14844, 2.05469)
+texture = ExtResource("2_2lfv0")
+
+[node name="Witch" type="Sprite2D" parent="."]
+position = Vector2(862, 416)
+rotation = 1.5708
+scale = Vector2(3.92188, 4.39844)
+texture = ExtResource("3_y1p27")
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_left = 111.0
+offset_top = 14.0
+offset_right = 1088.0
+offset_bottom = 173.0
+theme_override_colors/background_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Although the witch and I fought hard… the monsters kept coming. 
+Things were starting to look bleak, the witch fell ill, unable to 
+continue the fight, and everything got a whole lot worse.
+"
+
+[node name="TextEdit2" type="TextEdit" parent="."]
+offset_left = 699.0
+offset_top = 469.0
+offset_right = 1034.0
+offset_bottom = 574.0
+theme_override_colors/background_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "I’m sorry.. I cannot go on.. but
+I love you. Be well.. *passes out*
+"

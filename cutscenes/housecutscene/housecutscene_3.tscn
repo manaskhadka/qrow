@@ -1,0 +1,169 @@
+[gd_scene load_steps=6 format=3 uid="uid://c6rib54gkqvup"]
+
+[ext_resource type="Script" path="res://cutscenes/housecutscene/housecutscene_3.gd" id="1_dmx4n"]
+[ext_resource type="Texture2D" uid="uid://c6cu6vfd5xmmx" path="res://graphics/cutscene graphics/room1.png" id="1_yycss"]
+[ext_resource type="Texture2D" uid="uid://drhulqcvq06o5" path="res://graphics/Witch.png" id="2_4rqlg"]
+[ext_resource type="Texture2D" uid="uid://dqchffnypyrwe" path="res://graphics/cutscene graphics/deadfish.png" id="3_02ql8"]
+[ext_resource type="Texture2D" uid="uid://by35fscukp1w4" path="res://graphics/Baby Crow.png" id="4_mh4lw"]
+
+[node name="Housecutscene3" type="Node2D"]
+script = ExtResource("1_dmx4n")
+
+[node name="Room1" type="Sprite2D" parent="."]
+position = Vector2(578, 322)
+scale = Vector2(2.43038, 1.26563)
+texture = ExtResource("1_yycss")
+
+[node name="Witch2" type="Sprite2D" parent="."]
+position = Vector2(244, 445)
+scale = Vector2(3.33985, 4.92578)
+texture = ExtResource("2_4rqlg")
+
+[node name="Deadfish" type="Sprite2D" parent="."]
+position = Vector2(541, 497)
+scale = Vector2(0.18617, 0.192308)
+texture = ExtResource("3_02ql8")
+
+[node name="Deadfish2" type="Sprite2D" parent="."]
+position = Vector2(605, 499)
+scale = Vector2(0.18617, 0.192308)
+texture = ExtResource("3_02ql8")
+
+[node name="Deadfish23" type="Sprite2D" parent="."]
+position = Vector2(770.718, 596.577)
+scale = Vector2(0.0346593, 0.0369822)
+texture = ExtResource("3_02ql8")
+
+[node name="Deadfish3" type="Sprite2D" parent="."]
+position = Vector2(670, 501)
+scale = Vector2(0.18617, 0.192308)
+texture = ExtResource("3_02ql8")
+
+[node name="Deadfish4" type="Sprite2D" parent="."]
+position = Vector2(499.25, 487.5)
+scale = Vector2(0.174645, 0.246606)
+texture = ExtResource("3_02ql8")
+
+[node name="Deadfish5" type="Sprite2D" parent="."]
+position = Vector2(654, 473)
+scale = Vector2(0.18617, 0.223982)
+texture = ExtResource("3_02ql8")
+
+[node name="Deadfish6" type="Sprite2D" parent="."]
+position = Vector2(586, 476)
+scale = Vector2(0.189716, 0.178733)
+texture = ExtResource("3_02ql8")
+
+[node name="Deadfish7" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(518, 470)
+scale = Vector2(0.162234, 0.190045)
+texture = ExtResource("3_02ql8")
+
+[node name="Deadfish14" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(540, 373)
+scale = Vector2(0.248553, 0.223294)
+texture = ExtResource("3_02ql8")
+
+[node name="Deadfish13" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(583, 441)
+scale = Vector2(0.202508, 0.212542)
+texture = ExtResource("3_02ql8")
+
+[node name="Deadfish15" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(483, 466)
+scale = Vector2(0.245098, 0.26484)
+texture = ExtResource("3_02ql8")
+
+[node name="Deadfish12" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(652, 445)
+scale = Vector2(0.24584, 0.23514)
+texture = ExtResource("3_02ql8")
+
+[node name="Deadfish16" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(510, 426)
+scale = Vector2(0.226624, 0.248122)
+texture = ExtResource("3_02ql8")
+
+[node name="Deadfish11" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(462, 439)
+scale = Vector2(0.17313, 0.186555)
+texture = ExtResource("3_02ql8")
+
+[node name="Deadfish17" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(491, 407)
+scale = Vector2(0.170014, 0.140803)
+texture = ExtResource("3_02ql8")
+
+[node name="Deadfish10" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(568.596, 407.908)
+scale = Vector2(0.210654, 0.180581)
+texture = ExtResource("3_02ql8")
+
+[node name="Deadfish8" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(609, 382)
+scale = Vector2(0.200354, 0.20362)
+texture = ExtResource("3_02ql8")
+
+[node name="Deadfish9" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(636, 416)
+scale = Vector2(0.171424, 0.19907)
+texture = ExtResource("3_02ql8")
+
+[node name="BabyCrow" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(785, 493)
+rotation = 0.436332
+scale = Vector2(1.32813, 1.42188)
+texture = ExtResource("4_mh4lw")
+
+[node name="Deadfish22" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(485, 391)
+scale = Vector2(0.250504, 0.215954)
+texture = ExtResource("3_02ql8")
+
+[node name="Deadfish21" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(506, 352)
+scale = Vector2(0.242965, 0.232469)
+texture = ExtResource("3_02ql8")
+
+[node name="Deadfish20" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(557, 357)
+scale = Vector2(0.219893, 0.177306)
+texture = ExtResource("3_02ql8")
+
+[node name="Deadfish19" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(617, 355)
+scale = Vector2(0.221882, 0.202801)
+texture = ExtResource("3_02ql8")
+
+[node name="Deadfish18" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(568.596, 407.908)
+scale = Vector2(0.210654, 0.180581)
+texture = ExtResource("3_02ql8")
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_left = 220.0
+offset_top = 7.0
+offset_right = 1007.0
+offset_bottom = 110.0
+theme_override_colors/background_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "As time went on, we only became closer. She treated
+me so well, generously providing me with many fish.
+"

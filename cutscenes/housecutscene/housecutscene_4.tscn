@@ -1,0 +1,52 @@
+[gd_scene load_steps=6 format=3 uid="uid://754dcgy3c8l1"]
+
+[ext_resource type="Texture2D" uid="uid://d2xkorm8sqsl0" path="res://graphics/cutscene graphics/room2.png" id="1_1j63m"]
+[ext_resource type="Script" path="res://cutscenes/housecutscene/housecutscene_4.gd" id="1_nnihd"]
+[ext_resource type="Texture2D" uid="uid://drhulqcvq06o5" path="res://graphics/Witch.png" id="2_mtcom"]
+[ext_resource type="Texture2D" uid="uid://wtdv6vtna6by" path="res://graphics/Adult Crow.png" id="3_vxlcc"]
+[ext_resource type="Texture2D" uid="uid://cum0a7n2fmrkd" path="res://graphics/cutscene graphics/cauldron.png" id="4_qc5l1"]
+
+[node name="Housecutscene4" type="Node2D"]
+script = ExtResource("1_nnihd")
+
+[node name="Room2" type="Sprite2D" parent="."]
+position = Vector2(573, 328)
+scale = Vector2(2.24414, 1.57229)
+texture = ExtResource("1_1j63m")
+
+[node name="Witch" type="Sprite2D" parent="."]
+position = Vector2(887.125, 463.125)
+scale = Vector2(2.69141, 3.91016)
+texture = ExtResource("2_mtcom")
+
+[node name="AdultCrow" type="Sprite2D" parent="."]
+position = Vector2(302, 205)
+scale = Vector2(2.53125, 2.42187)
+texture = ExtResource("3_vxlcc")
+
+[node name="Cauldron" type="Sprite2D" parent="."]
+position = Vector2(1035, 492)
+scale = Vector2(0.276, 0.308)
+texture = ExtResource("4_qc5l1")
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_left = 660.0
+offset_top = 267.0
+offset_right = 1090.0
+offset_bottom = 353.0
+theme_override_colors/background_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 22
+text = "My dear crow, would you fetch the 
+potion atop the shelf for this old witch"
+
+[node name="TextEdit2" type="TextEdit" parent="."]
+offset_left = 293.0
+offset_top = 7.0
+offset_right = 874.0
+offset_bottom = 106.0
+theme_override_colors/background_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "I began helping her out with her magic,
+learning quite a few skills myself.
+"

@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://b02taegumgqmd"]
+
+[ext_resource type="Texture2D" uid="uid://1xd88uxyvjb6" path="res://graphics/cutscene graphics/forest.png" id="1_d8igc"]
+
+[node name="Woodscutscene1" type="Node2D"]
+scale = Vector2(0.492179, 0.85716)
+
+[node name="Forest" type="Sprite2D" parent="."]
+position = Vector2(1722, 457)
+scale = Vector2(0.961159, 0.657335)
+texture = ExtResource("1_d8igc")
