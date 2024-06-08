@@ -1,0 +1,59 @@
+[gd_scene load_steps=7 format=3 uid="uid://cmn2ulgusl8hn"]
+
+[ext_resource type="Script" path="res://cutscenes/housecutscene/housecutscene_5.gd" id="1_pivyp"]
+[ext_resource type="Texture2D" uid="uid://d2xkorm8sqsl0" path="res://graphics/cutscene graphics/room2.png" id="2_hanl8"]
+[ext_resource type="Texture2D" uid="uid://drhulqcvq06o5" path="res://graphics/Witch.png" id="3_7gyby"]
+[ext_resource type="Texture2D" uid="uid://wtdv6vtna6by" path="res://graphics/Adult Crow.png" id="4_tfmbr"]
+[ext_resource type="Texture2D" uid="uid://cum0a7n2fmrkd" path="res://graphics/cutscene graphics/cauldron.png" id="5_y7lg3"]
+[ext_resource type="Texture2D" uid="uid://hh53uuw21m0u" path="res://graphics/Cane.png" id="6_c3g3n"]
+
+[node name="Housecutscene4" type="Node2D"]
+script = ExtResource("1_pivyp")
+
+[node name="Room2" type="Sprite2D" parent="."]
+position = Vector2(573, 328)
+scale = Vector2(2.24414, 1.57229)
+texture = ExtResource("2_hanl8")
+
+[node name="Witch" type="Sprite2D" parent="."]
+position = Vector2(286.937, 438)
+scale = Vector2(3.6582, 3.91016)
+texture = ExtResource("3_7gyby")
+
+[node name="AdultCrow" type="Sprite2D" parent="."]
+position = Vector2(509, 426)
+scale = Vector2(1.125, 1.05469)
+texture = ExtResource("4_tfmbr")
+
+[node name="Cauldron" type="Sprite2D" parent="."]
+position = Vector2(1035, 492)
+scale = Vector2(0.276, 0.308)
+texture = ExtResource("5_y7lg3")
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_left = 340.0
+offset_top = 311.0
+offset_right = 702.0
+offset_bottom = 397.0
+theme_override_colors/background_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 22
+text = "What lies ahead of us won't be pretty... *cough* "
+wrap_mode = 1
+
+[node name="TextEdit2" type="TextEdit" parent="."]
+offset_left = 6.0
+offset_top = 5.0
+offset_right = 1161.0
+offset_bottom = 157.0
+theme_override_colors/background_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "After many months of peace, it became apparent that something was very wrong with the witch’s health. The forest and the village nearby became corrupted with monsters of dark magic!
+"
+wrap_mode = 1
+
+[node name="Cane" type="Sprite2D" parent="."]
+position = Vector2(244, 501)
+scale = Vector2(1.35938, 1.64063)
+texture = ExtResource("6_c3g3n")
