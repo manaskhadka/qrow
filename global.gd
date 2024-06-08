@@ -7,7 +7,8 @@ var returnPosition: Vector2;
 var camPosition: Vector2;
 
 # index  0 = amount and index 1 = texture to load
-var recipes = {"death": {"apple": [2,"res://graphics/Pixel Potions/2-removebg-preview.png"], "green":[2,"res://graphics/Pixel Potions/9-removebg-preview.png"]}, "healing": {"apple": [2,"res://graphics/Pixel Potions/2-removebg-preview.png"]}}
+var recipes = {"death": {"apple": [2,"res://graphics/Pixel Potions/2-removebg-preview.png"]},
+			  "healing": {"apple": [2,"res://graphics/Pixel Potions/2-removebg-preview.png"], "berry": [3,"res://graphics/Deep Forest/Foliage/Fruit+.png"]}}
 
 # saves selected potion in inventory
 var selectedPotion: String = ""
