@@ -1,6 +1,7 @@
 extends CanvasLayer
 
 @export_file("*.json") var dialogue_file
+
 var dialogue = []
 var curr_dialogue_id = 0
 var d_active = false
@@ -17,6 +18,16 @@ func start():
 	d_active = true
 	$NinePatchRect.visible = true
 	dialogue = load_dialogue() 
+	var crow = get_node("NinePatchRect/CrowPortrait")
+	var witch = get_node("NinePatchRect/WitchPortrait")
+	crow.visible=false
+	witch.visible=false
+	
+	if dialogue[0]['name'] == "Witch":
+		witch.visible=true
+	elif dialogue[0]['name'] == "Crow":
+		crow.visible=true
+	
 	curr_dialogue_id = -1
 	# next_script()
 
