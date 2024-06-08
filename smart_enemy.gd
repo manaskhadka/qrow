@@ -4,6 +4,9 @@ const SPEED = 30
 var player: CharacterBody2D
 var randomnum
 
+var health = 1000
+var player_inattack_zone = false
+
 enum {
 	SURROUND,
 	ATTACK,
@@ -44,4 +47,20 @@ func get_circle_position(random):
 	var x = kill_circle_centre.x + cos(angle) * radius
 	var y = kill_circle_centre.y + sin(angle) * radius 
 	return Vector2(x, y)
+	
+func _on_enemy_hitbox_body_entered(body):
+	if body.has_method("player"):
+		player_inattack_zone = true
+
+
+func _on_enemy_hitbox_body_exited(body):
+	if body.has_method("player"):
+		player_inattack_zone = false  
+		
+func process_damage():
+	if player_inattack_zone and global.player_current_attack:
+		health = health - 20  
+		print("enemy health:", health)
+		if health <= 0:
+			self.queue_free()
 
