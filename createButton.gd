@@ -14,6 +14,11 @@ func _process(delta):
 	pass
 	
 func check_if_can_make(potionName: String):
+	if potionName == "":
+			$"../PotionMessage".message = "You must first choose a potion to create it"
+			$"../PotionMessage".visible = true
+			return
+		
 	for ingredient in global.recipes[potionName].keys():
 		if !global.items.has(ingredient):
 			$"../PotionMessage".message = "Not enough ingredients to make " + potionName + " potion"
