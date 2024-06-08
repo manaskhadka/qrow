@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://cftoisbhfytx2"]
+[gd_scene load_steps=7 format=3 uid="uid://cftoisbhfytx2"]
 
 [ext_resource type="Script" path="res://inventory.gd" id="1_w6ekb"]
 [ext_resource type="Texture2D" uid="uid://coqfc4kh7r77w" path="res://InventoryRect.png" id="2_uawfs"]
 [ext_resource type="PackedScene" uid="uid://cv5kikv2v1anj" path="res://panel.tscn" id="3_3my4d"]
 [ext_resource type="PackedScene" uid="uid://d353gwpd1hqth" path="res://potionSelection.tscn" id="4_aii3v"]
 [ext_resource type="PackedScene" uid="uid://blinnbo5jotyt" path="res://createButton.tscn" id="5_qkawc"]
+[ext_resource type="PackedScene" uid="uid://d1usvmq3jlfxt" path="res://assets/potionMessage.tscn" id="6_5aox5"]
 
 [node name="Inventory" type="Node2D"]
 position = Vector2(24, 44)
@@ -162,5 +163,10 @@ offset_top = 88.6636
 offset_right = 175.525
 offset_bottom = 119.664
 scale = Vector2(0.375, 0.375)
+
+[node name="PotionMessage" parent="." instance=ExtResource("6_5aox5")]
+z_index = 1
+position = Vector2(-6.45161, 75.2074)
+scale = Vector2(0.54, 0.54)
 
 [connection signal="pressed" from="CreateButton" to="CreateButton" method="_on_pressed"]

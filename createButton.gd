@@ -1,11 +1,13 @@
 extends Button
 @onready var slots: Array = $"../NinePatchRect/GridContainer".get_children()
 @onready var ingredientSlots: Array = $"../Ingredients/GridContainer".get_children()
+var messageVisible = false
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	messageVisible = false
+	$"../PotionMessage".visible = messageVisible
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -14,10 +16,12 @@ func _process(delta):
 func check_if_can_make(potionName: String):
 	for ingredient in global.recipes[potionName].keys():
 		if !global.items.has(ingredient):
-			print("not enough to make potion:", potionName)
+			$"../PotionMessage".message = "Not enough ingredients to make " + potionName + " potion"
+			$"../PotionMessage".visible = true
 			return
 			
-		print("yay you can make the potion")
+		$"../PotionMessage".message = "Successfully created " + potionName + " potion"
+		$"../PotionMessage".visible = true
 		global.items[ingredient].amount -= 1
 		if global.items[ingredient].amount == 0:
 			global.items.erase(ingredient)
