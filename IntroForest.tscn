@@ -52,7 +52,6 @@ scale = Vector2(1.98438, 1.41146)
 script = ExtResource("6_flngg")
 
 [node name="01" type="Sprite2D" parent="Sign"]
-scale = Vector2(1, 1)
 texture = ExtResource("14_wekay")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sign"]

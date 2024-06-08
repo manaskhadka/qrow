@@ -97,10 +97,8 @@ shape = SubResource("CircleShape2D_1mc4c")
 
 [node name="Dialogue" parent="." instance=ExtResource("9_3ul48")]
 unique_name_in_owner = true
-visible = false
 
 [node name="PauseMenu" parent="." instance=ExtResource("9_evono")]
-visible = false
 
 [node name="Inventory" type="CanvasLayer" parent="."]
 
