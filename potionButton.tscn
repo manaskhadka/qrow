@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://t5w8jso6cmoq"]
+
+[ext_resource type="Texture2D" uid="uid://dwna6atgkbg4f" path="res://inventorySlot.png" id="1_uwu8d"]
+
+[node name="PotionButton" type="Button"]
+custom_minimum_size = Vector2(20, 20)
+offset_right = 9.0
+offset_bottom = 10.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(10, 10)
+texture = ExtResource("1_uwu8d")

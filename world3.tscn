@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://cgkee10d3vk36"]
+[gd_scene load_steps=3 format=3 uid="uid://bb8wb70x0ypcg"]
 
 [ext_resource type="Texture2D" uid="uid://dedxaelim2x8l" path="res://desert-game-assets/letter.png" id="1_ykcnw"]
 [ext_resource type="Script" path="res://assets/interactables/Button1.gd" id="2_8twbe"]

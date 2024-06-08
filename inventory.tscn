@@ -1,16 +1,21 @@
-[gd_scene load_steps=4 format=3 uid="uid://cftoisbhfytx2"]
+[gd_scene load_steps=7 format=3 uid="uid://cftoisbhfytx2"]
 
 [ext_resource type="Script" path="res://inventory.gd" id="1_w6ekb"]
 [ext_resource type="Texture2D" uid="uid://coqfc4kh7r77w" path="res://InventoryRect.png" id="2_uawfs"]
 [ext_resource type="PackedScene" uid="uid://cv5kikv2v1anj" path="res://panel.tscn" id="3_3my4d"]
+[ext_resource type="PackedScene" uid="uid://d353gwpd1hqth" path="res://potionSelection.tscn" id="4_aii3v"]
+[ext_resource type="PackedScene" uid="uid://blinnbo5jotyt" path="res://createButton.tscn" id="5_qkawc"]
+[ext_resource type="PackedScene" uid="uid://d1usvmq3jlfxt" path="res://assets/potionMessage.tscn" id="6_5aox5"]
 
 [node name="Inventory" type="Node2D"]
-scale = Vector2(6.56, 6.56)
+position = Vector2(5, 44)
+scale = Vector2(5.425, 5.425)
 script = ExtResource("1_w6ekb")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
-offset_right = 106.0
-offset_bottom = 82.0
+z_index = 1
+offset_right = 110.0
+offset_bottom = 108.0
 texture = ExtResource("2_uawfs")
 patch_margin_left = 6
 patch_margin_top = 6
@@ -25,9 +30,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -46.0
-offset_top = -34.0
+offset_top = -35.7579
 offset_right = 46.0
-offset_bottom = 34.0
+offset_bottom = 32.2421
 grow_horizontal = 2
 grow_vertical = 2
 columns = 4
@@ -67,3 +72,125 @@ layout_mode = 2
 
 [node name="Panel12" parent="NinePatchRect/GridContainer" instance=ExtResource("3_3my4d")]
 layout_mode = 2
+
+[node name="PotionTypes" type="NinePatchRect" parent="."]
+z_index = 1
+offset_left = 109.0
+offset_right = 171.0
+offset_bottom = 108.0
+texture = ExtResource("2_uawfs")
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 6
+
+[node name="PotionSelection2" parent="PotionTypes" instance=ExtResource("4_aii3v")]
+z_index = -1
+layout_mode = 0
+offset_left = 56.5783
+offset_top = 24.6176
+offset_right = 96.5783
+offset_bottom = 39.6176
+scale = Vector2(0.705, 0.705)
+keep_pressed_outside = true
+potionName = "healing"
+iconPic = "res://dialogues/Pixel Heart Sprite Sheet 32x32.png"
+
+[node name="PotionSelection" parent="PotionTypes" instance=ExtResource("4_aii3v")]
+z_index = -1
+layout_mode = 0
+offset_left = 57.5115
+offset_top = 38.5253
+offset_right = 97.5115
+offset_bottom = 53.5253
+scale = Vector2(0.685, 0.685)
+potionName = "death"
+iconPic = "res://Skull&Bones - FrodoUndead.png"
+
+[node name="Ingredients" type="NinePatchRect" parent="."]
+z_index = 1
+offset_left = 115.0
+offset_top = 21.0
+offset_right = 164.0
+offset_bottom = 39.0
+
+[node name="GridContainer" type="GridContainer" parent="Ingredients"]
+layout_mode = 0
+offset_left = 3.35365
+offset_top = -3.22609
+offset_right = 62.3536
+offset_bottom = 64.7739
+columns = 2
+
+[node name="Panel" parent="Ingredients/GridContainer" instance=ExtResource("3_3my4d")]
+layout_mode = 2
+
+[node name="Panel3" parent="Ingredients/GridContainer" instance=ExtResource("3_3my4d")]
+layout_mode = 2
+
+[node name="Panel5" parent="Ingredients/GridContainer" instance=ExtResource("3_3my4d")]
+layout_mode = 2
+
+[node name="Panel6" parent="Ingredients/GridContainer" instance=ExtResource("3_3my4d")]
+layout_mode = 2
+
+[node name="Panel2" parent="Ingredients/GridContainer" instance=ExtResource("3_3my4d")]
+layout_mode = 2
+
+[node name="Panel4" parent="Ingredients/GridContainer" instance=ExtResource("3_3my4d")]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="."]
+z_index = 1
+offset_left = 28.9401
+offset_top = 3.31797
+offset_right = 121.94
+offset_bottom = 26.318
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 9
+text = "My Inventory"
+
+[node name="Label" type="Label" parent="."]
+z_index = 1
+offset_left = 125.083
+offset_top = 3.447
+offset_right = 159.083
+offset_bottom = 26.447
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 9
+text = "Recipe"
+
+[node name="CreateButton" parent="." instance=ExtResource("5_qkawc")]
+z_index = 1
+offset_left = 118.525
+offset_top = 88.6636
+offset_right = 175.525
+offset_bottom = 119.664
+scale = Vector2(0.375, 0.375)
+
+[node name="PotionMessage" parent="." instance=ExtResource("6_5aox5")]
+z_index = 1
+position = Vector2(-2.58064, 75.2074)
+scale = Vector2(0.54, 0.54)
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="."]
+offset_left = 167.29
+offset_right = 211.29
+offset_bottom = 23.0
+texture = ExtResource("2_uawfs")
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 6
+
+[node name="Label3" type="Label" parent="."]
+z_index = 1
+offset_left = 172.369
+offset_top = 3.553
+offset_right = 206.369
+offset_bottom = 16.553
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 9
+text = "Potions"
+
+[connection signal="pressed" from="CreateButton" to="CreateButton" method="_on_pressed"]

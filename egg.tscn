@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://8h1i8s0mfmd"]
+
+[ext_resource type="Texture2D" uid="uid://cgnq1wffg6nmg" path="res://graphics/Egg1.png" id="1_w800h"]
+[ext_resource type="Texture2D" uid="uid://blpxj3csky5s5" path="res://graphics/Egg2.png" id="2_pw4ku"]
+[ext_resource type="Texture2D" uid="uid://bem5rnyvd2jo5" path="res://graphics/Egg3 game asset.png" id="3_dohaw"]
+[ext_resource type="Texture2D" uid="uid://duj3ip6wsmq0l" path="res://graphics/Egg4.png" id="4_4w76u"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1ufrd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_w800h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_pw4ku")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_dohaw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_4w76u")
+}],
+"loop": true,
+"name": &"egg",
+"speed": 3.0
+}]
+
+[node name="egg" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(378, 377)
+scale = Vector2(3.32143, 3.32143)
+sprite_frames = SubResource("SpriteFrames_1ufrd")
+animation = &"egg"
+autoplay = "egg"

@@ -39,6 +39,11 @@ func movement():
 		if (velocity.x <= max_speed):
 			velocity.x += speed
 		anim_sprite.play("flying right")
+	if Input.is_action_just_released("left"):
+		anim_sprite.play("standing l")
+	if Input.is_action_just_released("right"):
+		anim_sprite.play("standing r")
+		
 	
 	velocity.y *= decel_coeff
 	velocity.x *= decel_coeff
@@ -60,14 +65,12 @@ func attack():
 				pass
 			$"attack-cooldown".start()
 	
-	
 func player():
 	pass
 	
 func _on_player_hitbox_body_entered(body):
 	if body.has_method("enemy"): 
 		enemy_in_attack_range = true
-
 
 func _on_player_hitbox_body_exited(body):
 	if body.has_method("enemy"):
@@ -80,14 +83,23 @@ func enemy_attack():
 		health -= 10
 		print("Health:", health)
 
-
 func _on_invincibilitycooldown_timeout():
 	# This gets called whenever the invincibility timer goes off
 	enemy_attack_cooldown = true
-
 
 func _on_attackcooldown_timeout():
 	print("Player attacked!")
 	$"attack-cooldown".stop()
 	global.player_current_attack = false 
 	is_attacking = false
+
+func _ready():
+	if global.returnPosition != Vector2(0,0):
+		print("I have somewhere to return to")
+		$".".global_position = global.returnPosition
+		$Camera2D.global_position = global.returnPosition
+		global.returnPosition = Vector2(0,0)
+		
+
+
+

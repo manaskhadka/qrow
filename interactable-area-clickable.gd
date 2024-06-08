@@ -33,18 +33,21 @@ func add():
 		var inventory_slot = InventorySlot.new()
 		inventory_slot.texture = sprite.texture
 		inventory_slot.amount = 1
-		global.items.append(inventory_slot)
+		global.items[interactable_area_name] = inventory_slot
 		return
 	else:
-		for i in range(global.items.size()):
-			if global.items[i].texture == sprite.texture:
-				global.items[i].amount += 1
-				return
-
+		if global.items.has(interactable_area_name):
+			global.items[interactable_area_name].amount += 1
+			return
+		#for i in range(global.items.size()):
+			#if global.items[i].texture == sprite.texture:
+				#global.items[i].amount += 1
+				#return
 		var inventory_slot = InventorySlot.new()
 		inventory_slot.texture = sprite.texture
 		inventory_slot.amount = 1
-		global.items.append(inventory_slot)
+		global.items[interactable_area_name] = inventory_slot
+		#global.items.append(inventory_slot)
 		return
 
 func _input(event):

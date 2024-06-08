@@ -1,0 +1,135 @@
+[gd_resource type="TileSet" load_steps=15 format=3 uid="uid://baeatjksmp137"]
+
+[ext_resource type="Texture2D" uid="uid://cyxbmr3jqwjwb" path="res://graphics/Deep Forest/Foliage/Grass2.png" id="1_357rk"]
+[ext_resource type="Texture2D" uid="uid://e6ihrb1bsa5d" path="res://graphics/Deep Forest/Foliage/Grass1.png" id="2_m7uls"]
+[ext_resource type="Texture2D" uid="uid://5j3ufqe0or05" path="res://graphics/Deep Forest/Foliage/Grass3.png" id="3_rbp3f"]
+[ext_resource type="Texture2D" uid="uid://cteaaav63b210" path="res://graphics/Deep Forest/Foliage/Bush1_1.png" id="4_8os41"]
+[ext_resource type="Texture2D" uid="uid://bldmoa0yvd21i" path="res://graphics/Deep Forest/Foliage/Bush4_1.png" id="5_l05b5"]
+[ext_resource type="Texture2D" uid="uid://dkfrmss4jdd5i" path="res://graphics/Deep Forest/Foliage/Bush9_1.png" id="6_c3j16"]
+[ext_resource type="Texture2D" uid="uid://blod27a8tknoh" path="res://graphics/Deep Forest/Foliage/Pixel Art Tree (2).png" id="7_hk3hn"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y8xc4"]
+texture = ExtResource("1_357rk")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0gjgb"]
+texture = ExtResource("2_m7uls")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gvp03"]
+texture = ExtResource("3_rbp3f")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fun5a"]
+texture = ExtResource("4_8os41")
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_r41ce"]
+texture = ExtResource("5_l05b5")
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_we0ua"]
+texture = ExtResource("6_c3j16")
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1jvuk"]
+texture = ExtResource("7_hk3hn")
+texture_region_size = Vector2i(16, 19)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+
+[resource]
+sources/0 = SubResource("TileSetAtlasSource_y8xc4")
+sources/1 = SubResource("TileSetAtlasSource_0gjgb")
+sources/2 = SubResource("TileSetAtlasSource_gvp03")
+sources/3 = SubResource("TileSetAtlasSource_fun5a")
+sources/4 = SubResource("TileSetAtlasSource_r41ce")
+sources/5 = SubResource("TileSetAtlasSource_we0ua")
+sources/6 = SubResource("TileSetAtlasSource_1jvuk")

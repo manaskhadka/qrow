@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://beve8unndvi8n"]
+[gd_scene load_steps=15 format=3 uid="uid://beve8unndvi8n"]
 
 [ext_resource type="PackedScene" uid="uid://ccwb7bmjph5un" path="res://player.tscn" id="1_1j6s7"]
 [ext_resource type="TileSet" uid="uid://8gea1ppxsuby" path="res://forest.tres" id="1_opfij"]
@@ -6,24 +6,18 @@
 [ext_resource type="Texture2D" uid="uid://c2nfwoja71ay6" path="res://graphics/Deep Forest/Foliage/Bush1_2.png" id="4_tywwl"]
 [ext_resource type="Texture2D" uid="uid://7xutwwqjt1f1" path="res://graphics/Deep Forest/Foliage/Bush1_3.png" id="5_5mpe6"]
 [ext_resource type="Texture2D" uid="uid://bqx7lwqhohnb4" path="res://graphics/Deep Forest/Foliage/Bush1_4.png" id="6_iru7p"]
-[ext_resource type="PackedScene" uid="uid://cvo2xhojg2kx5" path="res://enemy.tscn" id="7_dri43"]
+[ext_resource type="PackedScene" path="res://enemy.tscn" id="7_dri43"]
 [ext_resource type="Texture2D" uid="uid://dh3xbr0pcjnrp" path="res://graphics/Bush4_1.png" id="8_3fvtt"]
 [ext_resource type="Script" path="res://GetInHouse.gd" id="9_bfioh"]
 [ext_resource type="Texture2D" uid="uid://blbqoin1phksy" path="res://graphics/02.png" id="10_821ml"]
 [ext_resource type="Script" path="res://interactable-area.gd" id="11_ehjrr"]
 [ext_resource type="AudioStream" uid="uid://dg2ehin641gqf" path="res://Magic Tree music.mp3" id="11_uusib"]
-[ext_resource type="Shader" path="res://world.gdshader" id="11_xcivm"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8o5td"]
 radius = 24.3311
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ggqcq"]
 radius = 20.6093
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_vmku7"]
-shader = ExtResource("11_xcivm")
-shader_parameter/outline_color = Color(1, 1, 1, 1)
-shader_parameter/outline_enabled = false
 
 [node name="Outside" type="Node2D"]
 
@@ -144,7 +138,6 @@ position = Vector2(0.515242, -1.90735e-06)
 shape = SubResource("CircleShape2D_ggqcq")
 
 [node name="Sign" type="Sprite2D" parent="Area2D"]
-material = SubResource("ShaderMaterial_vmku7")
 texture = ExtResource("10_821ml")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

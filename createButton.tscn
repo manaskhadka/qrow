@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://blinnbo5jotyt"]
+
+[ext_resource type="Script" path="res://createButton.gd" id="1_a2ojd"]
+
+[node name="CreateButton" type="Button"]
+custom_minimum_size = Vector2(15, 5)
+text = "create"
+script = ExtResource("1_a2ojd")

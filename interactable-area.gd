@@ -24,8 +24,14 @@ enum {CHARACTER, ITEM_C, ITEM_V}
 # For debugging purposes:
 @export var interactable_area_name : String;
 
+var shader = preload("res://world.gdshader")
 func _ready():
 	# $object.texture = load(image)
+	if (not sprite): 
+		print("ERROR: You did not attach a sprite to an interactable area")
+	
+	sprite.material = ShaderMaterial.new()
+	sprite.material.shader = shader
 	entered = false
 	sprite.material.set_shader_parameter("outline_enabled", false)
 		
@@ -50,6 +56,7 @@ func _input(event):
 			pass 
 
 		if transition_scene:
+			global.returnPosition =  $"../Crow".position
 			get_tree().change_scene_to_file(transition_scene)
 		
 func _process(delta):

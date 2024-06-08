@@ -21,6 +21,7 @@ offset_bottom = 467.0
 theme_override_font_sizes/font_size = 40
 
 [node name="c" type="LineEdit" parent="TextureRect"]
+layout_mode = 0
 offset_left = 56.0
 offset_top = 406.0
 offset_right = 209.0
@@ -28,6 +29,7 @@ offset_bottom = 467.0
 theme_override_font_sizes/font_size = 40
 
 [node name="d" type="LineEdit" parent="TextureRect"]
+layout_mode = 0
 offset_left = 415.0
 offset_top = 406.0
 offset_right = 568.0
@@ -35,6 +37,7 @@ offset_bottom = 467.0
 theme_override_font_sizes/font_size = 40
 
 [node name="r" type="LineEdit" parent="TextureRect"]
+layout_mode = 0
 offset_left = 590.0
 offset_top = 406.0
 offset_right = 743.0
@@ -42,6 +45,7 @@ offset_bottom = 467.0
 theme_override_font_sizes/font_size = 40
 
 [node name="i" type="LineEdit" parent="TextureRect"]
+layout_mode = 0
 offset_left = 770.0
 offset_top = 406.0
 offset_right = 923.0
@@ -49,6 +53,7 @@ offset_bottom = 467.0
 theme_override_font_sizes/font_size = 40
 
 [node name="c2" type="LineEdit" parent="TextureRect"]
+layout_mode = 0
 offset_left = 951.0
 offset_top = 406.0
 offset_right = 1104.0

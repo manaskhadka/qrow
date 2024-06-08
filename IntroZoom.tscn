@@ -1,8 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://ksohjbka5n50"]
+[gd_scene load_steps=5 format=3 uid="uid://ksohjbka5n50"]
 
-[ext_resource type="Texture2D" path="res://treezoom.png" id="1_oo2a7"]
+[ext_resource type="Script" path="res://IntroZoom.gd" id="1_73orx"]
+[ext_resource type="Texture2D" uid="uid://bdeuqm3dnutw" path="res://treezoom.png" id="1_oo2a7"]
+[ext_resource type="PackedScene" uid="uid://dvg308mbut0ul" path="res://babyPlayer.tscn" id="3_hl1wr"]
+[ext_resource type="AudioStream" uid="uid://dg2ehin641gqf" path="res://Magic Tree music.mp3" id="4_ysqyl"]
 
 [node name="DeepForest" type="Node2D"]
+script = ExtResource("1_73orx")
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2(3.05176e-05, 1.52588e-05)
+format = 2
 
 [node name="Bush41" type="Sprite2D" parent="."]
 position = Vector2(-426, -244)
@@ -10,7 +18,30 @@ scale = Vector2(1.75, 2.25)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+build_mode = 1
+polygon = PackedVector2Array(-4, 25, -31, 46, -101, 55, -133, 68, -181, 85, -232, 99, -227, 149, -208, 145, -207, 123, -124, 80, -87, 62, -23, 54, 1, 32)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(-255, 60)
+build_mode = 1
+polygon = PackedVector2Array(-5, 3, 39, 10, 104, -22, 171, -44, 226, -38, 245, -39, 258, -32, 253, -21, 284, -16, 270, -82, 209, -79, 36, -22, -6, -21, -6, 5, -4, 3, -3, 2, -3, 2)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(-223, 161)
+polygon = PackedVector2Array(7, -8, -38, -9, -38, -80, -60, -79, -56, 2, 9, 5)
+
 [node name="Treezoom" type="Sprite2D" parent="."]
-position = Vector2(268.375, 246.25)
-scale = Vector2(6.8525, 6.955)
+position = Vector2(-7, -1)
+scale = Vector2(5.19828, 3.08699)
 texture = ExtResource("1_oo2a7")
+
+[node name="player" parent="." instance=ExtResource("3_hl1wr")]
+position = Vector2(-35, 37)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_ysqyl")
+volume_db = -20.0
+autoplay = true
