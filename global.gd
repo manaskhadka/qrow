@@ -3,6 +3,10 @@ extends Node
 var player_current_attack = false
 var items = {}
 
+# These control access points for the crow
+# i.e. the crow cannot access certain locations unless true
+var darkforestavailable = false
+
 var returnPosition: Vector2;
 var camPosition: Vector2;
 
