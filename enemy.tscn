@@ -1,7 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://cvo2xhojg2kx5"]
+[gd_scene load_steps=9 format=3 uid="uid://cvo2xhojg2kx5"]
 
 [ext_resource type="Texture2D" uid="uid://dpyusvb2uqst1" path="res://graphics/Deep Forest/Entities/bunny.png" id="1_5ko2d"]
 [ext_resource type="Script" path="res://enemy.gd" id="1_mflam"]
+[ext_resource type="Texture2D" uid="uid://jdrsukvmq2lx" path="res://graphics/healthbarUnder.png" id="3_3irvu"]
+[ext_resource type="Texture2D" uid="uid://ctnwknwcjfiqe" path="res://graphics/healthbarProgress.png" id="4_vrcbb"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_n33er"]
 animations = [{
@@ -15,19 +17,20 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wx48u"]
-radius = 101.02
+radius = 127.004
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7tr6b"]
-radius = 9.05539
+radius = 13.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0cs7b"]
+radius = 14.0
 
 [node name="Enemy" type="CharacterBody2D"]
 script = ExtResource("1_mflam")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(2, 1)
-scale = Vector2(0.359375, 0.359375)
+position = Vector2(0, -3)
+scale = Vector2(0.507813, 0.507812)
 sprite_frames = SubResource("SpriteFrames_n33er")
 
 [node name="detection_area" type="Area2D" parent="."]
@@ -39,14 +42,23 @@ position = Vector2(0, 1)
 shape = SubResource("CircleShape2D_wx48u")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, 3)
+position = Vector2(-1, -1)
 shape = SubResource("CircleShape2D_7tr6b")
 
 [node name="enemy_hitbox" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="enemy_hitbox"]
-position = Vector2(1, 2)
+position = Vector2(-1, -1)
 shape = SubResource("CircleShape2D_0cs7b")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+offset_left = -19.0
+offset_top = -24.0
+offset_right = 19.0
+offset_bottom = -18.0
+nine_patch_stretch = true
+texture_under = ExtResource("3_3irvu")
+texture_progress = ExtResource("4_vrcbb")
 
 [connection signal="body_entered" from="detection_area" to="." method="_on_detection_area_body_entered"]
 [connection signal="body_exited" from="detection_area" to="." method="_on_detection_area_body_exited"]
