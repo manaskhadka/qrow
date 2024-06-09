@@ -38,7 +38,7 @@ position = Vector2(-7, -1)
 scale = Vector2(5.19828, 3.08699)
 texture = ExtResource("1_oo2a7")
 
-[node name="player" parent="." instance=ExtResource("3_hl1wr")]
+[node name="Crow" parent="." instance=ExtResource("3_hl1wr")]
 position = Vector2(-35, 37)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

@@ -20,8 +20,8 @@ func start():
 	dialogue = load_dialogue() 
 	var crow = get_node("NinePatchRect/CrowPortrait")
 	var witch = get_node("NinePatchRect/WitchPortrait")
-	crow.visible=false
-	witch.visible=false
+	crow.visible = false
+	witch.visible = false
 	
 	if dialogue[0]['name'] == "Witch":
 		witch.visible=true
