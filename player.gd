@@ -61,8 +61,10 @@ func attack():
 			is_attacking = true
 			if curr_direction == "right":
 				atk_right.visible = true
+				atk_right.play("attack")
 			if curr_direction == "left":
 				atk_left.visible = true 
+				atk_left.play("attack")
 			$"attack-cooldown".start()
 	
 func player():
@@ -104,8 +106,9 @@ func _ready():
 	
 	var a1 = get_node("attack-anim-left")
 	var a2 = get_node("attack-anim-right")
-	a1.visible = false 
-	a2.visible = false
+	if (a1 and a2):
+		a1.visible = false 
+		a2.visible = false
 
 	
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://bqppr753xuygx"]
+[gd_scene load_steps=4 format=3 uid="uid://dlf8t8n186uer"]
 
 [ext_resource type="Script" path="res://smart_enemy.gd" id="1_ig5av"]
 [ext_resource type="Texture2D" uid="uid://dpyusvb2uqst1" path="res://graphics/Deep Forest/Entities/bunny.png" id="2_xwuns"]

@@ -1,11 +1,11 @@
 extends CharacterBody2D
 
-@export var slow_coeff = 100
+@export var slow_coeff = 30
 @export var player_chase = false
 var player = null
 var original_pos
 
-var health = 100
+var health = 500
 var player_inattack_zone = false
 
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://beve8unndvi8n"]
+[gd_scene load_steps=17 format=3 uid="uid://beve8unndvi8n"]
 
 [ext_resource type="PackedScene" uid="uid://ccwb7bmjph5un" path="res://player.tscn" id="1_1j6s7"]
 [ext_resource type="TileSet" uid="uid://8gea1ppxsuby" path="res://forest.tres" id="1_opfij"]
@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://c2nfwoja71ay6" path="res://graphics/Deep Forest/Foliage/Bush1_2.png" id="4_tywwl"]
 [ext_resource type="Texture2D" uid="uid://7xutwwqjt1f1" path="res://graphics/Deep Forest/Foliage/Bush1_3.png" id="5_5mpe6"]
 [ext_resource type="Texture2D" uid="uid://bqx7lwqhohnb4" path="res://graphics/Deep Forest/Foliage/Bush1_4.png" id="6_iru7p"]
-[ext_resource type="PackedScene" uid="uid://cvo2xhojg2kx5" path="res://enemy.tscn" id="7_dri43"]
 [ext_resource type="Texture2D" uid="uid://dh3xbr0pcjnrp" path="res://graphics/Bush4_1.png" id="8_3fvtt"]
 [ext_resource type="Script" path="res://GetInHouse.gd" id="9_bfioh"]
 [ext_resource type="Texture2D" uid="uid://blbqoin1phksy" path="res://graphics/02.png" id="10_821ml"]
@@ -85,15 +84,6 @@ texture = ExtResource("6_iru7p")
 position = Vector2(788, -40)
 scale = Vector2(0.893939, 0.893939)
 texture = ExtResource("4_tywwl")
-
-[node name="Enemy" parent="." instance=ExtResource("7_dri43")]
-position = Vector2(623, 111)
-
-[node name="Enemy2" parent="." instance=ExtResource("7_dri43")]
-position = Vector2(484, 50)
-
-[node name="Enemy3" parent="." instance=ExtResource("7_dri43")]
-position = Vector2(372, -36)
 
 [node name="Bush21" type="Sprite2D" parent="."]
 position = Vector2(755, -10)
