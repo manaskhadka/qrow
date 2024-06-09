@@ -61,6 +61,11 @@ func _input(event):
 				print("Activiating exit...")
 				$"../Sign".dialogue_file = ""
 				$"../Sign".transition_scene = "res://outside.tscn"
+				global.darkforestdefeated = true
+			
+			if interactable_area_name == "witch" and global.darkforestdefeated:
+				print("Witch dialogue retrigger")
+				global.witchGone = true
 				
 		if transition_scene:
 			print("transitioning to:", transition_scene)

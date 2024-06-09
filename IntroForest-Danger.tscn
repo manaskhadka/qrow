@@ -82,7 +82,6 @@ scale = Vector2(3.2, 2.68)
 sprite = NodePath("darksapling")
 obj_type = 0
 dialogue_file = "res://dialogues/crow-finds-sapling.json"
-transition_scene = "<null>"
 interactable_area_name = "sapling"
 reposition = false
 
@@ -175,7 +174,7 @@ position = Vector2(291, 863)
 position = Vector2(721, 767)
 
 [node name="Crow" parent="." instance=ExtResource("8_bi6ja")]
-position = Vector2(-666.375, -36.1248)
+position = Vector2(-670, -46.0001)
 
 [node name="Trees" type="Sprite2D" parent="."]
 modulate = Color(0.548525, 0.390457, 0.976695, 1)

@@ -6,6 +6,8 @@ var items = {}
 # These control access points for the crow
 # i.e. the crow cannot access certain locations unless true
 var darkforestavailable = false
+var darkforestdefeated = false
+var witchGone = false
 
 var returnPosition: Vector2;
 var camPosition: Vector2;
