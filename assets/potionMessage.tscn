@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://d1usvmq3jlfxt"]
 
 [ext_resource type="Script" path="res://assets/potionMessage.gd" id="1_x5xfj"]
-[ext_resource type="Texture2D" uid="uid://cl260755i1om2" path="res://11.png" id="2_3ubfv"]
+[ext_resource type="Texture2D" uid="uid://cl260755i1om2" path="res://letterBlank.png" id="2_3ubfv"]
 [ext_resource type="Script" path="res://assets/messageButton.gd" id="3_65vva"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i3h7s"]
