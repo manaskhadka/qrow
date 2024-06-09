@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://u1b276ge0641"]
+
+[ext_resource type="Texture2D" uid="uid://cxbuboapy1wee" path="res://dialogues/WitchPortrait.png" id="1_ob0xc"]
+[ext_resource type="Texture2D" uid="uid://wtdv6vtna6by" path="res://graphics/Adult Crow.png" id="2_qb70n"]
+
+[node name="PictureFrame" type="Sprite2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 267.0
+offset_bottom = 287.0
+color = Color(0.337065, 0.247614, 0.140478, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+offset_left = 20.0
+offset_top = 27.0
+offset_right = 246.0
+offset_bottom = 265.0
+color = Color(0.740433, 0.828875, 1, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(124.75, 147.625)
+scale = Vector2(0.931641, 0.950195)
+texture = ExtResource("1_ob0xc")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(193, 228.5)
+scale = Vector2(1.90625, 1.79688)
+texture = ExtResource("2_qb70n")

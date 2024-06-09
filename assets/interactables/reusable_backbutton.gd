@@ -15,3 +15,7 @@ func _process(delta):
 func _on_pressed():
 	print("hi")
 	get_tree().change_scene_to_file(scene)
+
+
+func _on_area_2d_mouse_entered():
+	pass # Replace with function body.

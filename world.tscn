@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://b8i3w6yq3u6cb"]
+[gd_scene load_steps=45 format=3 uid="uid://b8i3w6yq3u6cb"]
 
 [ext_resource type="PackedScene" uid="uid://do027h1kv333v" path="res://test-level.tscn" id="1_4m6ml"]
 [ext_resource type="PackedScene" uid="uid://ccwb7bmjph5un" path="res://player.tscn" id="2_bcbvm"]
@@ -27,6 +27,8 @@
 [ext_resource type="Texture2D" uid="uid://ebp0n0jjurct" path="res://graphics/Top-Down Retro Interior/pie.png" id="24_qcgfe"]
 [ext_resource type="Texture2D" uid="uid://cyifakrdeuduj" path="res://graphics/Top-Down Retro Interior/tea.png" id="25_0fkea"]
 [ext_resource type="Script" path="res://cauldron.gd" id="26_ohhgt"]
+[ext_resource type="PackedScene" uid="uid://u1b276ge0641" path="res://pictureFrame.tscn" id="29_rgr13"]
+[ext_resource type="Script" path="res://pictureInteract.gd" id="29_vwqgj"]
 [ext_resource type="Texture2D" uid="uid://53jutxgi87rp" path="res://potion1.png" id="32_1b5bw"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_6fwv1"]
@@ -80,6 +82,14 @@ shader = ExtResource("7_pcqhn")
 shader_parameter/outline_color = Color(1, 1, 1, 1)
 shader_parameter/outline_enabled = false
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4u58o"]
+shader = ExtResource("7_pcqhn")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_enabled = false
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1eb00"]
+radius = 30.0167
+
 [node name="Cottage" type="Node2D"]
 position = Vector2(0, -1)
 
@@ -120,7 +130,7 @@ position = Vector2(525, 104)
 shape = SubResource("CircleShape2D_hlxmn")
 
 [node name="Note2" type="Area2D" parent="." node_paths=PackedStringArray("sprite")]
-position = Vector2(82, 15)
+position = Vector2(82, 84)
 script = ExtResource("7_6h0fw")
 sprite = NodePath("Note")
 obj_type = 1
@@ -911,6 +921,22 @@ position = Vector2(353, 89)
 scale = Vector2(0.5625, 0.575)
 texture = ExtResource("32_1b5bw")
 
+[node name="Area2D" type="Area2D" parent="." node_paths=PackedStringArray("sprite")]
+position = Vector2(622, 123)
+script = ExtResource("29_vwqgj")
+sprite = NodePath("PictureFrame")
+transition_scene = "res://pictureUpClose.tscn"
+interactable_area_name = "portrait"
+
+[node name="PictureFrame" parent="Area2D" instance=ExtResource("29_rgr13")]
+position = Vector2(-16, -15)
+scale = Vector2(0.1, 0.1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+material = SubResource("ShaderMaterial_4u58o")
+position = Vector2(-3, 0)
+shape = SubResource("CircleShape2D_1eb00")
+
 [connection signal="body_entered" from="Cedric Door" to="Cedric Door" method="_on_body_entered"]
 [connection signal="body_exited" from="Cedric Door" to="Cedric Door" method="_on_body_exited"]
 [connection signal="body_entered" from="Note2" to="Note2" method="_on_body_entered"]
@@ -929,3 +955,5 @@ texture = ExtResource("32_1b5bw")
 [connection signal="body_exited" from="Tea" to="Tea" method="_on_body_exited"]
 [connection signal="body_entered" from="cauldron" to="cauldron" method="_on_body_entered"]
 [connection signal="body_exited" from="cauldron" to="cauldron" method="_on_body_exited"]
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
