@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://d1usvmq3jlfxt"]
 
 [ext_resource type="Script" path="res://assets/potionMessage.gd" id="1_x5xfj"]
-[ext_resource type="Texture2D" uid="uid://cl260755i1om2" path="res://letterBlank.png" id="2_3ubfv"]
+[ext_resource type="Texture2D" uid="uid://duydvghywsr4b" path="res://11.png" id="2_toqx8"]
 [ext_resource type="Script" path="res://assets/messageButton.gd" id="3_65vva"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i3h7s"]
@@ -23,7 +23,7 @@ vertical_alignment = 1
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(195.964, 37)
 scale = Vector2(8.11907, 3.46875)
-texture = ExtResource("2_3ubfv")
+texture = ExtResource("2_toqx8")
 
 [node name="Button" type="Button" parent="."]
 modulate = Color(1, 1, 1, 0.984314)

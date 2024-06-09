@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bchnngednr14u"]
+[gd_scene load_steps=17 format=3 uid="uid://bchnngednr14u"]
 
 [ext_resource type="PackedScene" uid="uid://do027h1kv333v" path="res://test-level.tscn" id="1_2of21"]
 [ext_resource type="Texture2D" uid="uid://hh53uuw21m0u" path="res://graphics/Cane.png" id="2_tpmay"]
@@ -7,6 +7,7 @@
 [ext_resource type="Shader" path="res://world.gdshader" id="4_0b5m2"]
 [ext_resource type="Script" path="res://exitDoor.gd" id="6_2xevs"]
 [ext_resource type="Texture2D" uid="uid://cl260755i1om2" path="res://letterBlank.png" id="7_rympj"]
+[ext_resource type="Script" path="res://interactable-area-clickable.gd" id="8_3j0sf"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_10gp6"]
 shader = ExtResource("4_0b5m2")
@@ -24,6 +25,17 @@ radius = 11.0
 shader = ExtResource("4_0b5m2")
 shader_parameter/outline_color = Color(1, 1, 1, 1)
 shader_parameter/outline_enabled = false
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7tapc"]
+shader = ExtResource("4_0b5m2")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_enabled = false
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_51pfp"]
+load_path = "res://.godot/imported/Crystals.png-dac98c5c88a6baa6b6ab965f07e223c4.ctex"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_701cl"]
+radius = 29.4404
 
 [node name="Node2D" type="Node2D"]
 position = Vector2(488, 39)
@@ -84,9 +96,29 @@ position = Vector2(-0.999991, 2)
 scale = Vector2(0.359043, 0.337766)
 texture = ExtResource("7_rympj")
 
+[node name="Area2D2" type="Area2D" parent="." node_paths=PackedStringArray("sprite")]
+position = Vector2(131, 100)
+scale = Vector2(0.135869, 0.116667)
+script = ExtResource("8_3j0sf")
+sprite = NodePath("Crystals")
+obj_type = 2
+interactable_area_name = "crystal"
+
+[node name="Crystals" type="Sprite2D" parent="Area2D2"]
+material = SubResource("ShaderMaterial_7tapc")
+position = Vector2(5.28979, 9.64282)
+scale = Vector2(1.45998, 1.64285)
+texture = SubResource("CompressedTexture2D_51pfp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2(7.36001, 8.57143)
+shape = SubResource("CircleShape2D_701cl")
+
 [connection signal="body_entered" from="Cane" to="Cane" method="_on_body_entered"]
 [connection signal="body_exited" from="Cane" to="Cane" method="_on_body_exited"]
 [connection signal="body_entered" from="exitDoor" to="exitDoor" method="_on_body_entered"]
 [connection signal="body_exited" from="exitDoor" to="exitDoor" method="_on_body_exited"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
+[connection signal="mouse_entered" from="Area2D2" to="Area2D2" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D2" to="Area2D2" method="_on_mouse_exited"]

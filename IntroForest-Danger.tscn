@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://bntxubjp4x6wd" path="res://graphics/Deep Forest/Foliage/Bush4_2.png" id="10_gtyc6"]
 [ext_resource type="Texture2D" uid="uid://s6h07xsynw4b" path="res://graphics/Deep Forest/Foliage/Bush8_2.png" id="11_b7pih"]
 [ext_resource type="PackedScene" uid="uid://d3qh6l3njuq7j" path="res://interactable_area.tscn" id="12_cpgtg"]
-[ext_resource type="PackedScene" uid="uid://cvo2xhojg2kx5" path="res://enemy.tscn" id="14_ntvv4"]
+[ext_resource type="PackedScene" path="res://enemy.tscn" id="14_ntvv4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0lsx1"]
 size = Vector2(48.0865, 44.6752)
@@ -131,7 +131,6 @@ texture = ExtResource("4_lgmmm")
 
 [node name="Bush41" type="Sprite2D" parent="."]
 position = Vector2(-221, -74)
-scale = Vector2(1, 1)
 texture = ExtResource("9_g4hp6")
 
 [node name="Bush20" type="Sprite2D" parent="."]
