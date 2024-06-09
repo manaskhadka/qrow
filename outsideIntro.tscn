@@ -120,7 +120,7 @@ scale = Vector2(1.94087, 0.990351)
 script = ExtResource("10_hqwpn")
 sprite = NodePath("Sign")
 obj_type = 2
-dialogue_file = "res://dialogues/sample-dialogue.json"
+dialogue_file = "res://dialogues/signIntroDialogue.json"
 interactable_area_name = "sign"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
