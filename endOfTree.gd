@@ -16,7 +16,9 @@ func _process(delta):
 
 func _on_body_entered(body):
 	entered = true
+	$"../Label".visible = true
 
 
 func _on_body_exited(body):
 	entered = false# Replace with function body.
+	$"../Label".visible = false

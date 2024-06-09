@@ -58,5 +58,14 @@ script = ExtResource("5_lxxmm")
 position = Vector2(7, 0)
 shape = SubResource("CircleShape2D_mkk5u")
 
+[node name="Label" type="Label" parent="."]
+offset_left = -270.0
+offset_top = 141.0
+offset_right = -205.0
+offset_bottom = 164.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 8
+text = "press space here"
+
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
