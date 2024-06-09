@@ -104,8 +104,9 @@ func _ready():
 	
 	var a1 = get_node("attack-anim-left")
 	var a2 = get_node("attack-anim-right")
-	a1.visible = false 
-	a2.visible = false
+	if (a1 and a2):
+		a1.visible = false 
+		a2.visible = false
 
 	
 
