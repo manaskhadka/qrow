@@ -1,8 +1,10 @@
 [
   {"name": "Witch", "text": "Ah, dear crow . . ."},
-  {"name": "Witch", "text": "The monsters have gotten too many. People in the vilage are dying..."},
-  {"name": "Witch", "text": "They killed a boy... he was only 5... all they were able to find of him was his bracelet..."},
-  {"name": "Witch", "text": "We must go into the forest to combat them... You must go while I plan.."},
-  {"name": "Witch", "text": "Go into the deep forest, make sure they are all dead.."},
-  {"name": "Witch", "text": "Also look for a tree sapling and kill it, I think it's aggravating the magic."}
+  {"name": "Witch", "text": "The woods are grim nowadays . . . "},
+  {"name": "Witch", "text": "The monsters, they're horride. They even killed a young boy the other day"},
+  {"name": "Witch", "text": "There are certain . . . sources of this dark magic."},
+  {"name": "Witch", "text": "I detect a few in the forests surrounding us . . ."},
+  {"name": "Witch", "text": "Go into the deep forest, and locate one of them, my crow"},
+  {"name": "Witch", "text": "Better yet, remove it, if you can"},
+  {"name": "Witch", "text": "I will find the other sources and deal with them myself. Now go!"}
 ]

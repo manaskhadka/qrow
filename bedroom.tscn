@@ -85,6 +85,7 @@ script = ExtResource("3_han3g")
 sprite = NodePath("LetterBlank")
 transition_scene = "res://letterReveal.tscn"
 interactable_area_name = "note"
+reposition = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(0, 1)

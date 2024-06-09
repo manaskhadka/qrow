@@ -134,7 +134,6 @@ texture = ExtResource("4_lgmmm")
 
 [node name="Bush41" type="Sprite2D" parent="."]
 position = Vector2(-221, -74)
-scale = Vector2(1, 1)
 texture = ExtResource("9_g4hp6")
 
 [node name="Bush20" type="Sprite2D" parent="."]
