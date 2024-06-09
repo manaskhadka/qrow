@@ -17,7 +17,7 @@ offset_right = 937.0
 offset_bottom = 571.0
 theme_override_colors/font_color = Color(0.00184107, 0.00184107, 0.00184107, 1)
 theme_override_font_sizes/font_size = 35
-text = "This contains my notes of what I've learned throughout the years. I have honed my claws and can attack (e). I've worked with countless ingredients and can craft cncoctions near the cauldron (i)."
+text = "This contains my notes of what I've learned throughout the years. I have honed my claws and can attack (e). I've worked with countless ingredients and can craft concoctions near the cauldron (i)."
 autowrap_mode = 2
 
 [node name="Button" parent="." instance=ExtResource("2_sthq5")]
