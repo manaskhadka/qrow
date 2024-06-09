@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://dcx6lvd1foder"]
+
+[ext_resource type="Texture2D" uid="uid://cl260755i1om2" path="res://letterBlank.png" id="1_dgusc"]
+[ext_resource type="PackedScene" uid="uid://hxwwmunqojcr" path="res://assets/interactables/reusable_backbutton.tscn" id="2_4ca8g"]
+
+[node name="LetterReveal" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(483.5, 336)
+scale = Vector2(17.9362, 13.7021)
+texture = ExtResource("1_dgusc")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 369.0
+offset_top = 33.0
+offset_right = 794.0
+offset_bottom = 550.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 14
+text = "Dear Cedric, 
+
+I don't know if you will ever read this, but I must confess  to somebody, somewhere, so here goes. Today was the worst day of my life because it was the day that you died, you, the love of my life. We were so in love, so happy, so ready for the future, until your illness took over. I cannot bare a life without you, so I made a decision. I have chosen to give up a part of myself to the dark magic so that you may re-enter the world as a crow, so that you may be alive again and so that we can find each other once more. I know that this will destroy me, that over time I will be weaker, and that as long as I am alive and as time progresses, dark magic will begin to take over the forest and the village and that one day we will lose this battle, but I will do anything to hold you once more. I will try my hardest to fight the monsters off, but I fear that I may not be able to one day... then it will be over for everybody.. let us pray it never gets to that.
+
+ I love you forever,  Esmy"
+autowrap_mode = 2
+
+[node name="Button" parent="." instance=ExtResource("2_4ca8g")]
+offset_left = 953.0
+offset_top = 8.0
+offset_right = 1071.0
+offset_bottom = 79.0
+scene = "res://bedroom.tscn"

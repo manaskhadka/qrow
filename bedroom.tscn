@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bchnngednr14u"]
+[gd_scene load_steps=13 format=3 uid="uid://bchnngednr14u"]
 
 [ext_resource type="PackedScene" uid="uid://do027h1kv333v" path="res://test-level.tscn" id="1_2of21"]
 [ext_resource type="Texture2D" uid="uid://hh53uuw21m0u" path="res://graphics/Cane.png" id="2_tpmay"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://interactable-area.gd" id="3_han3g"]
 [ext_resource type="Shader" path="res://world.gdshader" id="4_0b5m2"]
 [ext_resource type="Script" path="res://exitDoor.gd" id="6_2xevs"]
+[ext_resource type="Texture2D" uid="uid://cl260755i1om2" path="res://letterBlank.png" id="7_rympj"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_10gp6"]
 shader = ExtResource("4_0b5m2")
@@ -15,6 +16,14 @@ shader_parameter/outline_enabled = false
 [sub_resource type="CircleShape2D" id="CircleShape2D_1rmcf"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ci2m0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_birbv"]
+radius = 11.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6yqql"]
+shader = ExtResource("4_0b5m2")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_enabled = false
 
 [node name="Node2D" type="Node2D"]
 position = Vector2(488, 39)
@@ -58,7 +67,26 @@ position = Vector2(48, 148)
 scale = Vector2(2, 2)
 shape = SubResource("CircleShape2D_ci2m0")
 
+[node name="Area2D" type="Area2D" parent="." node_paths=PackedStringArray("sprite")]
+position = Vector2(166, 125)
+script = ExtResource("3_han3g")
+sprite = NodePath("LetterBlank")
+transition_scene = "res://letterReveal.tscn"
+interactable_area_name = "note"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_birbv")
+
+[node name="LetterBlank" type="Sprite2D" parent="Area2D"]
+material = SubResource("ShaderMaterial_6yqql")
+position = Vector2(-0.999991, 2)
+scale = Vector2(0.359043, 0.337766)
+texture = ExtResource("7_rympj")
+
 [connection signal="body_entered" from="Cane" to="Cane" method="_on_body_entered"]
 [connection signal="body_exited" from="Cane" to="Cane" method="_on_body_exited"]
 [connection signal="body_entered" from="exitDoor" to="exitDoor" method="_on_body_entered"]
 [connection signal="body_exited" from="exitDoor" to="exitDoor" method="_on_body_exited"]
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
