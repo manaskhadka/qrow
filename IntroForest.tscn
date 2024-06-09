@@ -1,16 +1,23 @@
-[gd_scene load_steps=11 format=3 uid="uid://dbpv566fqmwu2"]
+[gd_scene load_steps=15 format=3 uid="uid://crlxngscsuudo"]
 
 [ext_resource type="Script" path="res://IntroForest.gd" id="1_m1mmt"]
-[ext_resource type="TileSet" uid="uid://clrtknw2lr2xu" path="res://IntroForest.tres" id="3_qin8l"]
+[ext_resource type="TileSet" uid="uid://db1ls77wf6igw" path="res://IntroForest.tres" id="3_qin8l"]
 [ext_resource type="Script" path="res://Sign.gd" id="6_flngg"]
 [ext_resource type="Texture2D" uid="uid://dh3xbr0pcjnrp" path="res://graphics/Bush4_1.png" id="8_p56hp"]
 [ext_resource type="AudioStream" uid="uid://dg2ehin641gqf" path="res://Magic Tree music.mp3" id="9_3elor"]
+[ext_resource type="PackedScene" uid="uid://d3qh6l3njuq7j" path="res://interactable_area.tscn" id="10_3lg67"]
+[ext_resource type="Texture2D" uid="uid://tv74ow7nbki2" path="res://puddle.png" id="11_r3540"]
 [ext_resource type="Texture2D" uid="uid://c2nfwoja71ay6" path="res://graphics/Deep Forest/Foliage/Bush1_2.png" id="12_yw2f5"]
 [ext_resource type="Texture2D" uid="uid://b8js4d1dc27qi" path="res://trees.png" id="13_4b8y0"]
 [ext_resource type="PackedScene" uid="uid://ccwb7bmjph5un" path="res://player.tscn" id="13_il8fa"]
 [ext_resource type="Texture2D" uid="uid://b27hbrj41dxug" path="res://01.png" id="14_wekay"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_jdlx4"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0lsx1"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_s1lid"]
+height = 28.7522
 
 [node name="IntroForest" type="Node2D"]
 script = ExtResource("1_m1mmt")
@@ -32,14 +39,22 @@ position = Vector2(-721, -77)
 scale = Vector2(0.799127, 0.799127)
 texture = ExtResource("12_yw2f5")
 
-[node name="Bush43" type="Sprite2D" parent="."]
-position = Vector2(-556, 62)
-scale = Vector2(0.893939, 0.893939)
+[node name="CreepyTree" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("10_3lg67")]
+position = Vector2(108, 130)
+scale = Vector2(5.08, 3.6)
+sprite = NodePath("Bush42")
+obj_type = 0
+dialogue_file = "res://dialogues/crow-dead-tree.json"
+interactable_area_name = "deadtree"
+
+[node name="Bush42" type="Sprite2D" parent="CreepyTree"]
+position = Vector2(0.984252, -2.77778)
+scale = Vector2(0.227608, 0.321181)
 texture = ExtResource("8_p56hp")
 
-[node name="Bush42" type="Sprite2D" parent="."]
-position = Vector2(-457, -174)
-texture = ExtResource("8_p56hp")
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="CreepyTree"]
+position = Vector2(-0.19685, 0.555556)
+shape = SubResource("CircleShape2D_jdlx4")
 
 [node name="Trees" type="Sprite2D" parent="."]
 position = Vector2(462, 982)
@@ -60,9 +75,6 @@ shape = SubResource("RectangleShape2D_0lsx1")
 [node name="Treezoom" type="Sprite2D" parent="."]
 position = Vector2(326, -45)
 
-[node name="Crow" parent="." instance=ExtResource("13_il8fa")]
-position = Vector2(453, 1036)
-
 [node name="Label" type="Label" parent="."]
 texture_filter = 1
 texture_repeat = 1
@@ -78,3 +90,37 @@ text = "Witch's Hut"
 stream = ExtResource("9_3elor")
 volume_db = -20.0
 autoplay = true
+
+[node name="Puddle" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("10_3lg67")]
+position = Vector2(732, 402)
+scale = Vector2(2.83998, 1.72002)
+sprite = NodePath("Puddle")
+obj_type = 0
+dialogue_file = "res://dialogues/crow-puddle-reflection.json"
+interactable_area_name = "puddle"
+
+[node name="Puddle" type="Sprite2D" parent="Puddle"]
+position = Vector2(2.40198, 1.9375)
+scale = Vector2(0.00407179, 0.00886451)
+texture = ExtResource("11_r3540")
+
+[node name="Puddle2" type="Sprite2D" parent="Puddle"]
+position = Vector2(15.8713, -11.0464)
+rotation = -3.11657
+scale = Vector2(0.00152028, 0.00252317)
+skew = -0.0158411
+texture = ExtResource("11_r3540")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Puddle"]
+position = Vector2(1, 2)
+rotation = 1.58143
+scale = Vector2(0.938422, 0.90921)
+shape = SubResource("CapsuleShape2D_s1lid")
+
+[node name="Crow" parent="." instance=ExtResource("13_il8fa")]
+position = Vector2(453, 1036)
+
+[connection signal="body_entered" from="CreepyTree" to="CreepyTree" method="_on_body_entered"]
+[connection signal="body_exited" from="CreepyTree" to="CreepyTree" method="_on_body_exited"]
+[connection signal="body_entered" from="Puddle" to="Puddle" method="_on_body_entered"]
+[connection signal="body_exited" from="Puddle" to="Puddle" method="_on_body_exited"]

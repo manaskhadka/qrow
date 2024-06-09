@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://tv74ow7nbki2"
-path="res://.godot/imported/vecteezy_water-puddle-clipart-design-illustration_9304190.png-c665e3958877433b36ccabd0eb406307.ctex"
+path="res://.godot/imported/puddle.png-363e2ae19544387c550b3e86da06d65d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://vecteezy_water-puddle-clipart-design-illustration_9304190.png"
-dest_files=["res://.godot/imported/vecteezy_water-puddle-clipart-design-illustration_9304190.png-c665e3958877433b36ccabd0eb406307.ctex"]
+source_file="res://puddle.png"
+dest_files=["res://.godot/imported/puddle.png-363e2ae19544387c550b3e86da06d65d.ctex"]
 
 [params]
 

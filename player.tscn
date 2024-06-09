@@ -146,6 +146,7 @@ shape = SubResource("CircleShape2D_1mc4c")
 unique_name_in_owner = true
 
 [node name="PauseMenu" parent="." instance=ExtResource("9_evono")]
+visible = true
 
 [node name="Inventory" type="CanvasLayer" parent="."]
 

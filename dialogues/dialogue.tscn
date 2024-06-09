@@ -1,11 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://cppr1vx0grq8r"]
+[gd_scene load_steps=5 format=3 uid="uid://cppr1vx0grq8r"]
 
 [ext_resource type="Script" path="res://dialogues/dialogue-player.gd" id="1_kakav"]
 [ext_resource type="Texture2D" uid="uid://c7eh4g4rb2kvu" path="res://dialogues/dialogue_box.png" id="1_m6oyw"]
+[ext_resource type="Texture2D" uid="uid://28gtvi4c6juf" path="res://dialogues/CrowPortrait.png" id="3_dhrhr"]
+[ext_resource type="Texture2D" uid="uid://cxbuboapy1wee" path="res://dialogues/WitchPortrait.png" id="4_f3mc2"]
 
 [node name="Dialogue" type="CanvasLayer"]
 script = ExtResource("1_kakav")
-dialogue_file = "res://dialogues/text.json"
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
 offset_left = 60.0
@@ -39,7 +40,7 @@ text = "This is sample text that demonstrates just about how many words fit on t
 
 [node name="Char Portrait Frame" type="ReferenceRect" parent="NinePatchRect"]
 layout_mode = 0
-offset_left = 23.0
+offset_left = 32.0
 offset_top = 36.0
 offset_right = 196.0
 offset_bottom = 168.0
@@ -54,6 +55,16 @@ offset_top = 62.0
 offset_right = 237.0
 offset_bottom = 101.0
 stretch_mode = 4
+
+[node name="CrowPortrait" type="Sprite2D" parent="NinePatchRect"]
+position = Vector2(123, 95)
+scale = Vector2(1.48, 1.48)
+texture = ExtResource("3_dhrhr")
+
+[node name="WitchPortrait" type="Sprite2D" parent="NinePatchRect"]
+position = Vector2(118.75, 102)
+scale = Vector2(0.509766, 0.515625)
+texture = ExtResource("4_f3mc2")
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.544

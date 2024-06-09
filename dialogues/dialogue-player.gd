@@ -29,7 +29,7 @@ func start():
 		crow.visible=true
 	
 	curr_dialogue_id = -1
-	# next_script()
+	next_script()
 
 func load_dialogue():
 	var json_string = FileAccess.get_file_as_string(dialogue_file)
