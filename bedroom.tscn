@@ -31,6 +31,7 @@ position = Vector2(45, 218)
 script = ExtResource("3_han3g")
 sprite = NodePath("Cane")
 obj_type = 2
+dialogue_file = "res://dialogues/cane.json"
 
 [node name="Cane" type="Sprite2D" parent="Cane"]
 z_index = 1
@@ -45,7 +46,7 @@ position = Vector2(35, -139)
 scale = Vector2(2, 2)
 shape = SubResource("CircleShape2D_1rmcf")
 
-[node name="player" parent="." instance=ExtResource("3_3g3ab")]
+[node name="Crow" parent="." instance=ExtResource("3_3g3ab")]
 z_index = 1
 position = Vector2(50, 133)
 

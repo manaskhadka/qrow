@@ -1,17 +1,12 @@
-[gd_scene load_steps=22 format=3 uid="uid://fe13bp6cdnst"]
+[gd_scene load_steps=35 format=3 uid="uid://fe13bp6cdnst"]
 
 [ext_resource type="Texture2D" uid="uid://epq2snulklfa" path="res://graphics/PNG image-746C70BB82B2-1.png" id="1_kqnoy"]
 [ext_resource type="Texture2D" uid="uid://b45u31wqwiemp" path="res://graphics/Pixel Potions/2-removebg-preview.png" id="2_p106a"]
 [ext_resource type="Texture2D" uid="uid://cauy77q6x75d" path="res://graphics/Pixel Potions/3-removebg-preview.png" id="3_hvre5"]
 [ext_resource type="Texture2D" uid="uid://caovrtvi45sdq" path="res://graphics/Pixel Potions/4-removebg-preview.png" id="4_oreuj"]
-[ext_resource type="Texture2D" uid="uid://bvvoaqkb5uu0f" path="res://graphics/Pixel Potions/5-removebg-preview.png" id="5_fdtcm"]
 [ext_resource type="Texture2D" uid="uid://cb0ygc5k3bke1" path="res://graphics/Pixel Potions/6-removebg-preview.png" id="6_hfk8s"]
 [ext_resource type="Texture2D" uid="uid://byyem8sfnyglq" path="res://graphics/Pixel Potions/7-removebg-preview.png" id="7_pgf0d"]
-[ext_resource type="Texture2D" uid="uid://b07gsjedwnrha" path="res://graphics/Pixel Potions/8-removebg-preview.png" id="8_es2nn"]
-[ext_resource type="Texture2D" uid="uid://jq0g21rfl2g0" path="res://graphics/Pixel Potions/9-removebg-preview.png" id="9_6nttt"]
 [ext_resource type="Texture2D" uid="uid://cl0gp72f722h7" path="res://graphics/Pixel Potions/10-removebg-preview.png" id="10_p31fi"]
-[ext_resource type="Texture2D" uid="uid://bmbrqipku82kl" path="res://graphics/Pixel Potions/11-removebg-preview.png" id="11_dbqi5"]
-[ext_resource type="Texture2D" uid="uid://clhytlpwgqxwh" path="res://graphics/Pixel Potions/12-removebg-preview.png" id="12_vqtyc"]
 [ext_resource type="Texture2D" uid="uid://r8pwdy5l5sas" path="res://graphics/Pixel Potions/1-removebg-preview_preview_rev_1.png" id="13_1qb31"]
 [ext_resource type="Script" path="res://interactable-area-clickable.gd" id="14_bx3up"]
 [ext_resource type="Shader" path="res://world.gdshader" id="14_j0o2n"]
@@ -19,7 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://dfrvhtyhvd8n1" path="res://assets/regularInventory.tscn" id="17_j4bn8"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pofav"]
-radius = 3.0303
+radius = 2.18728
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_j2t1r"]
 shader = ExtResource("14_j0o2n")
@@ -27,9 +22,81 @@ shader_parameter/outline_color = Color(1, 1, 1, 1)
 shader_parameter/outline_enabled = false
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_m4jhy"]
-radius = 67.0298
+radius = 41.0488
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_eruhl"]
+shader = ExtResource("14_j0o2n")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_enabled = false
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6mg2v"]
+radius = 41.0122
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3a4fn"]
+shader = ExtResource("14_j0o2n")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_enabled = false
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_u7en5"]
+radius = 43.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_00gf7"]
+shader = ExtResource("14_j0o2n")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_enabled = false
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_k6tpu"]
+radius = 41.4849
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fwqfc"]
+shader = ExtResource("14_j0o2n")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_enabled = false
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_v6h61"]
+radius = 42.0476
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_cs5dl"]
+shader = ExtResource("14_j0o2n")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_enabled = false
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_c4s31"]
+radius = 37.1214
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qv35r"]
+shader = ExtResource("14_j0o2n")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_enabled = false
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yhsa7"]
+radius = 36.8782
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_movff"]
+shader = ExtResource("14_j0o2n")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_enabled = false
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6a70d"]
+radius = 43.7379
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2had2"]
+shader = ExtResource("14_j0o2n")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_enabled = false
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cc6ve"]
+radius = 36.0139
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_yj8oh"]
+shader = ExtResource("14_j0o2n")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_enabled = false
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ktx8m"]
+radius = 32.0156
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mfhd6"]
 shader = ExtResource("14_j0o2n")
 shader_parameter/outline_color = Color(1, 1, 1, 1)
 shader_parameter/outline_enabled = false
@@ -43,211 +110,7 @@ position = Vector2(516.75, 293.367)
 scale = Vector2(22.4457, 14.7078)
 texture = ExtResource("1_kqnoy")
 
-[node name="3-removebg-preview" type="Sprite2D" parent="Shelf w_ Potions"]
-z_index = 1
-position = Vector2(17.2119, 14.6424)
-scale = Vector2(0.0382353, 0.0382353)
-texture = ExtResource("3_hvre5")
-
-[node name="4-removebg-preview" type="Sprite2D" parent="Shelf w_ Potions"]
-z_index = 1
-position = Vector2(10.9669, -9.39734)
-scale = Vector2(0.0250001, 0.0250001)
-texture = ExtResource("4_oreuj")
-
-[node name="5-removebg-preview" type="Sprite2D" parent="Shelf w_ Potions"]
-z_index = 1
-position = Vector2(-4.72186, -10.7086)
-scale = Vector2(0.04375, 0.04375)
-texture = ExtResource("5_fdtcm")
-
-[node name="6-removebg-preview" type="Sprite2D" parent="Shelf w_ Potions"]
-z_index = 1
-position = Vector2(-0.761589, -9.83443)
-scale = Vector2(0.0308823, 0.0308823)
-texture = ExtResource("6_hfk8s")
-
-[node name="7-removebg-preview" type="Sprite2D" parent="Shelf w_ Potions"]
-z_index = 1
-position = Vector2(2.28477, -10.4901)
-scale = Vector2(0.0377907, 0.0377907)
-texture = ExtResource("7_pgf0d")
-
-[node name="8-removebg-preview" type="Sprite2D" parent="Shelf w_ Potions"]
-z_index = 1
-position = Vector2(13.8609, -10.7086)
-scale = Vector2(0.0406977, 0.0406977)
-texture = ExtResource("8_es2nn")
-
-[node name="9-removebg-preview" type="Sprite2D" parent="Shelf w_ Potions"]
-z_index = 1
-position = Vector2(-7.15894, 14.6424)
-scale = Vector2(0.04375, 0.04375)
-texture = ExtResource("9_6nttt")
-
-[node name="10-removebg-preview" type="Sprite2D" parent="Shelf w_ Potions"]
-z_index = 1
-position = Vector2(18.2148, -1.46312)
-scale = Vector2(0.0426471, 0.0426472)
-texture = ExtResource("10_p31fi")
-
-[node name="11-removebg-preview" type="Sprite2D" parent="Shelf w_ Potions"]
-z_index = 1
-position = Vector2(-18.1258, 6.77482)
-scale = Vector2(0.0382351, 0.0382351)
-texture = ExtResource("11_dbqi5")
-
-[node name="12-removebg-preview" type="Sprite2D" parent="Shelf w_ Potions"]
-z_index = 1
-position = Vector2(18.1258, -10.053)
-scale = Vector2(0.0345588, 0.0345588)
-texture = ExtResource("12_vqtyc")
-
-[node name="1-removebg-previewPreviewRev2" type="Sprite2D" parent="Shelf w_ Potions"]
-z_index = 1
-position = Vector2(-18.2782, -1.31126)
-scale = Vector2(0.0359375, 0.0359375)
-texture = ExtResource("13_1qb31")
-
-[node name="2-removebg-preview2" type="Sprite2D" parent="Shelf w_ Potions"]
-z_index = 1
-position = Vector2(14.4702, -1.31126)
-scale = Vector2(0.0391566, 0.0391566)
-texture = ExtResource("2_p106a")
-
-[node name="3-removebg-preview2" type="Sprite2D" parent="Shelf w_ Potions"]
-z_index = 1
-position = Vector2(-10.2053, -1.31126)
-scale = Vector2(0.0382353, 0.0382353)
-texture = ExtResource("3_hvre5")
-
-[node name="4-removebg-preview2" type="Sprite2D" parent="Shelf w_ Potions"]
-z_index = 1
-position = Vector2(-8.07285, -9.39734)
-scale = Vector2(0.0250001, 0.0250001)
-texture = ExtResource("4_oreuj")
-
-[node name="5-removebg-preview2" type="Sprite2D" parent="Shelf w_ Potions"]
-z_index = 1
-position = Vector2(-14.6225, -1.74834)
-scale = Vector2(0.04375, 0.04375)
-texture = ExtResource("5_fdtcm")
-
-[node name="7-removebg-preview2" type="Sprite2D" parent="Shelf w_ Potions"]
-z_index = 1
-position = Vector2(-17.784, 14.9944)
-scale = Vector2(0.0377907, 0.0377907)
-texture = ExtResource("7_pgf0d")
-
-[node name="8-removebg-preview2" type="Sprite2D" parent="Shelf w_ Potions"]
-z_index = 1
-position = Vector2(-2.74172, 14.8609)
-scale = Vector2(0.0406977, 0.0406977)
-texture = ExtResource("8_es2nn")
-
-[node name="9-removebg-preview2" type="Sprite2D" parent="Shelf w_ Potions"]
-z_index = 1
-position = Vector2(10.6623, -1.96689)
-scale = Vector2(0.04375, 0.04375)
-texture = ExtResource("9_6nttt")
-
-[node name="10-removebg-preview2" type="Sprite2D" parent="Shelf w_ Potions"]
-z_index = 1
-position = Vector2(6.70199, -1.31126)
-scale = Vector2(0.0426471, 0.0426472)
-texture = ExtResource("10_p31fi")
-
-[node name="11-removebg-preview2" type="Sprite2D" parent="Shelf w_ Potions"]
-z_index = 1
-position = Vector2(7.76822, -10.2715)
-scale = Vector2(0.0382351, 0.0382351)
-texture = ExtResource("11_dbqi5")
-
-[node name="12-removebg-preview2" type="Sprite2D" parent="Shelf w_ Potions"]
-z_index = 1
-position = Vector2(8.21601, 6.99439)
-scale = Vector2(0.0345588, 0.0345588)
-texture = ExtResource("12_vqtyc")
-
-[node name="1-removebg-previewPreviewRev3" type="Sprite2D" parent="Shelf w_ Potions"]
-z_index = 1
-position = Vector2(1.21601, 14.9944)
-scale = Vector2(0.0359375, 0.0359375)
-texture = ExtResource("13_1qb31")
-
-[node name="2-removebg-preview3" type="Sprite2D" parent="Shelf w_ Potions"]
-z_index = 1
-position = Vector2(-14.346, 6.40689)
-scale = Vector2(0.0391566, 0.0391566)
-texture = ExtResource("2_p106a")
-
-[node name="3-removebg-preview3" type="Sprite2D" parent="Shelf w_ Potions"]
-z_index = 1
-position = Vector2(-10.784, 14.9944)
-scale = Vector2(0.0382353, 0.0382353)
-texture = ExtResource("3_hvre5")
-
-[node name="4-removebg-preview3" type="Sprite2D" parent="Shelf w_ Potions"]
-z_index = 1
-position = Vector2(-7.34598, 7.40689)
-scale = Vector2(0.0250001, 0.0250001)
-texture = ExtResource("4_oreuj")
-
-[node name="5-removebg-preview3" type="Sprite2D" parent="Shelf w_ Potions"]
-z_index = 1
-position = Vector2(-4.41722, 6.1192)
-scale = Vector2(0.04375, 0.04375)
-texture = ExtResource("5_fdtcm")
-
-[node name="6-removebg-preview3" type="Sprite2D" parent="Shelf w_ Potions"]
-z_index = 1
-position = Vector2(-0.304637, 6.99336)
-scale = Vector2(0.0308823, 0.0308823)
-texture = ExtResource("6_hfk8s")
-
-[node name="7-removebg-preview3" type="Sprite2D" parent="Shelf w_ Potions"]
-z_index = 1
-position = Vector2(2.74172, 6.55628)
-scale = Vector2(0.0377907, 0.0377907)
-texture = ExtResource("7_pgf0d")
-
-[node name="8-removebg-preview3" type="Sprite2D" parent="Shelf w_ Potions"]
-z_index = 1
-position = Vector2(14.6225, 6.11919)
-scale = Vector2(0.0406977, 0.0406977)
-texture = ExtResource("8_es2nn")
-
-[node name="9-removebg-preview3" type="Sprite2D" parent="Shelf w_ Potions"]
-z_index = 1
-position = Vector2(-6.85431, -1.96689)
-scale = Vector2(0.04375, 0.04375)
-texture = ExtResource("9_6nttt")
-
-[node name="10-removebg-preview3" type="Sprite2D" parent="Shelf w_ Potions"]
-z_index = 1
-position = Vector2(11.4238, 14.8609)
-scale = Vector2(0.0426471, 0.0426472)
-texture = ExtResource("10_p31fi")
-
-[node name="11-removebg-preview3" type="Sprite2D" parent="Shelf w_ Potions"]
-z_index = 1
-position = Vector2(7.4094, 15.1476)
-scale = Vector2(0.0382351, 0.0382351)
-texture = ExtResource("11_dbqi5")
-
-[node name="12-removebg-preview3" type="Sprite2D" parent="Shelf w_ Potions"]
-z_index = 1
-position = Vector2(18.8874, 6.99337)
-scale = Vector2(0.0345588, 0.0345588)
-texture = ExtResource("12_vqtyc")
-
-[node name="1-removebg-previewPreviewRev1" type="Sprite2D" parent="Shelf w_ Potions"]
-z_index = 1
-position = Vector2(-18.2782, -10.2715)
-scale = Vector2(0.0359375, 0.0359375)
-texture = ExtResource("13_1qb31")
-
-[node name="Area2D" type="Area2D" parent="." node_paths=PackedStringArray("sprite")]
+[node name="orange1" type="Area2D" parent="." node_paths=PackedStringArray("sprite")]
 position = Vector2(516.75, 293.367)
 scale = Vector2(22.4457, 14.7078)
 script = ExtResource("14_bx3up")
@@ -255,28 +118,30 @@ sprite = NodePath("Sprite2D")
 obj_type = 2
 interactable_area_name = "orange"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="orange1"]
+z_index = 1
 position = Vector2(0.011138, -0.228954)
 shape = SubResource("CircleShape2D_pofav")
 
-[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+[node name="Sprite2D" type="Sprite2D" parent="orange1"]
 z_index = 1
 material = SubResource("ShaderMaterial_j2t1r")
 position = Vector2(0.100243, -0.976858)
 scale = Vector2(0.03262, 0.033809)
 texture = ExtResource("3_hvre5")
 
-[node name="Area2D2" type="Area2D" parent="." node_paths=PackedStringArray("sprite")]
+[node name="apple2" type="Area2D" parent="." node_paths=PackedStringArray("sprite")]
 script = ExtResource("14_bx3up")
 sprite = NodePath("Sprite2D")
 obj_type = 2
 interactable_area_name = "apple"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
-position = Vector2(223, 152)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="apple2"]
+z_index = 1
+position = Vector2(226, 148)
 shape = SubResource("CircleShape2D_m4jhy")
 
-[node name="Sprite2D" type="Sprite2D" parent="Area2D2"]
+[node name="Sprite2D" type="Sprite2D" parent="apple2"]
 z_index = 1
 material = SubResource("ShaderMaterial_eruhl")
 position = Vector2(226, 137)
@@ -291,9 +156,198 @@ offset_right = 1099.0
 offset_bottom = 76.0
 
 [node name="PotionMaking" parent="." instance=ExtResource("17_j4bn8")]
+visible = false
 z_index = 1
 position = Vector2(-53, 0)
 
-[connection signal="mouse_entered" from="Area2D" to="Area2D" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="Area2D" to="Area2D" method="_on_mouse_exited"]
-[connection signal="mouse_entered" from="Area2D2" to="Area2D2" method="_on_mouse_entered"]
+[node name="secondApple" type="Area2D" parent="." node_paths=PackedStringArray("sprite")]
+position = Vector2(915, 509)
+script = ExtResource("14_bx3up")
+sprite = NodePath("Sprite2D")
+obj_type = 2
+interactable_area_name = "apple"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="secondApple"]
+z_index = 1
+position = Vector2(-9, 9)
+shape = SubResource("CircleShape2D_6mg2v")
+
+[node name="Sprite2D" type="Sprite2D" parent="secondApple"]
+z_index = 1
+material = SubResource("ShaderMaterial_3a4fn")
+position = Vector2(-9.37497, 6)
+scale = Vector2(0.731928, 0.454545)
+texture = ExtResource("2_p106a")
+
+[node name="tealPotion" type="Area2D" parent="." node_paths=PackedStringArray("sprite")]
+position = Vector2(84, 269)
+script = ExtResource("14_bx3up")
+sprite = NodePath("1-removebg-previewPreviewRev1")
+obj_type = 2
+interactable_area_name = "teal"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="tealPotion"]
+z_index = 1
+position = Vector2(3, 2)
+shape = SubResource("CircleShape2D_u7en5")
+
+[node name="1-removebg-previewPreviewRev1" type="Sprite2D" parent="tealPotion"]
+z_index = 1
+material = SubResource("ShaderMaterial_00gf7")
+position = Vector2(7, 7.00003)
+scale = Vector2(0.806642, 0.528562)
+texture = ExtResource("13_1qb31")
+
+[node name="green1" type="Area2D" parent="." node_paths=PackedStringArray("sprite")]
+position = Vector2(115, 520)
+script = ExtResource("14_bx3up")
+sprite = NodePath("Sprite2D")
+obj_type = 2
+interactable_area_name = "green"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="green1"]
+z_index = 1
+position = Vector2(4, -1)
+shape = SubResource("CircleShape2D_k6tpu")
+
+[node name="Sprite2D" type="Sprite2D" parent="green1"]
+z_index = 1
+material = SubResource("ShaderMaterial_fwqfc")
+position = Vector2(3, 1)
+scale = Vector2(0.547059, 0.398734)
+texture = ExtResource("4_oreuj")
+
+[node name="apple3" type="Area2D" parent="." node_paths=PackedStringArray("sprite")]
+position = Vector2(433, 404)
+script = ExtResource("14_bx3up")
+sprite = NodePath("Sprite2D")
+obj_type = 2
+interactable_area_name = "apple"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="apple3"]
+z_index = 1
+position = Vector2(-8, -7)
+shape = SubResource("CircleShape2D_v6h61")
+
+[node name="Sprite2D" type="Sprite2D" parent="apple3"]
+z_index = 1
+material = SubResource("ShaderMaterial_cs5dl")
+position = Vector2(-8.625, -11.5)
+scale = Vector2(0.78012, 0.512987)
+texture = ExtResource("2_p106a")
+
+[node name="apple4" type="Area2D" parent="." node_paths=PackedStringArray("sprite")]
+position = Vector2(760, 144)
+script = ExtResource("14_bx3up")
+sprite = NodePath("Sprite2D")
+obj_type = 2
+interactable_area_name = "apple"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="apple4"]
+z_index = 1
+position = Vector2(1, 0)
+shape = SubResource("CircleShape2D_c4s31")
+
+[node name="Sprite2D" type="Sprite2D" parent="apple4"]
+z_index = 1
+material = SubResource("ShaderMaterial_qv35r")
+position = Vector2(4, -11)
+scale = Vector2(0.89759, 0.62987)
+texture = ExtResource("2_p106a")
+
+[node name="purple1" type="Area2D" parent="." node_paths=PackedStringArray("sprite")]
+z_index = 1
+position = Vector2(262, 284)
+script = ExtResource("14_bx3up")
+sprite = NodePath("Sprite2D")
+obj_type = 2
+interactable_area_name = "purple"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="purple1"]
+position = Vector2(-6, 2)
+shape = SubResource("CircleShape2D_yhsa7")
+
+[node name="Sprite2D" type="Sprite2D" parent="purple1"]
+material = SubResource("ShaderMaterial_movff")
+position = Vector2(-5, -0.999996)
+scale = Vector2(0.723529, 0.452381)
+texture = ExtResource("6_hfk8s")
+
+[node name="green2" type="Area2D" parent="." node_paths=PackedStringArray("sprite")]
+position = Vector2(718, 283)
+script = ExtResource("14_bx3up")
+sprite = NodePath("Sprite2D")
+obj_type = 2
+interactable_area_name = "green"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="green2"]
+z_index = 1
+position = Vector2(1, -4)
+shape = SubResource("CircleShape2D_6a70d")
+
+[node name="Sprite2D" type="Sprite2D" parent="green2"]
+z_index = 1
+material = SubResource("ShaderMaterial_2had2")
+position = Vector2(1.12499, -3)
+scale = Vector2(0.72647, 0.474684)
+texture = ExtResource("4_oreuj")
+
+[node name="purple2" type="Area2D" parent="." node_paths=PackedStringArray("sprite")]
+position = Vector2(548, 413)
+script = ExtResource("14_bx3up")
+sprite = NodePath("Sprite2D")
+obj_type = 2
+interactable_area_name = "fire"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="purple2"]
+z_index = 1
+position = Vector2(4, -12)
+shape = SubResource("CircleShape2D_cc6ve")
+
+[node name="Sprite2D" type="Sprite2D" parent="purple2"]
+z_index = 1
+material = SubResource("ShaderMaterial_yj8oh")
+position = Vector2(7, -10)
+scale = Vector2(0.732558, 0.441176)
+texture = ExtResource("7_pgf0d")
+
+[node name="fire" type="Area2D" parent="." node_paths=PackedStringArray("sprite")]
+position = Vector2(484, 543)
+script = ExtResource("14_bx3up")
+sprite = NodePath("Sprite2D")
+obj_type = 2
+interactable_area_name = "fire"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fire"]
+z_index = 1
+position = Vector2(1, -19)
+shape = SubResource("CircleShape2D_ktx8m")
+
+[node name="Sprite2D" type="Sprite2D" parent="fire"]
+z_index = 1
+material = SubResource("ShaderMaterial_mfhd6")
+position = Vector2(3, -26)
+scale = Vector2(0.770588, 0.529412)
+texture = ExtResource("10_p31fi")
+
+[connection signal="mouse_entered" from="orange1" to="orange1" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="orange1" to="orange1" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="apple2" to="apple2" method="_on_mouse_entered"]
+[connection signal="mouse_entered" from="secondApple" to="secondApple" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="secondApple" to="secondApple" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="tealPotion" to="tealPotion" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="tealPotion" to="tealPotion" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="green1" to="green1" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="green1" to="green1" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="apple3" to="apple3" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="apple3" to="apple3" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="apple4" to="apple4" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="apple4" to="apple4" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="purple1" to="purple1" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="purple1" to="purple1" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="green2" to="green2" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="green2" to="green2" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="purple2" to="purple2" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="purple2" to="purple2" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="fire" to="fire" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="fire" to="fire" method="_on_mouse_exited"]

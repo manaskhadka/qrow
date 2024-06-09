@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://b8i3w6yq3u6cb"]
+[gd_scene load_steps=41 format=3 uid="uid://b8i3w6yq3u6cb"]
 
 [ext_resource type="PackedScene" uid="uid://do027h1kv333v" path="res://test-level.tscn" id="1_4m6ml"]
 [ext_resource type="PackedScene" uid="uid://ccwb7bmjph5un" path="res://player.tscn" id="2_bcbvm"]
@@ -22,6 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://clhytlpwgqxwh" path="res://graphics/Pixel Potions/12-removebg-preview.png" id="21_7areq"]
 [ext_resource type="Texture2D" uid="uid://r8pwdy5l5sas" path="res://graphics/Pixel Potions/1-removebg-preview_preview_rev_1.png" id="22_my6qv"]
 [ext_resource type="AudioStream" uid="uid://fgtvl4cddwh6" path="res://Solve the Riddle music.mp3" id="23_dksec"]
+[ext_resource type="Texture2D" uid="uid://epq2snulklfa" path="res://graphics/PNG image-746C70BB82B2-1.png" id="23_i1kgi"]
 [ext_resource type="Texture2D" uid="uid://depfqa2hxlwc6" path="res://graphics/PNG image-4754-8F17-67-0.png" id="23_lh4bv"]
 [ext_resource type="Texture2D" uid="uid://ebp0n0jjurct" path="res://graphics/Top-Down Retro Interior/pie.png" id="24_qcgfe"]
 [ext_resource type="Texture2D" uid="uid://cyifakrdeuduj" path="res://graphics/Top-Down Retro Interior/tea.png" id="25_0fkea"]
@@ -54,12 +55,12 @@ shader = ExtResource("7_pcqhn")
 shader_parameter/outline_color = Color(1, 1, 1, 1)
 shader_parameter/outline_enabled = false
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_ll84j"]
-
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_kbdxn"]
 shader = ExtResource("7_pcqhn")
 shader_parameter/outline_color = Color(1, 1, 1, 1)
 shader_parameter/outline_enabled = false
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ll84j"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_hdkng"]
 shader = ExtResource("7_pcqhn")
@@ -186,11 +187,6 @@ texture = ExtResource("10_x8pov")
 position = Vector2(46.3734, 0)
 scale = Vector2(1.02392, 1)
 texture = ExtResource("10_x8pov")
-
-[node name="CollisionShelf" type="CollisionShape2D" parent="Potions Shelf/PotionShelf"]
-position = Vector2(163, -192)
-scale = Vector2(4, 4)
-shape = SubResource("CircleShape2D_ll84j")
 
 [node name="2-removebg-preview" type="Sprite2D" parent="Potions Shelf"]
 z_index = 2
@@ -326,7 +322,7 @@ texture = ExtResource("20_ic0nc")
 
 [node name="12-removebg-preview2" type="Sprite2D" parent="Potions Shelf"]
 z_index = 2
-position = Vector2(209, 29)
+position = Vector2(392, 29)
 scale = Vector2(0.0345588, 0.0345588)
 texture = ExtResource("21_7areq")
 
@@ -446,13 +442,13 @@ texture = ExtResource("16_m03h8")
 
 [node name="8-removebg-preview4" type="Sprite2D" parent="Potions Shelf"]
 z_index = 2
-position = Vector2(280, 11)
+position = Vector2(405, 13)
 scale = Vector2(0.0406977, 0.0406977)
 texture = ExtResource("17_2lq4m")
 
 [node name="9-removebg-preview4" type="Sprite2D" parent="Potions Shelf"]
 z_index = 2
-position = Vector2(297, 37)
+position = Vector2(381, 36)
 scale = Vector2(0.04375, 0.04375)
 texture = ExtResource("18_b7n6u")
 
@@ -482,7 +478,7 @@ texture = ExtResource("22_my6qv")
 
 [node name="2-removebg-preview5" type="Sprite2D" parent="Potions Shelf"]
 z_index = 2
-position = Vector2(294.438, 19.3031)
+position = Vector2(406, 29)
 scale = Vector2(0.0391566, 0.0391566)
 texture = ExtResource("11_hufkg")
 
@@ -518,7 +514,7 @@ texture = ExtResource("16_m03h8")
 
 [node name="8-removebg-preview5" type="Sprite2D" parent="Potions Shelf"]
 z_index = 2
-position = Vector2(276, 11)
+position = Vector2(378, 11)
 scale = Vector2(0.0406977, 0.0406977)
 texture = ExtResource("17_2lq4m")
 
@@ -614,7 +610,7 @@ texture = ExtResource("20_ic0nc")
 
 [node name="12-removebg-preview6" type="Sprite2D" parent="Potions Shelf"]
 z_index = 2
-position = Vector2(287.344, 28.5484)
+position = Vector2(408, 12)
 scale = Vector2(0.0345588, 0.0345588)
 texture = ExtResource("21_7areq")
 
@@ -626,7 +622,7 @@ texture = ExtResource("22_my6qv")
 
 [node name="2-removebg-preview7" type="Sprite2D" parent="Potions Shelf"]
 z_index = 2
-position = Vector2(318.438, 11.3031)
+position = Vector2(387, 12)
 scale = Vector2(0.0391566, 0.0391566)
 texture = ExtResource("11_hufkg")
 
@@ -746,7 +742,7 @@ texture = ExtResource("18_b7n6u")
 
 [node name="10-removebg-preview8" type="Sprite2D" parent="Potions Shelf"]
 z_index = 2
-position = Vector2(340, 20)
+position = Vector2(381, 21)
 scale = Vector2(0.0426471, 0.0426472)
 texture = ExtResource("19_15a5d")
 
@@ -770,13 +766,13 @@ texture = ExtResource("22_my6qv")
 
 [node name="2-removebg-preview9" type="Sprite2D" parent="Potions Shelf"]
 z_index = 2
-position = Vector2(319, 28)
+position = Vector2(410, 37)
 scale = Vector2(0.0391566, 0.0391566)
 texture = ExtResource("11_hufkg")
 
 [node name="3-removebg-preview9" type="Sprite2D" parent="Potions Shelf"]
 z_index = 2
-position = Vector2(322.438, 37.3031)
+position = Vector2(395, 21)
 scale = Vector2(0.0382353, 0.0382353)
 texture = ExtResource("12_nm1qh")
 
@@ -788,13 +784,13 @@ texture = ExtResource("13_wbhrj")
 
 [node name="5-removebg-preview9" type="Sprite2D" parent="Potions Shelf"]
 z_index = 2
-position = Vector2(329, 28)
+position = Vector2(385, 20)
 scale = Vector2(0.04375, 0.04375)
 texture = ExtResource("14_nhy2m")
 
 [node name="6-removebg-preview9" type="Sprite2D" parent="Potions Shelf"]
 z_index = 2
-position = Vector2(322, 12)
+position = Vector2(377, 29)
 scale = Vector2(0.0308823, 0.0308823)
 texture = ExtResource("15_hs06n")
 
@@ -812,7 +808,7 @@ texture = ExtResource("17_2lq4m")
 
 [node name="9-removebg-preview9" type="Sprite2D" parent="Potions Shelf"]
 z_index = 2
-position = Vector2(338, 37)
+position = Vector2(390, 36)
 scale = Vector2(0.04375, 0.04375)
 texture = ExtResource("18_b7n6u")
 
@@ -855,8 +851,9 @@ transition_scene = "res://Shelf w Potions.tscn"
 [node name="Bookshelf" type="Sprite2D" parent="BookshelfInteract"]
 z_index = 1
 material = SubResource("ShaderMaterial_kbdxn")
-position = Vector2(351, -196)
-texture = ExtResource("23_lh4bv")
+position = Vector2(351, -195.75)
+scale = Vector2(1, 0.989362)
+texture = ExtResource("23_i1kgi")
 
 [node name="Bookshelf2" type="Sprite2D" parent="BookshelfInteract/Bookshelf"]
 position = Vector2(54.75, 0)
@@ -864,7 +861,7 @@ scale = Vector2(1.32292, 1)
 texture = ExtResource("23_lh4bv")
 
 [node name="CollisionBookshelf" type="CollisionShape2D" parent="BookshelfInteract"]
-position = Vector2(348, -196)
+position = Vector2(349, -199)
 scale = Vector2(4, 4)
 shape = SubResource("CircleShape2D_ll84j")
 
