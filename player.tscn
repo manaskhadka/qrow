@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://ccwb7bmjph5un"]
+[gd_scene load_steps=23 format=3 uid="uid://ccwb7bmjph5un"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_mc4wp"]
 [ext_resource type="Texture2D" uid="uid://t8apljm57jqa" path="res://graphics/Crow Flying Left/CFL1.png" id="2_rx0d0"]
@@ -9,9 +9,15 @@
 [ext_resource type="Texture2D" uid="uid://cxndvf4yv20we" path="res://graphics/Crow Flying Right/CFR2.png" id="6_x411j"]
 [ext_resource type="Texture2D" uid="uid://bpimdlpc7hqvn" path="res://graphics/Crow Flying Right/CFR3.png" id="7_6t0g6"]
 [ext_resource type="PackedScene" uid="uid://cppr1vx0grq8r" path="res://dialogues/dialogue.tscn" id="9_3ul48"]
-[ext_resource type="PackedScene" uid="uid://c0cf6vgdrekja" path="res://pause_menu.tscn" id="9_evono"]
-[ext_resource type="PackedScene" uid="uid://cftoisbhfytx2" path="res://inventory.tscn" id="11_5h1gq"]
-[ext_resource type="PackedScene" uid="uid://dfrvhtyhvd8n1" path="res://assets/regularInventory.tscn" id="11_hmuwd"]
+[ext_resource type="Texture2D" uid="uid://ddhayjmw4gs46" path="res://graphics/crow-attack/PNG image-6A4B993F6BE5-1.png" id="9_4qsx6"]
+[ext_resource type="PackedScene" uid="uid://v1s7ndq4ti5d" path="res://pause_menu.tscn" id="9_evono"]
+[ext_resource type="Texture2D" uid="uid://c2asi47d4go0f" path="res://graphics/crow-attack/PNG image-4BAB-84DB-98-0.png" id="10_x1yl8"]
+[ext_resource type="Texture2D" uid="uid://4bq4b484ji3h" path="res://graphics/crow-attack/PNG image-4DC8-A309-3B-0.png" id="11_3ncpc"]
+[ext_resource type="PackedScene" path="res://inventory.tscn" id="11_5h1gq"]
+[ext_resource type="PackedScene" path="res://assets/regularInventory.tscn" id="11_hmuwd"]
+[ext_resource type="Texture2D" uid="uid://byrldmd0c7vbp" path="res://graphics/crow-attack/PNG image-4F8E-BE90-6E-0.png" id="12_r7d0n"]
+[ext_resource type="Texture2D" uid="uid://bnj72yqe0eslu" path="res://graphics/crow-attack/PNG image-4955-ABB2-80-0.png" id="13_w0qlv"]
+[ext_resource type="Texture2D" uid="uid://0i6cts60s6ns" path="res://graphics/crow-attack/PNG image-41DA-99FB-D6-0.png" id="14_jwyog"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_vivnw"]
 animations = [{
@@ -61,6 +67,32 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_5gmxn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_4qsx6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_x1yl8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_3ncpc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_r7d0n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_w0qlv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_jwyog")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 5.0
+}]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rvteo"]
 size = Vector2(18.1818, 14.5455)
 
@@ -78,6 +110,20 @@ sprite_frames = SubResource("SpriteFrames_vivnw")
 animation = &"flying right"
 autoplay = "flying left"
 frame_progress = 0.805727
+
+[node name="attack-anim-left" type="AnimatedSprite2D" parent="."]
+position = Vector2(-19, 1)
+scale = Vector2(0.433333, 0.433333)
+sprite_frames = SubResource("SpriteFrames_5gmxn")
+animation = &"attack"
+frame_progress = 0.730469
+
+[node name="attack-anim-right" type="AnimatedSprite2D" parent="."]
+position = Vector2(20, 2)
+scale = Vector2(0.433333, 0.433333)
+sprite_frames = SubResource("SpriteFrames_5gmxn")
+animation = &"attack"
+frame_progress = 0.289264
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, -2.38419e-07)
@@ -100,7 +146,6 @@ shape = SubResource("CircleShape2D_1mc4c")
 unique_name_in_owner = true
 
 [node name="PauseMenu" parent="." instance=ExtResource("9_evono")]
-visible = true
 
 [node name="Inventory" type="CanvasLayer" parent="."]
 

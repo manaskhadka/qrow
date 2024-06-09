@@ -11,6 +11,8 @@ var curr_direction = "right"
 var is_attacking = false
 
 @onready var anim_sprite: AnimatedSprite2D = $AnimatedSprite2D as AnimatedSprite2D	
+@onready var atk_right: AnimatedSprite2D = $"attack-anim-right"
+@onready var atk_left: AnimatedSprite2D = $"attack-anim-left"
 
 func _physics_process(delta) -> void:
 	attack()
@@ -58,11 +60,9 @@ func attack():
 			global.player_current_attack = true
 			is_attacking = true
 			if curr_direction == "right":
-				# handle animations
-				pass 
+				atk_right.visible = true
 			if curr_direction == "left":
-				# handle animations
-				pass
+				atk_left.visible = true 
 			$"attack-cooldown".start()
 	
 func player():
@@ -90,6 +90,8 @@ func _on_invincibilitycooldown_timeout():
 func _on_attackcooldown_timeout():
 	print("Player attacked!")
 	$"attack-cooldown".stop()
+	atk_left.visible = false 
+	atk_right.visible = false
 	global.player_current_attack = false 
 	is_attacking = false
 
@@ -99,6 +101,14 @@ func _ready():
 		$".".global_position = global.returnPosition
 		$Camera2D.global_position = global.returnPosition
 		global.returnPosition = Vector2(0,0)
+	
+	var a1 = get_node("attack-anim-left")
+	var a2 = get_node("attack-anim-right")
+	a1.visible = false 
+	a2.visible = false
+
+	
+
 		
 
 

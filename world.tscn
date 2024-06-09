@@ -26,7 +26,7 @@
 [ext_resource type="Texture2D" uid="uid://ebp0n0jjurct" path="res://graphics/Top-Down Retro Interior/pie.png" id="24_qcgfe"]
 [ext_resource type="Texture2D" uid="uid://cyifakrdeuduj" path="res://graphics/Top-Down Retro Interior/tea.png" id="25_0fkea"]
 [ext_resource type="Script" path="res://cauldron.gd" id="26_ohhgt"]
-[ext_resource type="Texture2D" uid="uid://53jutxgi87rp" path="res://potion1.png" id="32_1b5bw"]
+[ext_resource type="Texture2D" path="res://potion1.png" id="32_1b5bw"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_6fwv1"]
 shader = ExtResource("7_pcqhn")
