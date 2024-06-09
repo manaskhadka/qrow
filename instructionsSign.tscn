@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://d0xsy8kssxvlu"]
+
+[ext_resource type="Texture2D" uid="uid://b27hbrj41dxug" path="res://01.png" id="1_baogs"]
+[ext_resource type="PackedScene" uid="uid://hxwwmunqojcr" path="res://assets/interactables/reusable_backbutton.tscn" id="2_sthq5"]
+
+[node name="InstructionsSign" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(583, 478)
+scale = Vector2(30.849, 26.6198)
+texture = ExtResource("1_baogs")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 257.0
+offset_top = 210.0
+offset_right = 937.0
+offset_bottom = 571.0
+theme_override_colors/font_color = Color(0.00184107, 0.00184107, 0.00184107, 1)
+theme_override_font_sizes/font_size = 35
+text = "This contains my notes of what I've learned throughout the years. I have honed my claws and can attack (e). I've worked with countless ingredients and can craft cncoctions near the cauldron (i)."
+autowrap_mode = 2
+
+[node name="Button" parent="." instance=ExtResource("2_sthq5")]
+offset_left = 1010.0
+offset_top = 21.0
+offset_right = 1119.0
+offset_bottom = 80.0
