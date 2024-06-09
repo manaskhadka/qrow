@@ -5,7 +5,6 @@ extends Node2D
 func _ready():
 	if global.truthFound == true:
 		print("truth revealed")# Replace with function body.
-		get_tree().change_scene_to_file("res://decision.tscn")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

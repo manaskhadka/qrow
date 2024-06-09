@@ -69,6 +69,10 @@ func check_if_can_make(potionName: String):
 		print(global.items)
 		print(global.items.size())
 		slots[i].update(global.items[key])
+	
+	# check if you just made the healing potion
+	if global.selectedPotion == "healing" and global.truthFound == true:
+		get_tree().change_scene_to_file("res://decision.tscn")
 		
 	# clear selected potion value
 	global.selectedPotion = ""
