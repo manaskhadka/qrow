@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://dnkejj5tv3gni"]
+
+[node name="Kill" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 133.0
+offset_top = 120.0
+offset_right = 1049.0
+offset_bottom = 767.0
+theme_override_font_sizes/font_size = 40
+text = "You decided to let the witch die. You live alone in teh cottage that you once shared, remembering her every day. You have begun to get your memories back about your love and you miss her every day, The dark magic and the monsters have gone, you have saved the village and the forest."
+autowrap_mode = 2

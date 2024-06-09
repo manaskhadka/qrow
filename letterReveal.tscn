@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://dcx6lvd1foder"]
+[gd_scene load_steps=4 format=3 uid="uid://dcx6lvd1foder"]
 
 [ext_resource type="Texture2D" uid="uid://cl260755i1om2" path="res://letterBlank.png" id="1_dgusc"]
+[ext_resource type="Script" path="res://letterReveal.gd" id="1_rajp6"]
 [ext_resource type="PackedScene" uid="uid://hxwwmunqojcr" path="res://assets/interactables/reusable_backbutton.tscn" id="2_4ca8g"]
 
 [node name="LetterReveal" type="Node2D"]
+script = ExtResource("1_rajp6")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(483.5, 336)

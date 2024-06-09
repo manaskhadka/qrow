@@ -28,5 +28,8 @@ var createdPotions = {}
 # checks whether the fight scene is done
 var fightDone: bool = true
 
+# checks if crow has discovered the truth yet
+var truthFound: bool = false
+
 #stores associated symbols
 var potionIcons = {"healing": "res://dialogues/Pixel Heart Sprite Sheet 32x32.png", "death":"res://Skull&Bones - FrodoUndead.png" }
