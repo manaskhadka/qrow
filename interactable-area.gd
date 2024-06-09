@@ -23,6 +23,7 @@ enum {CHARACTER, ITEM_C, ITEM_V}
 
 # For debugging purposes:
 @export var interactable_area_name : String;
+@export var reposition = true
 
 var shader = preload("res://world.gdshader")
 func _ready():
@@ -56,7 +57,8 @@ func _input(event):
 			pass 
 
 		if transition_scene:
-			global.returnPosition =  $"../Crow".position
+			if reposition:
+				global.returnPosition =  $"../Crow".position
 			get_tree().change_scene_to_file(transition_scene)
 		
 func _process(delta):

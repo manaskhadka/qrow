@@ -131,6 +131,7 @@ sprite = NodePath("Sign")
 obj_type = 2
 transition_scene = "res://IntroForest-Danger.tscn"
 interactable_area_name = "sign"
+reposition = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(0.515242, -1.90735e-06)
