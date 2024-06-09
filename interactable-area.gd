@@ -55,8 +55,15 @@ func _input(event):
 		if obj_type == ITEM_C:
 			# TODO: Add to inventory and remove from world
 			pass 
-
+			
+		if (interactable_area_name):
+			if interactable_area_name == "sapling":
+				print("Activiating exit...")
+				$"../Sign".dialogue_file = ""
+				$"../Sign".transition_scene = "res://outside.tscn"
+				
 		if transition_scene:
+			print("transitioning to:", transition_scene)
 			if reposition:
 				global.returnPosition =  $"../Crow".position
 			get_tree().change_scene_to_file(transition_scene)
